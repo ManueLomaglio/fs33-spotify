@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'SpotifyMixUI';
+    src: url('https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'SpotifyMixUI', Arial, sans-serif;
+    background-color: #131211;
+  }
+
+  section {
+    background: #1f1e1f;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .title-subtitle h2 {
+    font-weight: 500;
+  }
+
+  .title-subtitle p {
+    font-weight: 400;
+  }
