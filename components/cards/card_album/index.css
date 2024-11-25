@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "SpotifyMixUI";
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2")
+    format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
 div.card {
   width: fit-content;
   border-radius: 6px;
