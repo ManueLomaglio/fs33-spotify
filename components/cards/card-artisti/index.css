@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'SpotifyMixUI';
+    src: url('https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+    font-display: swap; 
+}
+
+body{
+    display: inline-flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #121212;
+}
+
+.card-artisti{
+    background-color: #121212;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.card-artisti__img-play-container{
+    position: relative;
+}
+
+.card-artisti__img img{
+    border-radius: 50%;
+}
+
+.card-artisti__play-button {
+    right: 8px;
+    opacity: 0;
+    position: absolute; 
+    bottom: -8px; 
+    transform: translateY(8px); 
+    opacity: 0; 
+    transition: transform 0.2s ease-out, opacity 0.5s ease-out;
+}
+
+.card-artisti__play-button button {
+    background-color: #1db954; 
+    width: 48px;
+    height: 48px;
+    border-radius: 500px;
+    
+}
+
+.card-artisti__description{
+    color: white;
+}
+
+.card-artisti__description__nome {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card-artisti__description__item {
+    color: #b3b3b3;
+    font-size: 16px;
+}
+
+.card-artisti--hover:hover{
+    background-color: #1f1f1f;
+
+}
+
+.card-artisti--hover:hover > .card-artisti__img-play-container > .card-artisti__play-button {
+    transform: translateY(0); 
+    bottom: 0px; 
+    opacity: 1;
+}
+
+.card-artisti__play-button button:hover{
+    background-color: #3be477;
+}
+
+.card-artisti__description__nome:hover {
+    text-decoration: underline; 
+}
