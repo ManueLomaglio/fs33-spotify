@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'SpotifyMixUI';
-    src: url('https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2') format('woff2');
-    font-weight: lighter;
-    font-style: normal;
-    font-display: swap; 
-}
-
 body{
     display: inline-flex;
     height: 100vh;
@@ -50,6 +42,9 @@ body{
 
 .card-artisti__description{
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .card-artisti__description__nome {
