@@ -1,27 +1,43 @@
-@font-face {
-  font-family: "SpotifyMixUI";
-  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2")
-    format("woff2");
-  font-weight: lighter;
-  font-style: normal;
-  font-display: swap;
+body {
+  font-family: "SpotifyMixUI", Arial, sans-serif;
 }
-
-div.card {
+.card {
   width: fit-content;
+  padding: 15px;
   border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #212121;
-  padding: 10px;
 }
 
-img {
+.image-container {
+  position: relative;
+}
+
+.image-container img {
   width: 100%;
   border-radius: 6px;
 }
 
-div:hover {
-  background-color: #535353;
+.card_album_play_button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card_album_play_button button {
+  height: 48px;
+  width: 48px;
+  /*display: none;*/
+}
+
+.card:hover {
+  background-color: #1e1e1f;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .card_album_play_button {
+  opacity: 1;
+  transform: translateY(0);
 }
