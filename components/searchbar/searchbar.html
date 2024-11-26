@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searchbar</title>
+    <style>
+      body {
+        background-color: #000000;
+        height: 100vh;
+        display: grid;
+        align-items: center;
+        margin-left: 700px !important;
+      }
+    </style>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="searchbar.css" />
+  </head>
+  <body>
+    <div class="searchbar">
+      <form action="#" role="searchbox" class="searchbar__form">
+        <section class="searchbar__magnifying-glass" title="">
+          <svg
+            data-encore-id="icon"
+            role="img"
+            aria-hidden="true"
+            data-testid="search-icon"
+            class="searchbar__magnifying-glass__icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+            ></path>
+          </svg>
+        </section>
+
+        <section class="searchbar__search">
+          <input
+            type="search"
+            name="searchbar"
+            id="searchbar"
+            placeholder="Cosa vuoi ascoltare?"
+          />
+          <div
+            class="searchbar__search__icon-container"
+            id="searchbar__search__icon-container"
+            title=""
+          >
+            <svg
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              class="searchbar__search__X-icon"
+            >
+              <path
+                d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"
+              ></path>
+            </svg>
+          </div>
+        </section>
+
+        <section class="searchbar__browse-album" title="">
+          <input
+            type="checkbox"
+            class="searchbar__browse-album__checkbox"
+            id="toggle"
+          />
+          <label
+            for="toggle"
+            class="searchbar__browse-album__checkbox__container"
+          >
+          </label>
+        </section>
+      </form>
+    </div>
+  </body>
+</html>
