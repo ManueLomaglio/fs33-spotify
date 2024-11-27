@@ -1,22 +1,17 @@
-body {
-  display: flex;
-  justify-content: center;
-}
-
-.card {
+.card_album {
   width: fit-content;
   padding: 15px;
   border-radius: 6px;
 }
 
-.card p {
+.card_album p {
   margin-top: 15px;
 }
-.image-container {
+.card_album_image_container {
   position: relative;
 }
 
-.image-container img {
+.card_album_image_container img {
   width: 100%;
   border-radius: 6px;
 }
@@ -37,12 +32,12 @@ body {
   /*display: none;*/
 }
 
-.card:hover {
+.card_album:hover {
   background-color: #1e1e1f;
   transition: background-color 0.3s ease;
 }
 
-.card:hover .card_album_play_button {
+.card_album:hover .card_album_play_button {
   opacity: 1;
   transform: translateY(0);
 }
