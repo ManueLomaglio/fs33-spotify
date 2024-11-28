@@ -10,8 +10,10 @@ section {
 
 .title-subtitle h2 {
   font-weight: 500;
+  padding: 10px;
 }
 
 .title-subtitle p {
   font-weight: 400;
+  padding: 10px;
 }
