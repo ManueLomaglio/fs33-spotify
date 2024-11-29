@@ -45,7 +45,6 @@
   transform: scale(1.1);
   transition: 33ms;
   background-color: #f0f0f0;
-  
 }
 .button_subscribe {
   background-color: #000;
@@ -114,6 +113,7 @@
   background-color: #1ed760;
   transform: scale(1.03);
   transition: 33ms;
+  cursor: pointer;
 }
 .button_home {
   width: 48px;
