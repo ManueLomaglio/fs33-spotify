@@ -1,0 +1,135 @@
+.button_show_all {
+  color: #b3b3b3;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #1f1f1f;
+  border: none;
+}
+.button_show_all:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.button_log_in {
+  color: #121212;
+  background-color: white;
+  width: fit-content;
+  height: 48px;
+  border: 0px solid transparent;
+  border-radius: 30px 30px 30px 30px;
+  font-weight: 700;
+  padding: 8px 32px;
+  font-size: 16px;
+}
+.button_log_in:hover {
+  transform: scale(1.1);
+  transition: 33ms;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.button_subscribe_free {
+  color: #000;
+  background-color: white;
+  width: fit-content;
+  height: 48px;
+
+  border: 0px solid white;
+  border-radius: 30px 30px 30px 30px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 32px;
+}
+.button_subscribe_free:hover {
+  transform: scale(1.1);
+  transition: 33ms;
+  background-color: #f0f0f0;
+}
+.button_subscribe {
+  background-color: #000;
+  color: #b3b3b3;
+  font-weight: 700;
+  font-size: 16px;
+  height: 48px;
+  width: fit-content;
+  padding: 8px 32px 8px 8px;
+}
+.button_subscribe:hover {
+  transform: scale(1.1);
+  transition: 33ms;
+  color: white;
+  cursor: pointer;
+}
+.button_new_playlist {
+  width: fit-content;
+  height: 32px;
+  padding: 4px 16px;
+  background-color: white;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  border: 0px solid transparent;
+  border-radius: 30px;
+}
+.button_new_playlist:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+  transition: 33ms;
+  cursor: pointer;
+}
+.button_browse_podcast {
+  width: fit-content;
+  height: 32px;
+  padding: 4px 16px;
+  background-color: white;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  border: 0px solid transparent;
+  border-radius: 30px;
+}
+.button_browse_podcast:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+  transition: 33ms;
+  cursor: pointer;
+}
+.button_play_green {
+  width: 48px;
+  height: 48px;
+  background-color: #1db954;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_play_green > svg {
+  height: 24px;
+  width: 24px;
+}
+.button_play_green:hover {
+  background-color: #1ed760;
+  transform: scale(1.03);
+  transition: 33ms;
+  cursor: pointer;
+}
+.button_home {
+  width: 48px;
+  height: 48px;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  background-color: #1f1f1f;
+  padding: 12px;
+}
+.button_home > svg {
+  height: 24px;
+  width: 24px;
+  fill: #b3b3b3;
+}
+.button_home:hover {
+  transform: scale(1.03);
+  transition: 33ms;
+  cursor: pointer;
+}
