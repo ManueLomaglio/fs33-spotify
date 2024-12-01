@@ -133,3 +133,32 @@
   transition: 33ms;
   cursor: pointer;
 }
+
+.button_language {
+  width: fit-content;
+  height: 32px;
+  border: 1px solid #818181;
+  border-radius: 30px 30px 30px 30px;
+  padding: 3px 15px 3px 15px;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: #121212;
+  color: white;
+  fill: #f0f0f0;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  vertical-align: middle;
+}
+.button_language:hover {
+  transform: scale(1.04);
+  transition: 33ms;
+  border-color: #fff;
+  cursor: pointer;
+}
+.button_language>span>svg {
+  height: 16px;
+  width: 16px;
+}
