@@ -1,18 +1,36 @@
+body {
+  background-color: #121212;
+}
+
 .create-playlist {
   background: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   color: #fff;
   border-radius: 8px;
-  padding: 20px;
+  margin: 8px 0px;
+  padding: 16px 20px;
+  overflow: hidden;
+  justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
+.create-playlist .title-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .create-playlist .title-subtitle h2 {
+  font-size: 16px;
   font-weight: 500;
-  padding: 10px;
+  margin: 4px 0px;
 }
 
 .create-playlist .title-subtitle p {
-  font-weight: 400;
-  padding: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 5px 0px;
 }
+
