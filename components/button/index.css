@@ -2,7 +2,7 @@
   color: #b3b3b3;
   width: fit-content;
   height: fit-content;
-  margin: 0 auto;
+
   font-weight: 700;
   font-size: 14px;
   background-color: #1f1f1f;
@@ -133,6 +133,22 @@
   transform: scale(1.04);
   transition: 33ms;
 }
+.button_home:hover::after {
+  content: "Home";
+  font-size: 14px;
+  position: absolute;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 8px;
+  animation: showTooltip 1.2s ease-in-out forwards;
+  animation-delay: 1ms;
+  z-index: 10;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .button_language {
   width: fit-content;
@@ -187,10 +203,30 @@
 .button_your_library > span > svg {
   height: 24px;
   width: 24px;
+  fill: #b3b3b3;
 }
 .button_your_library path {
   height: 20px;
   width: 20px;
+}
+.button_your_library svg:hover {
+  fill: #000;
+}
+.button_your_library:hover::after {
+  content: "Comprimi La tua libreria";
+  font-size: 14px;
+  position: absolute;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 8px;
+  animation: showTooltip 1.2s ease-in-out forwards;
+  animation-delay: 1ms;
+  z-index: 10;
+  top: 151%;
+  left: 62%;
+  transform: translateX(-50%);
 }
 
 .button_plus {
@@ -213,6 +249,23 @@
   background-color: #1f1f1f;
   fill: #fff;
 }
+.button_plus:hover::after {
+  content: "Crea una nuova playlist o una cartella";
+  font-size: 14px;
+  position: absolute;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 8px;
+  animation: showTooltip 1.2s ease-in-out forwards;
+  animation-delay: 1ms;
+  z-index: 10;
+  top: 169%;
+  left: 51%;
+  transform: translateX(-50%);
+}
+
 .button_instagram {
   height: 40px;
   width: 40px;
@@ -229,6 +282,23 @@
 .button_instagram:hover {
   background-color: rgb(114, 114, 114);
 }
+.button_instagram:hover::after {
+  content: "Instagram";
+  font-size: 12px;
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 4px;
+  border: 1px solid black;
+
+  animation: showTooltip 1.2s ease-in-out forwards;
+  animation-delay: 1ms;
+  z-index: 10;
+  top: 202%;
+  left: 58%;
+  transform: translateX(-50%);
+}
+
 .button_twitter {
   height: 40px;
   width: 40px;
@@ -244,6 +314,24 @@
 .button_twitter:hover {
   background-color: rgb(114, 114, 114);
 }
+
+.button_twitter:hover::after {
+  content: "Twitter";
+  font-size: 12px;
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 4px;
+  border: 1px solid black;
+
+  animation: showTooltip 1.2s ease-in-out forwards;
+  animation-delay: 1ms;
+  z-index: 10;
+  top: 222%;
+  left: 58%;
+  transform: translateX(-50%);
+}
+
 .button_facebook {
   height: 40px;
   width: 40px;
@@ -258,4 +346,20 @@
 }
 .button_facebook:hover {
   background-color: rgb(114, 114, 114);
+}
+.button_facebook:hover::after {
+  content: "Facebook";
+  font-size: 12px;
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 4px;
+  border: 1px solid black;
+
+  animation: showTooltip 1.2s ease-in-out forwards;
+  animation-delay: 1ms;
+  z-index: 10;
+  top: 242%;
+  left: 58%;
+  transform: translateX(-50%);
 }
