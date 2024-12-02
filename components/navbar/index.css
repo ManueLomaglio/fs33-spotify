@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.nav__logo__container {
+  width: 78px;
+  display: block;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.nav__logo__spotify {
+  fill: white;
+  cursor: pointer;
+}
+
+.nav__button-Home__searchbar__container {
+  display: flex;
+}
+
+.searchbar {
+  min-width: 448.1px;
+  width: 490px;
+  box-sizing: border-box;
+}
+
+.nav__buttons__container {
+  display: flex;
+}
