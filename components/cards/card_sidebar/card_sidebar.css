@@ -1,18 +1,18 @@
-section {
+.create-playlist {
   background: #1f1f1f;
-  color: white;
+  color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.title-subtitle h2 {
+.create-playlist .title-subtitle h2 {
   font-weight: 500;
   padding: 10px;
 }
 
-.title-subtitle p {
+.create-playlist .title-subtitle p {
   font-weight: 400;
   padding: 10px;
 }
