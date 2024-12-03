@@ -33,10 +33,14 @@
   gap: 8px;
 }
 
-.card-artisti__description__nome {
+.card-artisti__description__name {
   display: inline-block;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.card-artisti__description__name p {
+  display: inline-block;
 }
 
 .card-artisti__description__item {
@@ -57,7 +61,7 @@
   opacity: 1;
 }
 
-.card-artisti__description__nome p:hover {
+.card-artisti__description__name p:hover {
   text-decoration: underline;
   display: inline-block;
 }
