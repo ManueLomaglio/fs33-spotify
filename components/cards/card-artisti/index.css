@@ -4,6 +4,7 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .card-artisti__img-play-container {
