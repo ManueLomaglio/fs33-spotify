@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  flex-direction: row;
+}
+
+.footer div {
+ /** flex: 1 1 50%; dimensioni dei div da dipendenti dalle mediaquery**/ 
+ flex-grow: 1;
+  margin-bottom: 32px;
+  margin-right: 24px;
+}
+
+.footer_company ul,
+.footer_community ul,
+.footer_usefull_links ul,
+.footer_plans ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer div ul:first-child {
+  
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: text;
+}
+
+.footer_links a {
+  margin: 8px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #b3b3b3;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer_links a span {
+  padding: 0px 0px 8px;
+}
