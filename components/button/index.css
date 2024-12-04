@@ -142,8 +142,9 @@
   padding: 8px;
   border-radius: 5px;
   margin-top: 8px;
-  animation: showTooltip 1.2s ease-in-out forwards;
+  animation: showTooltip 0.5s ease-in-out forwards;
   animation-delay: 1ms;
+  opacity: 0;
   z-index: 10;
   top: 100%;
   left: 50%;
@@ -210,7 +211,7 @@
   width: 20px;
 }
 .button_your_library svg:hover {
-  fill: #000;
+  fill: #fff;
 }
 .button_your_library:hover::after {
   content: "Comprimi La tua libreria";
@@ -221,8 +222,9 @@
   padding: 8px;
   border-radius: 5px;
   margin-top: 8px;
-  animation: showTooltip 1.2s ease-in-out forwards;
-  animation-delay: 1ms;
+  animation: showTooltip 0.2s ease-in-out forwards;
+  animation-delay: 0,5s;
+  opacity: 0;
   z-index: 10;
   top: 151%;
   left: 62%;
@@ -258,8 +260,9 @@
   padding: 8px;
   border-radius: 5px;
   margin-top: 8px;
-  animation: showTooltip 1.2s ease-in-out forwards;
-  animation-delay: 1ms;
+  animation: showTooltip 0.2s ease-in-out forwards;
+  animation-delay: 0,5s;
+  opacity: 0;
   z-index: 10;
   top: 169%;
   left: 51%;
@@ -290,9 +293,9 @@
   color: #000;
   padding: 4px;
   border: 1px solid black;
-
-  animation: showTooltip 1.2s ease-in-out forwards;
-  animation-delay: 1ms;
+opacity: 0;
+  animation: showTooltip 0.2s ease-in-out forwards;
+  animation-delay: 0,5s;
   z-index: 10;
   top: 202%;
   left: 58%;
@@ -323,9 +326,9 @@
   color: #000;
   padding: 4px;
   border: 1px solid black;
-
-  animation: showTooltip 1.2s ease-in-out forwards;
-  animation-delay: 1ms;
+opacity: 0;
+  animation: showTooltip 0.2s ease-in-out forwards;
+  animation-delay: 0,5s;
   z-index: 10;
   top: 222%;
   left: 58%;
@@ -355,11 +358,19 @@
   color: #000;
   padding: 4px;
   border: 1px solid black;
-
-  animation: showTooltip 1.2s ease-in-out forwards;
-  animation-delay: 1ms;
+  opacity: 0;
+  animation: showTooltip 0.2s ease-in-out forwards;
+  animation-delay: 0,5s;
   z-index: 10;
   top: 242%;
   left: 58%;
   transform: translateX(-50%);
+}
+@keyframes showTooltip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
