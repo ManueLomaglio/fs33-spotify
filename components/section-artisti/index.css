@@ -1,0 +1,90 @@
+:root {
+  --section-min-height: 260px;
+  --card-min-width: 160px;
+  --section-padding-top: 4px;
+  --section-padding-left-right: 16px;
+}
+
+.section-artisti {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--section-padding-left-right);
+  padding-right: var(--section-padding-left-right);
+}
+
+.section-artisti__header {
+  display: flex;
+  padding-top: var(--section-padding-top);
+  height: 100%;
+  margin-bottom: 16px;
+  min-block-size: 40px;
+}
+
+.section-artisti__header__title {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  align-content: flex-end;
+}
+
+.section-artisti__header__show-all {
+  font-size: 0.875rem;
+  align-self: flex-end;
+  margin-top: 2px;
+  margin-right: 8px;
+}
+
+.section-artisti__header a {
+  text-decoration: none;
+  color: #fff;
+  justify-content: flex-end;
+}
+
+.section-artisti__header a:hover {
+  text-decoration: underline;
+}
+
+.container__card-artisti {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(var(--card-min-width), 1fr));
+}
+
+/* Quando lo schermo è più piccolo di 1400px, mostra 6 colonne */
+@media (max-width: 1400px) {
+  .container__card-artisti .card-artisti:nth-child(n + 7) {
+    display: none;
+  }
+  .container__card-artisti {
+    grid-template-columns: repeat(6, minmax(var(--card-min-width), 1fr));
+  }
+}
+
+/* Quando lo schermo è più piccolo di 1200px, mostra 5 colonne */
+@media (max-width: 1200px) {
+  .container__card-artisti .card-artisti:nth-child(n + 6) {
+    display: none;
+  }
+  .container__card-artisti {
+    grid-template-columns: repeat(5, minmax(var(--card-min-width), 1fr));
+  }
+}
+
+/* Quando lo schermo è più piccolo di 1000px, mostra 4 colonne */
+@media (max-width: 1000px) {
+  .container__card-artisti .card-artisti:nth-child(n + 5) {
+    display: none;
+  }
+  .container__card-artisti {
+    grid-template-columns: repeat(4, minmax(var(--card-min-width), 1fr));
+  }
+}
+
+/* Quando lo schermo è più piccolo di 800px, mostra 3 colonne */
+@media (max-width: 800px) {
+  .container__card-artisti .card-artisti:nth-child(n + 4) {
+    display: none;
+  }
+  .container__card-artisti {
+    grid-template-columns: repeat(3, minmax(var(--card-min-width), 1fr));
+  }
+}
