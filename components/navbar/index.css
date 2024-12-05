@@ -25,19 +25,19 @@ nav {
 .nav__button-Home__searchbar {
   display: inline-flex;
   flex: 1;
-  margin-left: 8px;
   align-items: center;
   justify-content: center;
+  margin-left: -10px;
 }
 
 .nav__button-Home__searchbar__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   position: relative;
-  left: 4.5%;
-  margin-right: 16px;
+  transform: translateX(6.5%);
+  margin-right: 15px;
 }
 
 .searchbar {
