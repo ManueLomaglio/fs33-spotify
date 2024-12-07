@@ -6,8 +6,11 @@
     <title>Searchbar</title>
     <style>
       body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #000000;
-        margin-top: 100px;
+        height: 100vh;
       }
     </style>
     <link rel="stylesheet" href="../common.css" />
@@ -16,8 +19,8 @@
   <body>
     <div class="searchbar">
       <form action="#" role="searchbox" class="searchbar__form">
-        <div class="searchbar__magnifying-glass" title="">
-          <label for="searchbar">
+        <div class="searchbar__magnifying-glass">
+          <label for="searchbar" class="searchbar__magnifying-glass__label">
             <svg
               data-encore-id="icon"
               role="img"
@@ -43,7 +46,6 @@
           <div
             class="searchbar__search__icon-container"
             id="searchbar__search__icon-container"
-            title=""
           >
             <svg
               data-encore-id="icon"
@@ -59,7 +61,7 @@
           </div>
         </div>
 
-        <div class="searchbar__browse-album" title="">
+        <div class="searchbar__browse-album">
           <input
             type="checkbox"
             class="searchbar__browse-album__checkbox"
