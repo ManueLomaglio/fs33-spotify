@@ -21,6 +21,11 @@
   flex-grow: 1;
   gap: 8px;
   padding: 0 8px 8px;
+  overflow: hidden;
+}
+
+.create-playlist {
+  flex-shrink: 0;
 }
 
 .footer_links {
@@ -50,11 +55,41 @@
 }
 
 .politica_cookie :hover {
-    text-decoration: 0.8px solid underline;
-    text-underline-offset: 1.5px; 
+  text-decoration: 0.8px solid underline;
+  text-underline-offset: 1.5px;
 }
 
 .button-footer {
   margin-bottom: 32px;
   padding: 0 24px;
 }
+
+.sidebar_card:hover {
+  overflow-y: overlay;
+  padding-right: 0px;
+}
+
+.sidebar_card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar_card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar_card::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.sidebar_card::-webkit-scrollbar-thumb:hover {
+  background: #898989; /* Colore quando passi con il mouse */
+}
+
+.sidebar_card::-webkit-scrollbar-thumb:active {
+  background: #B8B8B8; /* Colore quando clicchi */
+}
+
+
+
