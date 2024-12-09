@@ -108,6 +108,7 @@
 .button_play_green > svg {
   height: 24px;
   width: 24px;
+  position: absolute;
 }
 .button_play_green:hover {
   background-color: #1ed760;
@@ -115,7 +116,25 @@
   transition: 33ms;
   cursor: pointer;
 }
-.button_home {
+
+.button_play_green::after {
+  content: "Riproduci ";
+  font-size: 14px;
+  position: relative;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  top: -50px;
+  opacity: 0;
+}
+.button_play_green:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.7s ;
+  
+}
+
+/* .button_home {
   width: 48px;
   height: 48px;
   border: 0px solid transparent;
@@ -133,22 +152,75 @@
   transform: scale(1.04);
   transition: 33ms;
 }
-.button_home:hover::after {
+.button_home::after {
   content: "Home";
   font-size: 14px;
-  position: absolute;
   background-color: #2a2a2a;
   color: white;
   padding: 8px;
   border-radius: 5px;
-  margin-top: 8px;
-  animation: showTooltip 0.5s ease-in-out forwards;
-  animation-delay: 1ms;
+  position: relative;
   opacity: 0;
-  z-index: 10;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -25px;
+  left: -12px;
+}
+.button_home:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.3s;
+  transform: translatey(3px);
+} */
+.button_home {
+  width: 48px;
+  height: 48px;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  background-color: #1f1f1f;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_home_checkbox {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.button_home_checkbox_container {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgb(179, 179, 179)'%3E%3Cpath d='M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z'%3E%3C/path%3E%3C/svg%3E");
+  position: absolute;
+}
+.button_home_checkbox:checked + .button_home_checkbox_container {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.button_home_checkbox_container:focus {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z'%3E%3C/path%3E%3C/svg%3E");
+}
+.button_home:hover {
+  transform: scale(1.04);
+  transition: 33ms;
+}
+.button_home::after {
+  content: "Home";
+  font-size: 14px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  position: relative;
+  opacity: 0;
+  bottom: -42px;
+  left: 0px;
+}
+.button_home:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.2s;
+  
 }
 
 .button_language {
@@ -189,7 +261,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
+  flex-wrap: nowrap;
   min-block-size: 40px;
   font-weight: 700;
   font-size: 16px;
@@ -201,34 +273,34 @@
   color: #fff;
 }
 
-.button_your_library > span > svg {
+.button_your_library svg {
+  fill: currentColor;
   height: 24px;
   width: 24px;
-  fill: #b3b3b3;
 }
 .button_your_library path {
   height: 20px;
   width: 20px;
+  fill: currentColor;
 }
-.button_your_library svg:hover {
-  fill: #fff;
-}
-.button_your_library:hover::after {
+
+.button_your_library::after {
   content: "Comprimi La tua libreria";
   font-size: 14px;
-  position: absolute;
+  position: relative;
   background-color: #2a2a2a;
   color: white;
   padding: 8px;
   border-radius: 5px;
-  margin-top: 8px;
-  animation: showTooltip 0.2s ease-in-out forwards;
-  animation-delay: 0,5s;
   opacity: 0;
-  z-index: 10;
-  top: 151%;
-  left: 62%;
-  transform: translateX(-50%);
+  top: -50px;
+  left: -165px;
+  white-space: nowrap;
+}
+.button_your_library:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.3s;
+  
 }
 
 .button_plus {
@@ -245,28 +317,31 @@
 .button_plus svg {
   height: 16px;
   width: 16px;
+  position: absolute;
 }
 
 .button_plus:hover {
   background-color: #1f1f1f;
   fill: #fff;
 }
-.button_plus:hover::after {
-  content: "Crea una nuova playlist o una cartella";
+.button_plus::after {
+  content: "Crea una playlist o una cartella";
   font-size: 14px;
-  position: absolute;
+  position: relative;
   background-color: #2a2a2a;
   color: white;
   padding: 8px;
   border-radius: 5px;
-  margin-top: 8px;
-  animation: showTooltip 0.2s ease-in-out forwards;
-  animation-delay: 0,5s;
+  top: -50px;
+  left: 0px;
   opacity: 0;
-  z-index: 10;
-  top: 169%;
-  left: 51%;
-  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.button_plus:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.3s;
+  ;
 }
 
 .button_instagram {
@@ -275,64 +350,75 @@
   border: 0 solid transparent;
   border-radius: 50%;
   background-color: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button_instagram svg {
   fill: #fff;
   height: 16px;
   width: 16px;
+  position: absolute;
 }
 .button_instagram:hover {
   background-color: rgb(114, 114, 114);
 }
-.button_instagram:hover::after {
+.button_instagram::after {
   content: "Instagram";
   font-size: 12px;
-  position: absolute;
+  position: relative;
   background-color: #fff;
   color: #000;
   padding: 4px;
   border: 1px solid black;
-opacity: 0;
-  animation: showTooltip 0.2s ease-in-out forwards;
-  animation-delay: 0,5s;
   z-index: 10;
-  top: 202%;
-  left: 58%;
-  transform: translateX(-50%);
+  top: 25px;
+  left: 35px;
+  opacity: 0;
 }
-
+.button_instagram:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.5s;
+  transform: translatey(3px);
+}
 .button_twitter {
   height: 40px;
   width: 40px;
   border: 0 solid transparent;
   border-radius: 50%;
   background-color: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button_twitter svg {
   fill: #fff;
   height: 16px;
   width: 16px;
+  position: absolute;
 }
 .button_twitter:hover {
   background-color: rgb(114, 114, 114);
 }
 
-.button_twitter:hover::after {
+.button_twitter::after {
   content: "Twitter";
   font-size: 12px;
-  position: absolute;
+  position: relative;
   background-color: #fff;
   color: #000;
   padding: 4px;
   border: 1px solid black;
-opacity: 0;
-  animation: showTooltip 0.2s ease-in-out forwards;
-  animation-delay: 0,5s;
+  opacity: 0;
   z-index: 10;
-  top: 222%;
-  left: 58%;
-  transform: translateX(-50%);
+  top: 20px;
+  left: 30px;
+}
+.button_twitter:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.5s;
+  transform: translatey(3px);
 }
 
 .button_facebook {
@@ -341,30 +427,37 @@ opacity: 0;
   border: 0 solid transparent;
   border-radius: 50%;
   background-color: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button_facebook svg {
   fill: #fff;
   height: 16px;
   width: 16px;
+  position: absolute;
 }
+
 .button_facebook:hover {
   background-color: rgb(114, 114, 114);
 }
-.button_facebook:hover::after {
+.button_facebook::after {
   content: "Facebook";
   font-size: 12px;
-  position: absolute;
+  position: relative;
   background-color: #fff;
   color: #000;
   padding: 4px;
   border: 1px solid black;
   opacity: 0;
-  animation: showTooltip 0.2s ease-in-out forwards;
-  animation-delay: 0,5s;
   z-index: 10;
-  top: 242%;
-  left: 58%;
-  transform: translateX(-50%);
+  bottom: -27px;
+  left: 35px;
+}
+.button_facebook:hover::after {
+  opacity: 1;
+  transition: all 0.1s 0.5s;
+  transform: translatey(3px);
 }
 @keyframes showTooltip {
   0% {
