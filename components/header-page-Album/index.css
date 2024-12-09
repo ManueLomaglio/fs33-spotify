@@ -1,0 +1,96 @@
+:root {
+  --color-text-white: #ffffff;
+  --color-text-gray: hsl(0deg 0% 100% / 70%);
+  --color-text-gray-second: rgb(255 255 255 / 70%);
+  --text-small-size: 0.875rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header__album-page__text-small-size {
+  font-size: var(--text-small-size);
+}
+
+.header__album-page__color__text__gray {
+  color: var(--color-text-gray);
+}
+
+.header__album-page__color__text__gray-second {
+  color: var(--color-text-gray-second);
+}
+
+#header__album-page {
+  display: flex;
+  gap: 1.2rem;
+  align-items: end;
+  height: fit-content;
+}
+
+#header__album-page__album-logo__container {
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#header__album-page__album-logo {
+  max-width: 232px;
+  max-height: 232px;
+}
+
+#header__album-page__info {
+  display: flex;
+  flex-direction: column;
+}
+
+#header__album-page__info > p:first-of-type {
+  color: var(--color-text-white);
+}
+
+#header__album-page__info > h1 {
+  font-size: 96px;
+  font-weight: 800;
+  color: var(--color-text-white);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+#header__album-page__info-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+#header__album-page__info-container > a {
+  color: var(--color-text-white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#header__album-page__info-container > a:hover {
+  text-decoration: underline;
+}
+
+#header__album-page__info-container__logo-spotify {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+#header__album-page__info-container > span {
+  margin: 0px 4px;
+  color: var(--color-text-gray-second);
+}
+
+#header__album-page__info-container__new-add {
+  width: 8px;
+  height: 8px;
+  background-color: #2e77d0;
+  border-radius: 50%;
+}
