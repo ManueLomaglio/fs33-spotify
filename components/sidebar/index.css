@@ -1,0 +1,95 @@
+.left-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  border-radius: 8px;
+  width: 420px;
+  height: 100vh;
+}
+
+.header_sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 8px;
+}
+
+.sidebar_card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+  padding: 0 8px 8px;
+  overflow: hidden;
+}
+
+.create-playlist {
+  flex-shrink: 0;
+}
+
+.footer_links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px 0;
+  padding: 0 24px;
+  line-height: 28px;
+}
+
+.footer_links a {
+  font-weight: 400;
+  font-size: 11px;
+  text-decoration: none;
+  color: #b3b3b3;
+  margin-right: 16px;
+}
+
+.politica_cookie {
+  width: 100%;
+  text-align: left;
+}
+
+.politica_cookie a {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.politica_cookie :hover {
+  text-decoration: 0.8px solid underline;
+  text-underline-offset: 1.5px;
+}
+
+.button-footer {
+  margin-bottom: 32px;
+  padding: 0 24px;
+}
+
+.sidebar_card:hover {
+  overflow-y: overlay;
+  padding-right: 0px;
+}
+
+.sidebar_card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar_card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar_card::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.sidebar_card::-webkit-scrollbar-thumb:hover {
+  background: #898989; /* Colore quando passi con il mouse */
+}
+
+.sidebar_card::-webkit-scrollbar-thumb:active {
+  background: #B8B8B8; /* Colore quando clicchi */
+}
+
+
+
