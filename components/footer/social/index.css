@@ -3,3 +3,9 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 /**heigh e width gestite da media query penso vada bene 100%**/}
+
+@media (min-width: 992px) {
+    .social_links{justify-content: none;
+      width: 20%;
+    }
+  }

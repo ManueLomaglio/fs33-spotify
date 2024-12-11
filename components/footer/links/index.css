@@ -51,7 +51,7 @@
     width: 20%;
   }
 }
-@media (min-width: 268px) {
+@media (min-width: 768px) {
   .footer_link_containers {
     width: 40%;
     margin-right: 24px;
