@@ -9,29 +9,88 @@
     <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body>
-    <section>
-      <div>
+  <body style="background-color: rgb(106, 41, 41); color: #b3b3b3">
+    <section id="albums_viral50">
+      <div id="first_row">
+        <div class="clm_1-2 rw_1-2 flex">
+          <p>#</p>
+        </div>
+        <div class="clm_2-3 rw_1-2 flex">
+          <p>Titolo</p>
+        </div>
+        <div class="clm_3-4 rw_1-2 flex">
+          <p>Album</p>
+        </div>
+        <div class="clm_4-5 rw_1-2 flex tag_30" id="clock">
+          <svg viewBox="0 0 16 16" class="basic_features">
+            <path
+              d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+            ></path>
+            <path
+              d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H7.25V4A.75.75 0 0 1 8 3.25z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="container_viral50">
         <!--DIV SONG-->
-        <div>
-          <!--Numero-->
-          <p></p>
-        </div>
-        <div>
-          <!--Title-->
-          <img src="Images_viral50/Icona APT.jpeg" alt="Icona_album_APT." />
-          <p class="font_small_bold">APT.</p>
-          <p>ROSÉ, Bruno Mars</p>
-        </div>
-        <div>
-          <!--Album-->
-          <p>APT.</p>
-        </div>
-        <div>
-          <!--Duration-->
-          <button></button>
-          <p>2:49</p>
-          <button></button>
+        <div class="container clm_1-5 rw_1-2">
+          <div class="clm_1-2 flex center">
+            <!--Numero-->
+            <p class="song_position">1</p>
+            <span>
+              <svg viewBox="0 0 24 24" class="play_icon basic_features">
+                <path
+                  d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <div class="clm_2-3 flex">
+            <!--Title-->
+            <img
+              src="Images_viral50/Icona APT.jpeg"
+              alt="Icona_album_APT."
+              class="album_cover"
+            />
+            <div>
+              <p class="bold_white">APT.</p>
+              <span class="font_small hover_white_underlined tag_43 song_1"
+                >ROSÉ,</span
+              >
+              <span class="font_small hover_white_underlined tag_43 song_1"
+                >Bruno Mars</span
+              >
+            </div>
+          </div>
+          <div class="clm_3-4 flex">
+            <!--Album-->
+            <p class="font_small hover_white_underlined tag_43" id="apt">
+              APT.
+            </p>
+          </div>
+          <div class="clm_4-5 flex duration">
+            <!--Duration-->
+            <button class="opacity tag_30 add">
+              <svg viewBox="0 0 16 16" class="basic_features">
+                <path
+                  d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                ></path>
+                <path
+                  d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"
+                ></path>
+              </svg>
+            </button>
+            <p class="font_small">2:49</p>
+            <button class="opacity tag_43" id="more_1">
+              <svg viewBox="0 0 16 16" class="basic_features">
+                <path
+                  d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
