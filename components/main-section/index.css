@@ -1,0 +1,136 @@
+.main-container {
+  background-color: #121212;
+  border-radius: 8px;
+  padding-bottom: 32px;
+  height: 100vh;
+  overflow: auto; /* Usa overflow auto per abilitare la scrollbar */
+  position: relative; /* Transizione per l'overflow */
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-container {
+  padding-top: 40px;
+}
+
+.footer-main {
+  margin-top: 32px;
+  padding-top: 8px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 40px;
+}
+
+/* Personalizzazione della scrollbar */
+.main-container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: hsla(0, 0%, 100%, 0);
+}
+/* Thumb della scrollbar */
+.main-container:hover::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 100%, 0.3);
+}
+
+/* Quando l'utente passa sopra il contenitore */
+.main-container:hover::-webkit-scrollbar {
+  width: 12px; /* Mostra la scrollbar quando il mouse è sopra */
+}
+
+/* Hover sul thumb della scrollbar */
+.main-container::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.5); /* Colore più scuro quando hoverato */
+}
+
+.main-container::-webkit-scrollbar-thumb:active {
+  background: hsla(0, 0%, 100%, 0.7); /* Colore più scuro quando hoverato */
+}
+
+.card-artisti__img__quadra,
+.card-artisti__img__quadra img {
+  border-radius: 6px;
+}
+
+.card-artisti__description__item_2 {
+  width: fit-content;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.card-artisti__description__item_2 a:hover {
+  text-decoration: underline;
+}
+
+.button_play_green::after {
+  pointer-events: none;
+}
+
+.button_play_green[data-index="ANNA"]::after {
+  content: "Riproduci ANNA";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Geolier"]::after {
+  content: "Riproduci Geolier";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Lazza"]::after {
+  content: "Riproduci Lazza";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Tedua"]::after {
+  content: "Riproduci Tedua";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Tony Effe"]::after {
+  content: "Riproduci Tony Effe";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Cesare Cremonini"]::after {
+  content: "Riproduci Cesare Cremonini";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Ghali"]::after {
+  content: "Riproduci Ghali";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Vera Baddie"]::after {
+  content: "Riproduci VERA BADDIE di ANNA";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Tutta vita"]::after {
+  content: "Riproduci TUTTA VITA di Olly, JVLI";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Containers"]::after {
+  content: "Riproduci Containers di Night Skinny";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Dio lo sa"]::after {
+  content: "Riproduci DIO LO SA di Geolier";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Locura"]::after {
+  content: "Riproduci LOCURA di Lazza";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Milano Angels"]::after {
+  content: "Riproduci Milano Angels di Shiva";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Esci dal tunnel"]::after {
+  content: "Riproduci ESCI DAL TUNNEL di Simba La Rue";
+  white-space: nowrap;
+}

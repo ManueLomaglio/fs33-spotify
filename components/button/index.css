@@ -130,8 +130,7 @@
 }
 .button_play_green:hover::after {
   opacity: 1;
-  transition: all 0.1s 0.7s ;
-  
+  transition: all 0.1s 0.7s;
 }
 
 /* .button_home {
@@ -220,7 +219,6 @@
 .button_home:hover::after {
   opacity: 1;
   transition: all 0.1s 0.2s;
-  
 }
 
 .button_language {
@@ -300,7 +298,6 @@
 .button_your_library:hover::after {
   opacity: 1;
   transition: all 0.1s 0.3s;
-  
 }
 
 .button_plus {
@@ -341,7 +338,6 @@
 .button_plus:hover::after {
   opacity: 1;
   transition: all 0.1s 0.3s;
-  ;
 }
 
 .button_instagram {
