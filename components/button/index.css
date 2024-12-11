@@ -76,7 +76,7 @@
 .button_new_playlist:hover {
   background-color: #f0f0f0;
   transform: scale(1.04);
-  transition: 0.3s;
+  transition: 0s;
   cursor: pointer;
 }
 .button_browse_podcast {
@@ -97,7 +97,7 @@
 .button_browse_podcast:hover {
   background-color: #f0f0f0;
   transform: scale(1.04);
-  transition: 0.3s;
+  transition: 0s;
   cursor: pointer;
 }
 .button_play_green {
@@ -240,10 +240,11 @@
   cursor: pointer;
   block-size: 40px;
   gap: 14px;
+  transition: 0.5s;
 }
 .button_your_library:hover {
   color: #fff;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .button_your_library svg {
