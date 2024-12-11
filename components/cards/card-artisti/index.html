@@ -18,10 +18,8 @@
       body {
         display: inline-flex;
         height: 100vh;
-        width: 100%;
-        align-items: center;
+        width: 200px;
         flex-direction: column;
-        justify-content: center;
         background-color: #121212;
       }
     </style>
@@ -37,7 +35,7 @@
           />
         </div>
         <div class="card-artisti__play-button">
-          <button class="button_play_green">
+          <button class="button_play_green" data-index="ANNA">
             <svg>
               <path
                 d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -50,7 +48,66 @@
         <div class="card-artisti__description__name">
           <p title="ANNA">ANNA</p>
         </div>
-        <div class="card-artisti__description__item"><p>Artista</p></div>
+        <div class="card-artisti__description__item">
+          <p>Artista</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-artisti card-artisti--hover">
+      <div class="card-artisti__img-play-container">
+        <div class="card-artisti__img card-artisti__img__quadra">
+          <img
+            src="../../../assets/img/Vera Baddie.jpeg"
+            alt="Immagine di Anna"
+            draggable="false"
+          />
+        </div>
+        <div class="card-artisti__play-button">
+          <button class="button_play_green" data-index="Vera Baddie">
+            <svg>
+              <path
+                d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="card-artisti__description">
+        <div class="card-artisti__description__name">
+          <p title="VERA BADDIE">VERA BADDIE</p>
+        </div>
+        <div
+          class="card-artisti__description__item card-artisti__description__item_2"
+        >
+          <a>ANNA</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-artisti card-artisti--hover">
+      <div class="card-artisti__img-play-container">
+        <div class="card-artisti__img card-artisti__img__quadra">
+          <img
+            src="../../../assets/img/brunomars radio.jpg"
+            alt="Immagine di Brunomars"
+            draggable="false"
+          />
+        </div>
+        <div class="card-artisti__play-button">
+          <button class="button_play_green" data-index="Bruno Mars">
+            <svg>
+              <path
+                d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="card-artisti__description">
+        <div
+          class="card-artisti__description__item card-artisti__description__item_no-hover"
+        >
+          <p>Con Maroon 5, Katy Perry, One Direction e molti altri</p>
+        </div>
       </div>
     </div>
   </body>
