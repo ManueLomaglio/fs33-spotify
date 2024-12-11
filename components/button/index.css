@@ -216,7 +216,7 @@
 }
 .button_language:hover {
   transform: scale(1.04);
-  transition: 0.3s;
+  transition: 0s;
   border-color: #fff;
 }
 .button_language > span > svg {
