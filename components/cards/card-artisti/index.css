@@ -17,6 +17,7 @@
   padding-top: 100%; /* Questo crea un contenitore quadrato */
   overflow: hidden;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .card-artisti__img img {
@@ -38,6 +39,12 @@
   transform: translateY(8px);
   opacity: 0;
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  z-index: 2;
+}
+
+.card-artisti__img__quadra,
+.card-artisti__img__quadra img {
+  border-radius: 6px;
 }
 
 .card-artisti__description {
@@ -62,6 +69,23 @@
   font-size: 0.875rem;
 }
 
+.card-artisti__description__item_2 {
+  width: fit-content;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.card-artisti__description__item_2 a:hover {
+  text-decoration: underline;
+}
+
+.card-artisti__description__item_no-hover {
+  display: -webkit-box; /* Necessario per abilitare line clamping */
+  -webkit-box-orient: vertical; /* Specifica l'orientamento del contenitore */
+  -webkit-line-clamp: 2; /* Numero massimo di righe visibili */
+  overflow: hidden; /* Nasconde il contenuto in eccesso */
+}
+
 .card-artisti--hover:hover {
   background-color: #1f1f1f;
   cursor: pointer;
@@ -78,4 +102,19 @@
 .card-artisti__description__name p:hover {
   text-decoration: underline;
   display: inline-block;
+}
+
+.button_play_green[data-index="ANNA"]::after {
+  content: "Riproduci ANNA";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Vera Baddie"]::after {
+  content: "Riproduci VERA BADDIE di ANNA";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Bruno Mars"]::after {
+  content: "Riproduci Radio di Bruno Mars";
+  white-space: nowrap;
 }

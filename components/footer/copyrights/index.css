@@ -1,0 +1,26 @@
+.footer_copyright_wrapper {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_copyright {
+  padding-right: 16px;
+}
+
+.footer_copyright > p {
+  width: fit-content;
+  color: #b3b3b3;
+  cursor: text;
+}
+.footer_copyright_text {
+  color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  .footer_copyright_wrapper {
+    flex-flow: row;
+    align-items: start;
+  }
+}
