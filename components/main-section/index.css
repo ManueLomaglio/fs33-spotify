@@ -5,6 +5,7 @@
   height: 100vh;
   overflow: auto; /* Usa overflow auto per abilitare la scrollbar */
   position: relative; /* Transizione per l'overflow */
+  overflow-x: hidden;
 }
 
 .sections-container {
@@ -50,87 +51,62 @@
   background: hsla(0, 0%, 100%, 0.7); /* Colore più scuro quando hoverato */
 }
 
-.card-artisti__img__quadra,
-.card-artisti__img__quadra img {
-  border-radius: 6px;
-}
-
-.card-artisti__description__item_2 {
-  width: fit-content;
-  display: inline-flex;
-  text-decoration: none;
-}
-
-.card-artisti__description__item_2 a:hover {
-  text-decoration: underline;
-}
-
-.button_play_green::after {
-  pointer-events: none;
-}
-
-.button_play_green[data-index="ANNA"]::after {
-  content: "Riproduci ANNA";
-  white-space: nowrap;
-}
-.button_play_green[data-index="Geolier"]::after {
-  content: "Riproduci Geolier";
-  white-space: nowrap;
-}
-.button_play_green[data-index="Lazza"]::after {
-  content: "Riproduci Lazza";
-  white-space: nowrap;
-}
-.button_play_green[data-index="Tedua"]::after {
-  content: "Riproduci Tedua";
-  white-space: nowrap;
-}
-.button_play_green[data-index="Tony Effe"]::after {
-  content: "Riproduci Tony Effe";
+.button_play_green[data-index="Globale"]::after {
+  content: "Riproduci Brani top Globale";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Cesare Cremonini"]::after {
-  content: "Riproduci Cesare Cremonini";
+.button_play_green[data-index="Stati Uniti"]::after {
+  content: "Riproduci Brani top Stati Uniti";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Ghali"]::after {
-  content: "Riproduci Ghali";
+.button_play_green[data-index="50 Global"]::after {
+  content: "Riproduci Top 50 Global";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Vera Baddie"]::after {
-  content: "Riproduci VERA BADDIE di ANNA";
+.button_play_green[data-index="50 USA"]::after {
+  content: "Riproduci Top 50 Stati Uniti";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Tutta vita"]::after {
-  content: "Riproduci TUTTA VITA di Olly, JVLI";
+.button_play_green[data-index="Viral Global"]::after {
+  content: "Riproduci Viral 50 Globale";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Containers"]::after {
-  content: "Riproduci Containers di Night Skinny";
+.button_play_green[data-index="Viral USA"]::after {
+  content: "Riproduci Viral 50 Stati Uniti";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Dio lo sa"]::after {
-  content: "Riproduci DIO LO SA di Geolier";
+.button_play_green[data-index="Big-on"]::after {
+  content: "Riproduci big on the internet";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Locura"]::after {
-  content: "Riproduci LOCURA di Lazza";
+.button_play_green[data-index="Calming"]::after {
+  content: "Riproduci Calming Acoustic";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Milano Angels"]::after {
-  content: "Riproduci Milano Angels di Shiva";
+.button_play_green[data-index="Chillhop"]::after {
+  content: "Riproduci Chillhop";
   white-space: nowrap;
 }
 
-.button_play_green[data-index="Esci dal tunnel"]::after {
-  content: "Riproduci ESCI DAL TUNNEL di Simba La Rue";
+.button_play_green[data-index="Jazz"]::after {
+  content: "Riproduci Jazz in the Background";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Soft-pop"]::after {
+  content: "Riproduci Soft Pop Hits";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Viral-hits"]::after {
+  content: "Riproduci Viral Hits";
   white-space: nowrap;
 }

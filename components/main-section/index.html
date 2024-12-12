@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="../button/index.css" />
     <link rel="stylesheet" href="../cards/card-artisti/index.css" />
     <link rel="stylesheet" href="../section-artisti/index.css" />
     <link rel="stylesheet" href="../footer/footer links/index.css" />
     <link rel="stylesheet" href="../footer/footer social/index.css" />
     <link rel="stylesheet" href="../footer/footer copyrights/index.css" />
-    <link rel="stylesheet" href="./index.css" />
     <style>
       body {
         overflow: hidden;
@@ -481,12 +481,12 @@
                 <div class="card-artisti__img card-artisti__img__quadra">
                   <img
                     src="../../assets/img/brunomars radio.jpg"
-                    alt="Immagine di Anna"
+                    alt="Immagine di Brunomars"
                     draggable="false"
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Bruno Mars">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -496,39 +496,10 @@
                 </div>
               </div>
               <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="ANNA">
-                  <p>ANNA</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img card-artisti__img__quadra">
-                  <img
-                    src="../../assets/img/xo xo radio.jpg"
-                    alt="Immagine di The Weekend"
-                    draggable="false"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Geolier">
-                  <p>Geolier</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Con Maroon 5, Katy Perry, One Direction e molti altri</p>
                 </div>
               </div>
             </div>
@@ -542,7 +513,7 @@
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Coldplay">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -552,11 +523,37 @@
                 </div>
               </div>
               <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Lazza">
-                  <p>Lazza</p>
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Con Harry Styles, Maroon 5, Keane e molti altri</p>
                 </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/xo xo radio.jpg"
+                    alt="Immagine di The Weeknd"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="The Weeknd">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Con SZA, Katy Perry, Doja Cat e molti altri</p>
                 </div>
               </div>
             </div>
@@ -566,10 +563,11 @@
                   <img
                     src="../../assets/img/annalisa radio.jpg"
                     alt="Immagine di Annalisa"
+                    draggable="false"
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Annalisa">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -579,11 +577,10 @@
                 </div>
               </div>
               <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Tedua">
-                  <p>Tedua</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Con Elodie, Alfa, Rose Villain e molti altri</p>
                 </div>
               </div>
             </div>
@@ -593,10 +590,11 @@
                   <img
                     src="../../assets/img/calcutta.jpg"
                     alt="Immagine di Calcutta"
+                    draggable="false"
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Calcutta">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -606,11 +604,10 @@
                 </div>
               </div>
               <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Tony Effe">
-                  <p>Tony Effe</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Con Gazzelle, Frah Quintale, Franco126 e molti altri</p>
                 </div>
               </div>
             </div>
@@ -620,10 +617,11 @@
                   <img
                     src="../../assets/img/cremoni radio.jpg"
                     alt="Immagine di Cremonini"
+                    draggable="false"
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Cremonini">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -634,13 +632,12 @@
               </div>
               <div class="card-artisti__description">
                 <div
-                  class="card-artisti__description__name"
-                  title="Cesare Cremonini"
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
                 >
-                  <p>Cesare Cremonini</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+                  <p>
+                    Con Lùnapop, Pinguini Tattici Nucleari, Negramaro e molti
+                    altri
+                  </p>
                 </div>
               </div>
             </div>
@@ -650,187 +647,11 @@
                   <img
                     src="../../assets/img/dalla radio.jpg"
                     alt="Immagine di Lucio Dalla"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Ghali">
-                  <p>Ghali</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-artisti">
-          <div class="section-artisti__header">
-            <div class="section-artisti__header__title">
-              <a href="#">Artisti più popolari</a>
-            </div>
-            <div class="section-artisti__header__show-all">
-              <a href="#">Mostra tutto</a>
-            </div>
-          </div>
-          <div class="container__card-artisti">
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img card-artisti__img__quadra">
-                  <img
-                    src="Anna - Artista.jpeg"
-                    alt="Immagine di Anna"
                     draggable="false"
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="ANNA">
-                  <p>ANNA</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img card-artisti__img__quadra">
-                  <img
-                    src="../../assets/img/Geolier - Artista.jpeg"
-                    alt="Immagine di Geolier"
-                    draggable="false"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Geolier">
-                  <p>Geolier</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img card-artisti__img__quadra">
-                  <img
-                    src="../../assets/img/Lazza - Artista.jpeg"
-                    alt="Immagine di Lazza"
-                    draggable="false"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Lazza">
-                  <p>Lazza</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img card-artisti__img__quadra">
-                  <img
-                    src="../../assets/img/Tedua - Artista.jpeg"
-                    alt="Immagine di Tedua"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Tedua">
-                  <p>Tedua</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img card-artisti__img__quadra">
-                  <img
-                    src="../../assets/img/TonyEffe - Artista.jpeg"
-                    alt="Immagine di Tony Effe"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Tony Effe">
-                  <p>Tony Effe</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img card-artisti__img__quadra">
-                  <img
-                    src="../../assets/img/Cesare-Cremonini - Artista.jpeg"
-                    alt="Immagine di Cesare Cremonini"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Lucio Dalla">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -841,13 +662,11 @@
               </div>
               <div class="card-artisti__description">
                 <div
-                  class="card-artisti__description__name"
-                  title="Cesare Cremonini"
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
                 >
-                  <p>Cesare Cremonini</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+                  <p>
+                    Con Rino Gaetano, Vasco Rossi, Edoardo Bennato e molti altri
+                  </p>
                 </div>
               </div>
             </div>
@@ -856,161 +675,21 @@
         <section class="section-artisti">
           <div class="section-artisti__header">
             <div class="section-artisti__header__title">
-              <a href="#">Artisti più popolari</a>
-            </div>
-            <div class="section-artisti__header__show-all">
-              <a href="#">Mostra tutto</a>
+              <a href="#">Classifiche in primo piano</a>
             </div>
           </div>
           <div class="container__card-artisti">
             <div class="card-artisti card-artisti--hover">
               <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img">
+                <div class="card-artisti__img card-artisti__img__quadra">
                   <img
-                    src="Anna - Artista.jpeg"
-                    alt="Immagine di Anna"
+                    src="../../assets/img/preferiti global.jpg"
+                    alt="Immagine di Preferiti Globale"
                     draggable="false"
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="ANNA">
-                  <p>ANNA</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img">
-                  <img
-                    src="../../assets/img/Geolier - Artista.jpeg"
-                    alt="Immagine di Geolier"
-                    draggable="false"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Geolier">
-                  <p>Geolier</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img">
-                  <img
-                    src="../../assets/img/Lazza - Artista.jpeg"
-                    alt="Immagine di Lazza"
-                    draggable="false"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Lazza">
-                  <p>Lazza</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img">
-                  <img
-                    src="../../assets/img/Tedua - Artista.jpeg"
-                    alt="Immagine di Tedua"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Tedua">
-                  <p>Tedua</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img">
-                  <img
-                    src="../../assets/img/TonyEffe - Artista.jpeg"
-                    alt="Immagine di Tony Effe"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
-                    <svg>
-                      <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Tony Effe">
-                  <p>Tony Effe</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-artisti card-artisti--hover">
-              <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img">
-                  <img
-                    src="../../assets/img/Cesare-Cremonini - Artista.jpeg"
-                    alt="Immagine di Cesare Cremonini"
-                  />
-                </div>
-                <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Globale">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -1021,26 +700,26 @@
               </div>
               <div class="card-artisti__description">
                 <div
-                  class="card-artisti__description__name"
-                  title="Cesare Cremonini"
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
                 >
-                  <p>Cesare Cremonini</p>
-                </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+                  <p>
+                    Globale: il tuo aggiornamento settimanale sui brani più
+                    ascoltati in questo momento.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="card-artisti card-artisti--hover">
               <div class="card-artisti__img-play-container">
-                <div class="card-artisti__img">
+                <div class="card-artisti__img card-artisti__img__quadra">
                   <img
-                    src="../../assets/img/Ghali - Artista.jpeg"
-                    alt="Immagine di Ghali"
+                    src="../../assets/img/preferiti us.jpg"
+                    alt="Immagine di Preferiti Stati Uniti"
+                    draggable="false"
                   />
                 </div>
                 <div class="card-artisti__play-button">
-                  <button class="button_play_green">
+                  <button class="button_play_green" data-index="Stati Uniti">
                     <svg>
                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
@@ -1050,11 +729,337 @@
                 </div>
               </div>
               <div class="card-artisti__description">
-                <div class="card-artisti__description__name" title="Ghali">
-                  <p>Ghali</p>
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>
+                    Stati Uniti: il tuo aggiornamento settimanale sui brani più
+                    ascoltati in questo momento.
+                  </p>
                 </div>
-                <div class="card-artisti__description__item">
-                  <p>Artista</p>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/top 50 global.jpg"
+                    alt="Immagine di top 50 Global"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="50 Global">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>
+                    Globale: il tuo aggiornamento quotidiano sui brani più
+                    ascoltati in questo momento.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/top50 us.jpg"
+                    alt="Immagine di top 50 USA"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="50 USA">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>
+                    Stati Uniti: il tuo aggiornamento quotidiano sui brani più
+                    ascoltati in questo momento.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/viral 50 global.jpg"
+                    alt="Immagine di Viral 50 Global"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Viral Global">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>
+                    Globale: il tuo aggiornamento quotidiano sui brani più
+                    ascoltati in questo momento.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/viral us.jpg"
+                    alt="Immagine di Viral 50 USA"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Viral USA">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>
+                    Stati Uniti: il tuo aggiornamento quotidiano sui brani più
+                    ascoltati in questo momento.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-artisti">
+          <div class="section-artisti__header">
+            <div class="section-artisti__header__title">
+              <a href="#">Playlist from our editors</a>
+            </div>
+            <div class="section-artisti__header__show-all">
+              <a href="#">Mostra tutto</a>
+            </div>
+          </div>
+          <div class="container__card-artisti">
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/Bigon-The-Internet - Editor Playlist.jpeg"
+                    alt="Immagine di Playlist Big on the internet"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Big-on">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Di Spotify</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/Calming-Acoustic - Editor Playlist.jpeg"
+                    alt="Immagine di Playlist Calmint Acoustic"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Calming">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Keep calm with instrumental acoustic tracks.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/Chillhop - Editor Playlist.jpeg"
+                    alt="Immagine di Playlist Chillhop"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Chillhop">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>
+                    Blissed out beats and head nodding grooves - Relax, study
+                    and vibe.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/Jazz-In-The-Background - Editor Playlist.jpeg"
+                    alt="Immagine di Playlist Jazz in the background"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Jazz">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Soft instrumental Jazz for all your activities.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/Phonk - Editor Playlist.jpeg"
+                    alt="Immagine di Playlist Phonk"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Phonk">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>The beat of your drift.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/Soft-Pop-Hits - Editor Playlist.jpeg"
+                    alt="Immagine di Playlist Soft Pop Hits"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Soft-pop">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Warm familiar pop you know and love. Cover: Adele.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-artisti card-artisti--hover">
+              <div class="card-artisti__img-play-container">
+                <div class="card-artisti__img card-artisti__img__quadra">
+                  <img
+                    src="../../assets/img/ViralHits - Editor Playlist.jpeg"
+                    alt="Immagine di Playlist Viral Hits"
+                    draggable="false"
+                  />
+                </div>
+                <div class="card-artisti__play-button">
+                  <button class="button_play_green" data-index="Viral-hits">
+                    <svg>
+                      <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-artisti__description">
+                <div
+                  class="card-artisti__description__item card-artisti__description__item_no-hover"
+                >
+                  <p>Viral, trending and taking off.</p>
                 </div>
               </div>
             </div>
