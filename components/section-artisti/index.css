@@ -49,6 +49,102 @@
   grid-template-columns: repeat(7, minmax(var(--card-min-width), 1fr));
 }
 
+.button_play_green[data-index="ANNA"]::after {
+  content: "Riproduci ANNA";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Geolier"]::after {
+  content: "Riproduci Geolier";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Lazza"]::after {
+  content: "Riproduci Lazza";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Tedua"]::after {
+  content: "Riproduci Tedua";
+  white-space: nowrap;
+}
+.button_play_green[data-index="Tony Effe"]::after {
+  content: "Riproduci Tony Effe";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Cesare Cremonini"]::after {
+  content: "Riproduci Cesare Cremonini";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Ghali"]::after {
+  content: "Riproduci Ghali";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Vera Baddie"]::after {
+  content: "Riproduci VERA BADDIE di ANNA";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Tutta vita"]::after {
+  content: "Riproduci TUTTA VITA di Olly, JVLI";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Containers"]::after {
+  content: "Riproduci Containers di Night Skinny";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Dio lo sa"]::after {
+  content: "Riproduci DIO LO SA di Geolier";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Locura"]::after {
+  content: "Riproduci LOCURA di Lazza";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Milano Angels"]::after {
+  content: "Riproduci Milano Angels di Shiva";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Esci dal tunnel"]::after {
+  content: "Riproduci ESCI DAL TUNNEL di Simba La Rue";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Coldplay"]::after {
+  content: "Riproduci Radio di Coldplay";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="The Weeknd"]::after {
+  content: "Riproduci Radio di The Weeknd";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Annalisa"]::after {
+  content: "Riproduci Radio di Annalisa";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Calcutta"]::after {
+  content: "Riproduci Radio di Calcutta";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Cremonini"]::after {
+  content: "Riproduci Radio di Cesare Cremonini";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Lucio Dalla"]::after {
+  content: "Riproduci Radio di Lucio Dalla";
+  white-space: nowrap;
+}
+
 /* Quando lo schermo è più piccolo di 1400px, mostra 6 colonne */
 @media (max-width: 1400px) {
   .container__card-artisti .card-artisti:nth-child(n + 7) {
