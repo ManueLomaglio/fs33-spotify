@@ -4,7 +4,6 @@ body {
 .actionbar-container {
   display: flex;
   align-items: center;
-  flex-direction: row;
   padding: 16px;
   width: 100%;
 }
@@ -15,26 +14,20 @@ body {
   margin-right: 24px;
 }
 
-.button_save_in_your_libray {
-  fill: rgb(179, 179, 179);
-  width: 32px;
-  height: 32px;
-  margin: 0px 16px 0px 0px;
-  padding: 12px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: none;
-  border: none;
+.button_other_options, .button_save_in_your_library, .button_list  {
+  background-color: transparent;
 }
 
 .button_other_options {
+  flex-grow: 1;
+}
+
+.button_other_options svg{
     display: flex;
     align-items: center;
     fill: hsla(0, 0%, 100%, 0.7);
     height: 32px;
     padding-inline: 8px 8px;
-    background-color: transparent;
 }
 
 .button_save_in_your_library svg {
@@ -43,7 +36,6 @@ body {
     fill: hsla(0, 0%, 100%, 0.7);
     height: 32px;
     padding-inline: 8px 8px;
-    background-color: transparent;
 }
 
 
@@ -55,6 +47,7 @@ body {
   color: hsla(0, 0%, 100%, 0.7);
   height: 32px;
   padding-inline: 8px 8px;
+  gap: 8px;
 }
 
 .button_list svg{
@@ -63,8 +56,4 @@ body {
   background-color: transparent;
   fill: hsla(0, 0%, 100%, 0.7);
   height: 16px;
-  padding-inline: 8px 8px;
-  flex-grow: 1;
 }
-
-
