@@ -4,10 +4,11 @@ body {
   width: 100%;
   display: grid;
   height: 100vh;
-  overflow: hidden;
   grid-template-areas:
     "nav nav nav" "sidebar main-view main-view"
     "anteprima anteprima anteprima";
+  gap: 8px;
+  padding: 8px;
 }
 
 .navbar {

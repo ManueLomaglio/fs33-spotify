@@ -2,7 +2,6 @@
   background-color: #121212;
   border-radius: 8px;
   padding-bottom: 32px;
-  height: 100vh;
   overflow: auto; /* Usa overflow auto per abilitare la scrollbar */
   position: relative; /* Transizione per l'overflow */
   overflow-x: hidden;

@@ -3,8 +3,9 @@
   flex-direction: column;
   background: #121212;
   border-radius: 8px;
-  width: 420px;
-  height: 100vh;
+  min-width: calc(280 * 1px);
+  max-width: 420px;
+  height: 100%;
 }
 
 .header_sidebar {
@@ -18,10 +19,9 @@
 .sidebar_card {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   gap: 8px;
   padding: 0 8px 8px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .create-playlist {
@@ -33,7 +33,6 @@
   flex-wrap: wrap;
   margin: 32px 0;
   padding: 0 24px;
-  line-height: 28px;
 }
 
 .footer_links a {
@@ -80,7 +79,7 @@
 .sidebar_card::-webkit-scrollbar-thumb {
   background: #5a5a5a;
   border-radius: 10px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .sidebar_card::-webkit-scrollbar-thumb:hover {
