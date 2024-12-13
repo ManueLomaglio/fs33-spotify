@@ -1,0 +1,70 @@
+body {
+  background-color: #121212;
+}
+.actionbar-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 16px;
+  width: 100%;
+}
+
+.button_play_green {
+  width: 56px;
+  height: 56px;
+  margin-right: 24px;
+}
+
+.button_save_in_your_libray {
+  fill: rgb(179, 179, 179);
+  width: 32px;
+  height: 32px;
+  margin: 0px 16px 0px 0px;
+  padding: 12px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  border: none;
+}
+
+.button_other_options {
+    display: flex;
+    align-items: center;
+    fill: hsla(0, 0%, 100%, 0.7);
+    height: 32px;
+    padding-inline: 8px 8px;
+    background-color: transparent;
+}
+
+.button_save_in_your_library svg {
+    display: flex;
+    align-items: center;
+    fill: hsla(0, 0%, 100%, 0.7);
+    height: 32px;
+    padding-inline: 8px 8px;
+    background-color: transparent;
+}
+
+
+
+.button_list {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: hsla(0, 0%, 100%, 0.7);
+  height: 32px;
+  padding-inline: 8px 8px;
+}
+
+.button_list svg{
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  fill: hsla(0, 0%, 100%, 0.7);
+  height: 16px;
+  padding-inline: 8px 8px;
+  flex-grow: 1;
+}
+
+
