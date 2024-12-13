@@ -1,25 +1,28 @@
+body {
+  display: flex;
+}
 .footer_top_links {
   display: flex;
   flex-flow: column wrap;
-  flex-direction: row;
 }
 
 .footer_link_containers {
-  /** flex: 1 1 50%; dimensioni dei div da dipendenti dalle mediaquery**/
-  flex-grow: 1;
   margin-bottom: 32px;
-  
+  width: fit-content;
 }
 
 .footer_link_containers ul {
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
+  
 }
 .footer_link_containers ul:first-child {
   color: #fff;
   font-size: 16px;
   font-weight: 700;
   cursor: text;
+  display: block;
 }
 
 .footer_links a {
@@ -29,9 +32,13 @@
   color: #b3b3b3;
   text-decoration: none;
   cursor: pointer;
+  width: fit-content;
+  display: block;
 }
 .footer_links a span {
   padding: 0px 0px 8px;
+  width: auto;
+  display: block;
 }
 
 @media (min-width: 992px) {
@@ -47,7 +54,7 @@
 }
 
 @media (min-width: 992px) {
-  .footer_link_containers{
+  .footer_link_containers {
     width: 20%;
   }
 }
@@ -57,4 +64,3 @@
     margin-right: 24px;
   }
 }
-

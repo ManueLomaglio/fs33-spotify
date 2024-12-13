@@ -1,11 +1,19 @@
-.social_links{ margin-bottom: 40px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-/**heigh e width gestite da media query penso vada bene 100%**/}
+.social_links_wrapper {
+  margin-bottom: 40px;
+  display: inline-flex;
+}
+.social_links {
+  padding-right: 16px;
+  width: auto;
+  height: fit-content;
+}
+.button.facebook {
+  margin-right: 0px;
+}
 
 @media (min-width: 992px) {
-    .social_links{justify-content: none;
-      width: 20%;
-    }
+  .social_links {
+    justify-content: none;
+    width: 20%;
   }
+}
