@@ -3,9 +3,8 @@
   flex-direction: column;
   background: #121212;
   border-radius: 8px;
-  min-width: calc(280 * 1px);
+  min-width: 280px;
   max-width: 420px;
-  height: 100%;
 }
 
 .header_sidebar {
