@@ -1,0 +1,17 @@
+@import url(../../components/common.css);
+@import url(../../components/anteprima/index.css);
+@import url(../../components/button/index.css);
+@import url(../../components/cards/card-artisti/index.css);
+@import url(../../components/cards/card_album/card_album.css);
+@import url(../../components/cards/card_sidebar/card_sidebar.css);
+@import url(../../components/footer/links/index.css);
+@import url(../../components/footer/copyrights/index.css);
+@import url(../../components/footer/social/index.css);
+@import url(../../components/footer/layout/index.css);
+@import url(../../components/header-page-Album/index.css);
+@import url(../../components/navbar/index.css);
+@import url(../../components/searchbar/index.css);
+@import url(../../components/section-artisti/index.css);
+@import url(../../components/sidebar/index.css);
+@import url(home.css);
+@import url(second-page.css);
