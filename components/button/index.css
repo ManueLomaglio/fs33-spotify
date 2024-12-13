@@ -32,7 +32,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .button_subscribe_free:hover {
   transform: scale(1.04);
@@ -50,7 +49,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .button_subscribe:hover {
   transform: scale(1.04);
@@ -71,7 +69,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .button_new_playlist:hover {
   background-color: #f0f0f0;
@@ -109,6 +106,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 .button_play_green > svg {
   height: 24px;
@@ -135,6 +133,7 @@
   opacity: 0;
   text-align: center;
   vertical-align: baseline;
+  pointer-events: none;
 }
 .button_play_green:hover::after {
   opacity: 1;
@@ -191,6 +190,7 @@
   left: 0px;
   text-align: center;
   vertical-align: baseline;
+  pointer-events: none;
 }
 .button_home:hover::after {
   opacity: 1;
@@ -271,6 +271,7 @@
   left: -165px;
   white-space: nowrap;
   text-align: center;
+  pointer-events: none;
 }
 .button_your_library:hover::after {
   opacity: 1;
@@ -313,6 +314,7 @@
   white-space: nowrap;
   text-align: center;
   vertical-align: baseline;
+  pointer-events: none;
 }
 
 .button_plus:hover::after {
@@ -353,6 +355,7 @@
   opacity: 0;
   text-align: center;
   vertical-align: baseline;
+  pointer-events: none;
 }
 .button_instagram:hover::after {
   opacity: 1;
@@ -392,6 +395,7 @@
   left: 30px;
   text-align: center;
   vertical-align: baseline;
+  pointer-events: none;
 }
 .button_twitter:hover::after {
   opacity: 1;
@@ -432,17 +436,11 @@
   left: 35px;
   text-align: center;
   vertical-align: baseline;
+  pointer-events: none;
 }
 .button_facebook:hover::after {
   opacity: 1;
   transition: all 0.2s 0.5s;
   transform: translatey(3px);
 }
-@keyframes showTooltip {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
