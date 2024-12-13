@@ -1,0 +1,44 @@
+.premium-banner {
+  background-color: #ffcdd2;
+  padding: 32px 16px;
+}
+
+.button_close svg {
+  width: 17px;
+  fill: #121212;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  padding: 16px;
+}
+
+.button_premium {
+  color: white;
+  background-color: #000;
+  width: fit-content;
+  height: 32px;
+  border: 0px solid white;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 4px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.testo-sottotesto h2 {
+  font-size: 32px;
+  font-weight: 700;
+  height: 39px;
+}
+
+.testo-sottotesto p {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  height: 44px;
+  line-height: 1.5;
+}
