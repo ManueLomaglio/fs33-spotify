@@ -1,0 +1,27 @@
+body {
+  box-sizing: border-box;
+  background-color: #000;
+  width: 100%;
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-areas:
+    "nav nav nav" "sidebar main-view main-view"
+    "anteprima anteprima anteprima";
+}
+
+.navbar {
+  grid-area: nav;
+}
+
+.left-sidebar-container {
+  grid-area: sidebar;
+}
+
+.main-container {
+  grid-area: main-view;
+}
+
+.anteprima {
+  grid-area: anteprima;
+}

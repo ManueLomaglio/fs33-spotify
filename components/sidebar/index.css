@@ -88,8 +88,5 @@
 }
 
 .sidebar_card::-webkit-scrollbar-thumb:active {
-  background: #B8B8B8; /* Colore quando clicchi */
+  background: #b8b8b8; /* Colore quando clicchi */
 }
-
-
-
