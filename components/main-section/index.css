@@ -1,0 +1,112 @@
+.main-container {
+  background-color: #121212;
+  border-radius: 8px;
+  padding-bottom: 32px;
+  height: 100vh;
+  overflow: auto; /* Usa overflow auto per abilitare la scrollbar */
+  position: relative; /* Transizione per l'overflow */
+  overflow-x: hidden;
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-container {
+  padding-top: 40px;
+}
+
+.footer-main {
+  margin-top: 32px;
+  padding-top: 8px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 40px;
+}
+
+/* Personalizzazione della scrollbar */
+.main-container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: hsla(0, 0%, 100%, 0);
+}
+/* Thumb della scrollbar */
+.main-container:hover::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 100%, 0.3);
+}
+
+/* Quando l'utente passa sopra il contenitore */
+.main-container:hover::-webkit-scrollbar {
+  width: 12px; /* Mostra la scrollbar quando il mouse è sopra */
+}
+
+/* Hover sul thumb della scrollbar */
+.main-container::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.5); /* Colore più scuro quando hoverato */
+}
+
+.main-container::-webkit-scrollbar-thumb:active {
+  background: hsla(0, 0%, 100%, 0.7); /* Colore più scuro quando hoverato */
+}
+
+.button_play_green[data-index="Globale"]::after {
+  content: "Riproduci Brani top Globale";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Stati Uniti"]::after {
+  content: "Riproduci Brani top Stati Uniti";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="50 Global"]::after {
+  content: "Riproduci Top 50 Global";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="50 USA"]::after {
+  content: "Riproduci Top 50 Stati Uniti";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Viral Global"]::after {
+  content: "Riproduci Viral 50 Globale";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Viral USA"]::after {
+  content: "Riproduci Viral 50 Stati Uniti";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Big-on"]::after {
+  content: "Riproduci big on the internet";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Calming"]::after {
+  content: "Riproduci Calming Acoustic";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Chillhop"]::after {
+  content: "Riproduci Chillhop";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Jazz"]::after {
+  content: "Riproduci Jazz in the Background";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Soft-pop"]::after {
+  content: "Riproduci Soft Pop Hits";
+  white-space: nowrap;
+}
+
+.button_play_green[data-index="Viral-hits"]::after {
+  content: "Riproduci Viral Hits";
+  white-space: nowrap;
+}
