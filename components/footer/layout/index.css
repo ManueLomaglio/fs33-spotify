@@ -5,12 +5,33 @@
 #footer_navbar {
   width: 100%;
   background-color: transparent;
-  padding: 8px 16px 40px;
+  padding: 8px 16px 40px 16px;
   display: block;
+  box-sizing: border-box;
+  background-color: rgb(18, 18, 18);
+}
+.footer_top_section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 32px;
+  flex-direction: column;
+}
+
+hr {
+  border-top: 0.8px solid #b3b3b3;
+  margin-bottom: 24px;
 }
 @media (min-width: 992px) {
   #footer_navbar {
     padding-left: 32px;
     padding-right: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .footer_top_section {
+    justify-content: space-between;
+    flex-direction: row;
+    -webkit-box-pack: justify;
   }
 }
