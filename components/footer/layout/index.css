@@ -1,6 +1,5 @@
 #footer_container {
   padding-top: 40px;
-width: 100%;
   background-color: #121212;
 }
 #footer_navbar {
@@ -8,6 +7,8 @@ width: 100%;
   background-color: transparent;
   padding: 8px 16px 40px 16px;
   display: block;
+  box-sizing: border-box;
+  background-color: rgb(18, 18, 18);
 }
 .footer_top_section {
   display: flex;

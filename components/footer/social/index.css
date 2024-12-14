@@ -7,13 +7,6 @@
   width: auto;
   height: fit-content;
 }
-.button.facebook {
-  margin-right: 0px;
-}
-
-@media (min-width: 992px) {
-  .social_links {
-    justify-content: none;
-    width: 20%;
-  }
+.social_links_wrapper div:last-child {
+  padding-right: 0px;
 }
