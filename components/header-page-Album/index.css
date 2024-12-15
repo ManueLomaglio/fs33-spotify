@@ -29,17 +29,19 @@
 }
 
 #header__album-page__album-logo__container {
-  overflow: hidden;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: fit-content;
+  height: fit-content;
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 #header__album-page__album-logo {
   max-width: 232px;
-  max-height: 232px;
+  min-width: 128px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
 }
 
 #header__album-page__info {
@@ -93,4 +95,16 @@
   height: 8px;
   background-color: #2e77d0;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 1188px) {
+  #header__album-page__info > h1 {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 1003px) {
+  #header__album-page__info > h1 {
+    font-size: 48px;
+  }
 }
