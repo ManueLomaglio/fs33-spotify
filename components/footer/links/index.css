@@ -1,10 +1,7 @@
-body {
-  display: flex;
-}
+
 .footer_top_links {
   display: flex;
   flex-flow: column wrap;
-  
 }
 
 .footer_link_containers {
@@ -46,13 +43,6 @@ body {
   display: block;
   box-sizing: border-box;
 }
-
-@media (min-width: 992px) {
-  .footer_top_links {
-    flex: 1 1 50%;
-    padding-bottom: 0px;
-  }
-}
 @media (min-width: 768px) {
   .footer_top_links {
     flex-direction: row;
@@ -65,8 +55,14 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .footer_top_links {
+    flex: 1 1 50%;
+    padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 992px) {
   .footer_link_containers {
     width: 20%;
   }
 }
-
