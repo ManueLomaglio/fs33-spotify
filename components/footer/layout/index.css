@@ -1,6 +1,7 @@
 #footer_container {
   padding-top: 40px;
   background-color: #121212;
+  
 }
 #footer_navbar {
   width: 100%;
@@ -19,7 +20,7 @@
 }
 
 hr {
-  border-top: 0.8px solid #b3b3b3;
+  border-top: 0.8px solid #535353;
   margin-bottom: 24px;
 }
 @media (min-width: 992px) {
