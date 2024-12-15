@@ -4,7 +4,6 @@
   padding-bottom: 32px;
   overflow: auto; /* Usa overflow auto per abilitare la scrollbar */
   position: relative; /* Transizione per l'overflow */
-  overflow-x: hidden;
 }
 
 .sections-container {
