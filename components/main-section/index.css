@@ -2,8 +2,10 @@
   background-color: #121212;
   border-radius: 8px;
   padding-bottom: 32px;
-  overflow: auto; /* Usa overflow auto per abilitare la scrollbar */
+  overflow-y: scroll;
+  overflow-x: hidden;
   position: relative; /* Transizione per l'overflow */
+  padding-left: 16px;
 }
 
 .sections-container {
