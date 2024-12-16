@@ -1,6 +1,9 @@
 :root {
   --general-distance: 16px;
 }
+* {
+  box-sizing: border-box;
+}
 
 section#albums_viral50 {
   padding-left: var(--general-distance);
@@ -29,7 +32,6 @@ div.container {
   height: 56px;
   min-width: 120px;
   padding-left: var(--general-distance);
-  padding-right: var(--general-distance);
   border-radius: 4px;
 }
 div.flex {
@@ -107,6 +109,13 @@ svg.play_icon {
   left: 2px;
 }
 
+.shorten {
+  display: -webkit-box; /* Necessario per abilitare line clamping */
+  -webkit-box-orient: vertical; /* Specifica l'orientamento del contenitore */
+  -webkit-line-clamp: 1; /* Numero massimo di righe visibili */
+  overflow: hidden; /* Nasconde il contenuto in eccesso */
+}
+
 /* effetti hover */
 div.container:hover {
   background-color: hsla(0, 0%, 100%, 0.3);
@@ -122,7 +131,7 @@ button.opacity:hover {
   color: white;
   cursor: pointer;
 }
-div.container:hover:hover button.opacity {
+div.container:hover button.opacity {
   background-color: transparent;
   color: white;
   opacity: 1;
@@ -285,4 +294,15 @@ span.song_11::before {
 }
 button#more_11::before {
   content: "Altre opzioni per Imago Heap";
+}
+
+@media screen and (max-width: 838px) {
+  .invisible {
+    display: none;
+  }
+  button.opacity.add {
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+  }
 }
