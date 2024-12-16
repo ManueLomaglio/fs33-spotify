@@ -13,7 +13,6 @@ body {
 .left_buttons {
   display: flex;
   flex-direction: row;
- 
 }
 .button_play_green {
   width: 56px;
@@ -26,27 +25,24 @@ body {
 .button_list {
   background-color: transparent;
   cursor: pointer;
-  
 }
 
-.button_save, .button_other_options {
+.button_save,
+.button_other_options {
   padding: 12px 0px;
   margin-right: 16px;
   width: 32px;
   box-sizing: border-box;
   display: inline-flex;
   flex-shrink: 0;
-  
-  
 }
 
 .button_save svg {
   fill: hsla(0, 0%, 100%, 0.7);
   height: 32px;
   width: 32px;
-  
+
   position: absolute;
-  
 }
 .button_save svg:hover {
   fill: #fff;
@@ -79,7 +75,7 @@ body {
   fill: hsla(0, 0%, 100%, 0.7);
   height: 32px;
   width: 32px;
-  
+
   position: absolute;
 }
 .button_other_options::after {
@@ -130,3 +126,51 @@ body {
   transition: scale (1.5s);
 }
 
+.button_liked {
+  display: none;
+}
+
+.button_share {
+  display: none;
+}
+
+.button_other_options_mobile {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .actionbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the end (right) */
+    padding-inline: 16px;
+  }
+
+  .left_buttons {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of buttons */
+    align-items: center;
+    gap: 24px;
+    width: 100%; /* Ensure the container takes full width */
+  }
+
+  .button_save,
+  .button_other_options,
+  .button_list {
+    display: none;
+  }
+
+  .button_liked,
+  .button_share,
+  .button_other_options_mobile {
+    display: block;
+    width: 24px;
+    background-color: transparent;
+    fill: hsla(0, 0%, 100%, 0.7);
+  }
+
+  .button_play_green {
+    margin-left: auto; /* Push the play button to the right */
+    margin-right: 0;
+  }
+}
