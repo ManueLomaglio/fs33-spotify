@@ -9,6 +9,8 @@ body {
     "anteprima anteprima anteprima";
   gap: 8px;
   padding: 8px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 .navbar {

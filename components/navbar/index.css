@@ -49,3 +49,53 @@
 .nav__buttons__container {
   display: flex;
 }
+
+.button_open_app,
+.nav__hamburgher-menu__container,
+.nav__search-glass__container {
+  display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .searchbar,
+  .button_subscribe,
+  .button_log_in,
+  .button_home {
+    display: none;
+  }
+
+  .nav__buttons__container {
+    align-items: center;
+  }
+
+  .nav__search-glass__container {
+    display: inline-flex;
+    width: 48px;
+    height: 32px;
+    padding: 0px 16px;
+    fill: white;
+  }
+
+  .button_open_app {
+    display: flex;
+    width: 90.2px;
+    height: 32px;
+    font-size: 13px;
+    padding: 4px 16px;
+  }
+
+  .nav__hamburgher-menu__container {
+    display: inline-flex;
+    width: 40px;
+    height: 32px;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .nav__hamburgher-menu {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+}

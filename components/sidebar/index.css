@@ -16,10 +16,6 @@
 }
 
 .sidebar_card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 0 8px 8px;
   overflow: auto;
   position: relative;
   height: 40vh;
@@ -30,6 +26,10 @@
   top: 0;
   left: 0;
   width: 100%;
+  padding: 0 8px 8px 8px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
 .create-playlist {
