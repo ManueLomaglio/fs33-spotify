@@ -16,6 +16,11 @@
   flex-shrink: 0;
 }
 
+.label__logo__spotify {
+  width: 32px;
+  height: 32px;
+}
+
 .nav__logo__spotify {
   fill: white;
   cursor: pointer;
@@ -57,11 +62,23 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 56px;
+    background-color: black;
+  }
+
   .searchbar,
   .button_subscribe,
   .button_log_in,
   .button_home {
     display: none;
+  }
+
+  .nav__logo__container {
+    width: 65px;
   }
 
   .nav__buttons__container {
@@ -90,7 +107,7 @@
     height: 32px;
     justify-content: end;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   .nav__hamburgher-menu {

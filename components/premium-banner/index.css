@@ -1,15 +1,24 @@
 .premium-banner {
   background-color: #ffcdd2;
   padding: 32px 16px;
+  position: relative;
+}
+
+.button_close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  padding: 12px;
 }
 
 .button_close svg {
   width: 17px;
+  height: 24px;
   fill: #121212;
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  padding: 16px;
 }
 
 .button_premium {
@@ -40,5 +49,5 @@
   font-size: 16px;
   font-weight: 400;
   height: 44px;
-  line-height: 1.5;
+  line-height: 1.3;
 }

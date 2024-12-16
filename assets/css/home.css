@@ -3,7 +3,7 @@ body {
   background-color: #000;
   width: 100%;
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   grid-template-areas:
     "nav nav nav" "sidebar main-view main-view"
     "anteprima anteprima anteprima";
@@ -17,6 +17,11 @@ body {
   grid-area: nav;
 }
 
+.premium-banner {
+  display: none;
+  grid-area: banner;
+}
+
 .left-sidebar-container {
   grid-area: sidebar;
 }
@@ -27,4 +32,26 @@ body {
 
 .anteprima {
   grid-area: anteprima;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  body {
+    padding: inherit;
+    gap: inherit;
+    grid-template-areas: "nav nav" "banner banner" "main-view main-view";
+    height: 100%;
+  }
+
+  .main-container {
+    overflow-y: scroll;
+  }
+
+  .left-sidebar-container,
+  .anteprima {
+    display: none;
+  }
+
+  .premium-banner {
+    display: block;
+  }
 }

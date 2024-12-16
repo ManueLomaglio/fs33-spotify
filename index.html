@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!--NAVBAR-->
     <nav class="navbar">
       <div class="nav__logo__container">
         <label for="toggle">
@@ -130,6 +131,33 @@
         </div>
       </div>
     </nav>
+
+    <!--PREMIUM BANNER-->
+    <div class="premium-banner">
+      <button class="button_close">
+        <svg
+          data-encore-id="icon"
+          role="img"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          class="Svg-sc-ytk21e-0 bneLcE"
+        >
+          <path
+            d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"
+          ></path>
+        </svg>
+      </button>
+      <div class="testo-sottotesto">
+        <h2>Passa a Premium</h2>
+        <p>
+          Ascolta tutta la musica che vuoi senza pubblicità. Annulla quando
+          vuoi.
+        </p>
+      </div>
+      <button class="button_premium">Passa a Premium</button>
+    </div>
+
+    <!--SIDEBAR-->
     <div class="left-sidebar-container">
       <header class="header_sidebar">
         <button class="button_your_library">
@@ -208,6 +236,8 @@
         </div>
       </div>
     </div>
+
+    <!--MAIN-->
     <main class="main-container">
       <div class="sections-container">
         <section class="section-artisti">
@@ -1247,12 +1277,14 @@
           </div>
         </section>
       </div>
+
+      <!--FOOTER-->
       <div id="footer_container">
         <nav id="footer_navbar">
           <div class="footer_top_section">
             <div class="footer_top_links">
               <div class="footer_link_containers">
-                <ul class="footer_links">
+                <ul class="main_footer_links">
                   <p>Azienda</p>
 
                   <a href="https://www.spotify.com/it/about-us/contact/">
@@ -1269,7 +1301,7 @@
                 </ul>
               </div>
               <div class="footer_link_containers">
-                <ul class="footer_links">
+                <ul class="main_footer_links">
                   <p>Community</p>
 
                   <a href="https://artists.spotify.com/"
@@ -1292,7 +1324,7 @@
                 </ul>
               </div>
               <div class="footer_link_containers">
-                <ul class="footer_links">
+                <ul class="main_footer_links">
                   <p>Link utili</p>
 
                   <a href="https://support.spotify.com/"
@@ -1310,7 +1342,7 @@
                 </ul>
               </div>
               <div class="footer_link_containers">
-                <ul class="footer_links">
+                <ul class="main_footer_links">
                   <p>Piani Spotify</p>
 
                   <a
@@ -1373,12 +1405,52 @@
               </div>
             </div>
           </div>
-          <hr />
-
+          <hr class="horizontal_rule" />
+          <div class="left-sidebar-footer">
+            <div class="footer_links">
+              <a href="https://www.spotify.com/it/legal/"
+                >Informazioni legali</a
+              >
+              <a href="https://www.spotify.com/it/safetyandprivacy/"
+                >Sicurezza e Centro sulla privacy</a
+              >
+              <a href="https://www.spotify.com/it/legal/privacy-policy/"
+                >Informativa sulla privacy</a
+              >
+              <a href="#">Impostazioni cookie</a>
+              <a href="https://www.spotify.com/it/legal/privacy-policy/#s3"
+                >Info annunci</a
+              >
+              <a href="https://www.spotify.com/it/accessibility/"
+                >Accessibilità</a
+              >
+              <div class="politica_cookie">
+                <a
+                  href="https://www.spotify.com/legal/cookies-policy/"
+                  class="cookie_policy"
+                  >Politica sui cookie</a
+                >
+              </div>
+            </div>
+          </div>
           <div class="footer_copyright"><p>&copy;2024 Spotify AB</p></div>
+          <div class="button-footer">
+            <button class="button_language">
+              <span>
+                <svg>
+                  <path
+                    d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z"
+                  ></path>
+                </svg>
+              </span>
+              Italiano
+            </button>
+          </div>
         </nav>
       </div>
     </main>
+
+    <!--ANTEPRIMA-->
     <div class="anteprima">
       <div id="anteprima_testo">
         <span class="font_bold">Anteprima di Spotify</span>
