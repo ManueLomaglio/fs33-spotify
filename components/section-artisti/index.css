@@ -214,4 +214,8 @@
   .section-artisti__header {
     margin-left: 14px;
   }
+
+  .section-artisti__header__title {
+    font-size: 20px;
+  }
 }

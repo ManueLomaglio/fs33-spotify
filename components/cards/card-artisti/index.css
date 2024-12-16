@@ -127,4 +127,9 @@
   .card-artisti {
     padding: 8px;
   }
+  .card-artisti__description__item,
+  .card-artisti__description__item_2,
+  .card-artisti__description__item_no-hover {
+    display: none;
+  }
 }
