@@ -26,7 +26,7 @@
   display: block;
 }
 
-.footer_links a {
+.main_footer_links a {
   margin: 8px 0px;
   font-size: 16px;
   font-weight: 400;
@@ -37,9 +37,11 @@
   display: block;
   box-sizing: border-box;
 }
-.footer_links a span {
+.main_footer_links a span {
   padding: 0px 0px 8px;
   width: auto;
+  font-size: 16px;
+  font-weight: 400;
   display: block;
   box-sizing: border-box;
 }

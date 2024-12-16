@@ -1,7 +1,6 @@
 #footer_container {
   padding-top: 40px;
   background-color: #121212;
-  
 }
 #footer_navbar {
   width: 100%;
@@ -19,9 +18,14 @@
   flex-direction: column;
 }
 
-hr {
+.horizontal_rule {
   border-top: 0.8px solid #535353;
   margin-bottom: 24px;
+}
+
+#footer_navbar .button_language,
+#footer_navbar .left-sidebar-footer {
+  display: none;
 }
 @media (min-width: 992px) {
   #footer_navbar {
@@ -34,5 +38,11 @@ hr {
     justify-content: space-between;
     flex-direction: row;
     -webkit-box-pack: justify;
+  }
+}
+@media (min-width: 320px) and (max-width: 568px) {
+  #footer_navbar .left-sidebar-footer,
+  #footer_navbar .button_language {
+    display: inline;
   }
 }
