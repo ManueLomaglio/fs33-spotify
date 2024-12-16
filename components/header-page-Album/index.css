@@ -3,6 +3,7 @@
   --color-text-gray: hsl(0deg 0% 100% / 70%);
   --color-text-gray-second: rgb(255 255 255 / 70%);
   --text-small-size: 0.875rem;
+  --text-small-size-phone: 0.8125rem;
 }
 
 * {
@@ -62,19 +63,31 @@
   cursor: default;
 }
 
+#header__album-page__info > p:nth-of-type(2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
 #header__album-page__info-container {
   display: flex;
   align-items: center;
   margin-top: 8px;
 }
 
-#header__album-page__info-container > a {
+#header__album-page__info-container__spotify {
+  display: flex;
+  align-items: center;
+}
+
+#header__album-page__info-container__spotify > a {
   color: var(--color-text-white);
   font-weight: 700;
   text-decoration: none;
 }
 
-#header__album-page__info-container > a:hover {
+#header__album-page__info-container__spotify > a:hover {
   text-decoration: underline;
 }
 
@@ -106,5 +119,61 @@
 @media screen and (max-width: 1003px) {
   #header__album-page__info > h1 {
     font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  #header__album-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .header__album-page__color__text__gray {
+    color: #b3b3b3;
+  }
+
+  .header__album-page__text-small-size,
+  #header__album-page__info-container__spotify > a {
+    font-weight: 350;
+  }
+
+  #header__album-page__album-logo__container {
+    width: 164.8px;
+    border-radius: inherit;
+  }
+
+  #header__album-page__album-logo {
+    border-radius: inherit;
+  }
+
+  #header__album-page__info > h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .header__album-page__text-small-size {
+    font-size: var(--text-small-size-phone);
+  }
+
+  .hidden__in__phone,
+  #header__album-page__info-container__new-add {
+    display: none;
+  }
+
+  #header__album-page__info-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+
+  #header__album-page__info-container p:first-of-type {
+    color: var(--color-text-white);
+  }
+
+  #header__album-page__info-container__logo-spotify {
+    width: 24px;
+    height: 24px;
   }
 }
