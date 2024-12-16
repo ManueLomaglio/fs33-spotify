@@ -117,3 +117,14 @@
   content: "Riproduci Radio di Bruno Mars";
   white-space: nowrap;
 }
+
+@media (max-width: 576px) {
+  .card-artisti__img,
+  .card-artisti__img img {
+    border-radius: 6px;
+  }
+
+  .card-artisti {
+    padding: 8px;
+  }
+}
