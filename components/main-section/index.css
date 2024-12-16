@@ -110,3 +110,31 @@
   content: "Riproduci Viral Hits";
   white-space: nowrap;
 }
+
+@media (max-width: 576px) {
+  .main-container {
+    overflow-y: scroll;
+    padding-left: 0;
+  }
+  .main-container::-webkit-scrollbar {
+    display: none;
+  }
+  .sections-container
+    .section-artisti:nth-child(n + 4)
+    .container__card-artisti {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .sections-container
+    .section-artisti:nth-child(n + 5)
+    .container__card-artisti {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .card-artisti {
+    width: 200px;
+    overflow: hidden;
+  }
+}
