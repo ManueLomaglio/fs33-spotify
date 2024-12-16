@@ -40,6 +40,8 @@
 .main_footer_links a span {
   padding: 0px 0px 8px;
   width: auto;
+  font-size: 16px;
+  font-weight: 400;
   display: block;
   box-sizing: border-box;
 }
