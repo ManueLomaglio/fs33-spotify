@@ -107,6 +107,7 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
+  position: relative;
 }
 .button_play_green > svg {
   height: 24px;
@@ -134,6 +135,7 @@
   text-align: center;
   vertical-align: baseline;
   pointer-events: none;
+  box-shadow: 0px 1px 1px black;
 }
 .button_play_green:hover::after {
   opacity: 1;
@@ -191,6 +193,7 @@
   text-align: center;
   vertical-align: baseline;
   pointer-events: none;
+  box-shadow: 0px 1px 1px black;
 }
 .button_home:hover::after {
   opacity: 1;
@@ -272,6 +275,7 @@
   white-space: nowrap;
   text-align: center;
   pointer-events: none;
+  box-shadow: 0px 1px 1px black;
 }
 .button_your_library:hover::after {
   opacity: 1;
@@ -315,6 +319,7 @@
   text-align: center;
   vertical-align: baseline;
   pointer-events: none;
+  box-shadow: 0px 1px 1px black;
 }
 
 .button_plus:hover::after {
@@ -331,6 +336,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .button_instagram svg {
@@ -371,6 +377,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .button_twitter svg {
   fill: #fff;
@@ -412,6 +419,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .button_facebook svg {
   fill: #fff;
