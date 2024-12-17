@@ -23,6 +23,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   align-content: flex-end;
+  padding-left: 12px;
 }
 
 .section-artisti__header__show-all {

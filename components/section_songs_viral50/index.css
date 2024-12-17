@@ -1,0 +1,343 @@
+:root {
+  --general-distance: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+
+section#albums_viral50 {
+  padding-left: var(--general-distance);
+  padding-right: var(--general-distance);
+  contain: layout style size;
+}
+div#first_row {
+  display: grid;
+  grid-template-columns: 16px 4fr 2fr 1fr;
+  min-width: 120px;
+  grid-template-rows: 36px;
+  border-bottom: 1px solid;
+  column-gap: var(--general-distance);
+  padding-left: var(--general-distance);
+  padding-right: var(--general-distance);
+  margin-bottom: 8px;
+}
+div.container_viral50 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+div.container {
+  display: grid;
+  grid-template-columns: 16px 4fr 2fr 1fr;
+  grid-gap: var(--general-distance);
+  height: 56px;
+  min-width: 120px;
+  padding-left: var(--general-distance);
+  padding-right: var(--general-distance);
+  border-radius: 4px;
+  contain: layout style size;
+}
+div.flex {
+  display: flex;
+  align-items: center;
+}
+div.center {
+  justify-content: center;
+  position: relative;
+}
+div.column {
+  flex-direction: column;
+}
+div#clock {
+  justify-content: center;
+  position: relative;
+}
+div.duration {
+  justify-content: center;
+  gap: 15px;
+}
+div.height {
+  height: 40px;
+}
+div.height_16 {
+  height: var(--general-distance);
+}
+button.opacity {
+  opacity: 0;
+}
+button.opacity.add {
+  margin-right: 20px;
+}
+img.album_cover {
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+svg.basic_features {
+  width: var(--general-distance);
+  height: var(--general-distance);
+  fill: #b3b3b3;
+}
+svg.green {
+  fill: green;
+}
+svg.red {
+  fill: red;
+}
+svg.blue {
+  fill: rgb(72, 72, 216);
+}
+p.bold_white {
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: white;
+}
+.song_position {
+  opacity: 1;
+}
+span.explicit_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span.explicit_content {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 4px 5px;
+  margin-right: 4px;
+  border-radius: 2px;
+  background-color: rgb(82, 82, 130);
+}
+svg.play_icon {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  left: 2px;
+}
+.phone_dots {
+  display: none;
+}
+
+.shorten {
+  display: -webkit-box; /* Necessario per abilitare line clamping */
+  -webkit-box-orient: vertical; /* Specifica l'orientamento del contenitore */
+  -webkit-line-clamp: 1; /* Numero massimo di righe visibili */
+  overflow: hidden; /* Nasconde il contenuto in eccesso */
+}
+
+/* effetti hover */
+div.container:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+div.container:hover .song_position {
+  opacity: 0;
+}
+div.container:hover svg.play_icon {
+  opacity: 1;
+}
+button.opacity:hover {
+  transform: scale(1.05);
+  color: white;
+  cursor: pointer;
+}
+div.container:hover button.opacity {
+  background-color: transparent;
+  color: white;
+  opacity: 1;
+}
+.hover_white_underlined:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* targhette */
+.tag_30::before {
+  position: absolute;
+  font-size: 14px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(0);
+  white-space: nowrap;
+  pointer-events: none;
+  right: -20px;
+}
+.tag_30:hover::before {
+  transform: translateY(-30px);
+  transition: all 0.3s;
+  opacity: 1;
+}
+.tag_43::before {
+  position: absolute;
+  font-size: 14px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(0);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.tag_43:hover::before {
+  transform: translateY(-43px);
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+/* contenuti targhette */
+p#apt::before {
+  content: "APT.";
+}
+span.song_1::before {
+  content: "ROSÉ,Bruno Mars";
+}
+div#clock::before {
+  content: "Durata";
+  right: 20px;
+}
+button.add::before {
+  content: "Aggiungi a brani piaciuti";
+  right: -75px;
+}
+button#more_1::before {
+  content: "Altre opzioni per ROSÉ,Bruno Mars";
+}
+
+p#bpf::before {
+  content: "BAD PARENTING FUNK";
+}
+span.song_2::before {
+  content: "DJ CEREJASS, Sayfalse";
+}
+button#more_2::before {
+  content: "Altre opzioni per DJ CEREJASS, Sayfalse";
+}
+
+p#VA::before {
+  content: "Victory Anthem";
+}
+span.song_3::before {
+  content: "Khushi TDT, Lash curry, Audiocrackerr";
+}
+button#more_3::before {
+  content: "Altre opzioni per Khushi TDT, Lash curry, Audiocrackerr";
+}
+
+p#Raanjhan::before {
+  content: "Raanjhan (From " Do Patti ")";
+}
+span.song_4::before {
+  content: "Sachet-Parampara, Parampara Tandon, Kausar Munir";
+}
+button#more_4::before {
+  content: "Altre opzioni per Sachet-Parampara, Parampara Tandon, Kausar Munir";
+}
+
+p#bst::before {
+  content: "Blood Sweat & Tears (from the series Arcane League of Legends)";
+}
+span.song_5::before {
+  content: "Sheryl Lee Ralph, Arcane, League of Legends";
+}
+button#more_5::before {
+  content: "Altre opzioni per Sheryl Lee Ralph, Arcane, League of Legends";
+}
+
+p#EOV::before {
+  content: "En Ontra Vida";
+}
+span.song_6::before {
+  content: "Yami Safdie, Lasso";
+}
+button#more_6::before {
+  content: "Altre opzioni per Yami Safdie, Lasso";
+}
+
+p#MdV::before {
+  content: "Menina de Vermelho";
+}
+span.song_7::before {
+  content: "MC Menor JP, RAMONMIX, The Ironix";
+}
+button#more_7::before {
+  content: "Altre opzioni per MC Menor JP, RAMONMIX, The Ironix";
+}
+
+p#TST::before {
+  content: "The Secret of Us (Deluxe)";
+}
+span.song_8::before {
+  content: "Gracie Abrams";
+}
+button#more_8::before {
+  content: "Altre opzioni per Gracie Abrams";
+}
+
+p#BWBH::before {
+  content: "Born With a Broken Heart";
+}
+span.song_9::before {
+  content: "Damiano David";
+}
+button#more_9::before {
+  content: "Altre opzioni per Damiano David";
+}
+
+p#wicked::before {
+  content: "Wicked";
+}
+span.song_10::before {
+  content: "Stephen Schwartz, Kristin Chenoweth, Stephen Oremus, Alex Lacamoire";
+}
+button#more_10::before {
+  content: "Altre opzioni per Stephen Schwartz, Kristin Chenoweth, Stephen Oremus, Alex Lacamoire";
+}
+
+p#Headlock::before {
+  content: "Born With a Broken Heart";
+}
+span.song_11::before {
+  content: "Imago Heap";
+}
+button#more_11::before {
+  content: "Altre opzioni per Imago Heap";
+}
+
+@media screen and (max-width: 838px) {
+  div.invisible {
+    display: none;
+  }
+
+  div.container,
+  div#first_row {
+    grid-template-columns: 16px 4fr 1fr;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  section#albums_viral50 {
+    padding-right: 0px;
+  }
+  div.invisible_phone,
+  div#first_row,
+  button.opacity.add {
+    display: none;
+  }
+  div.container {
+    grid-template-columns: 2fr 1fr;
+    padding-left: 0px;
+  }
+  button.opacity {
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+  }
+  div.duration {
+    justify-content: end;
+  }
+}

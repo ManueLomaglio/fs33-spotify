@@ -1,11 +1,11 @@
 .main-container {
-  background-color: #121212;
+  background: linear-gradient(to bottom, #222222 10%, #121212 20%);
   border-radius: 8px;
   padding-bottom: 32px;
   overflow-y: scroll;
   overflow-x: hidden;
   position: relative; /* Transizione per l'overflow */
-  padding-left: 16px;
+  padding-left: 10px;
 }
 
 .sections-container {
@@ -28,18 +28,19 @@
 
 /* Personalizzazione della scrollbar */
 .main-container::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
   height: 12px;
   background: hsla(0, 0%, 100%, 0);
 }
 /* Thumb della scrollbar */
 .main-container:hover::-webkit-scrollbar-thumb {
   background: hsla(0, 0%, 100%, 0.3);
+  border-radius: 10px;
 }
 
 /* Quando l'utente passa sopra il contenitore */
 .main-container:hover::-webkit-scrollbar {
-  width: 12px; /* Mostra la scrollbar quando il mouse è sopra */
+  width: 8px; /* Mostra la scrollbar quando il mouse è sopra */
 }
 
 /* Hover sul thumb della scrollbar */
