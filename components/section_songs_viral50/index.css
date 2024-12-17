@@ -8,6 +8,7 @@
 section#albums_viral50 {
   padding-left: var(--general-distance);
   padding-right: var(--general-distance);
+  contain: layout style size;
 }
 div#first_row {
   display: grid;
@@ -32,7 +33,9 @@ div.container {
   height: 56px;
   min-width: 120px;
   padding-left: var(--general-distance);
+  padding-right: var(--general-distance);
   border-radius: 4px;
+  contain: layout style size;
 }
 div.flex {
   display: flex;
@@ -51,7 +54,7 @@ div#clock {
 }
 div.duration {
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
 }
 div.height {
   height: 40px;
@@ -62,10 +65,14 @@ div.height_16 {
 button.opacity {
   opacity: 0;
 }
+button.opacity.add {
+  margin-right: 20px;
+}
 img.album_cover {
   margin-right: 12px;
   width: 40px;
   height: 40px;
+  border-radius: 4px;
 }
 svg.basic_features {
   width: var(--general-distance);
@@ -107,6 +114,9 @@ svg.play_icon {
   position: absolute;
   top: 20px;
   left: 2px;
+}
+.phone_dots {
+  display: none;
 }
 
 .shorten {
@@ -297,12 +307,39 @@ button#more_11::before {
 }
 
 @media screen and (max-width: 838px) {
-  .invisible {
+  div.invisible {
     display: none;
   }
   button.opacity.add {
     background-color: transparent;
     color: white;
     opacity: 1;
+  }
+  div.container,
+  div#first_row {
+    grid-template-columns: 16px 4fr 1fr;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  section#albums_viral50 {
+    padding-right: 0px;
+  }
+  div.invisible_phone,
+  div#first_row,
+  button.opacity.add {
+    display: none;
+  }
+  div.container {
+    grid-template-columns: 2fr 1fr;
+    padding-left: 0px;
+  }
+  button.opacity {
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+  }
+  div.duration {
+    justify-content: end;
   }
 }
