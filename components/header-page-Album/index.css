@@ -27,6 +27,8 @@
   gap: 1.2rem;
   align-items: end;
   height: fit-content;
+  padding: 20px;
+  background: linear-gradient(to bottom, #27ae71 10%, #166441);
 }
 
 #header__album-page__album-logo__container {
@@ -61,6 +63,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   cursor: default;
+  white-space: nowrap;
 }
 
 #header__album-page__info > p:nth-of-type(2) {
@@ -68,7 +71,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
-  height: 20px;
+  height: 16px;
 }
 
 #header__album-page__info-container {
@@ -112,13 +115,13 @@
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1188px) {
+@media screen and (max-width: 1326px) {
   #header__album-page__info > h1 {
     font-size: 72px;
   }
 }
 
-@media screen and (max-width: 1003px) {
+@media screen and (max-width: 1151px) {
   #header__album-page__info > h1 {
     font-size: 48px;
   }
@@ -130,6 +133,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin-top: 56px;
   }
 
   .header__album-page__color__text__gray {

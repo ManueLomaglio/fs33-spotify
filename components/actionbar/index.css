@@ -4,16 +4,18 @@
   justify-content: space-between;
   padding: 16px;
   height: fit-content;
+  position: relative;
 }
 
 .left_buttons {
   display: flex;
   flex-direction: row;
 }
-.button_play_green {
+.button_play_green-2 {
   width: 56px;
   height: 56px;
   margin-right: 24px;
+  position: relative;
 }
 
 .button_other_options,
@@ -37,7 +39,6 @@
   fill: hsla(0, 0%, 100%, 0.7);
   height: 32px;
   width: 32px;
-
   position: absolute;
 }
 .button_save svg:hover {
