@@ -16,11 +16,10 @@
 }
 
 .sidebar_card {
-  overflow: auto;
+  overflow-y:scroll;
   position: relative;
   height: 40vh;
   flex-grow: 1;
-  padding: 0 8px 8px 8px;
 }
 
 .sidebar-trick {
@@ -31,6 +30,7 @@
   gap: 8px;
   display: flex;
   flex-direction: column;
+  padding: 0px 0px 8px 8px;
 }
 
 .create-playlist {
