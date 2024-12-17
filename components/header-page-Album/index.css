@@ -68,12 +68,14 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+  height: 20px;
 }
 
 #header__album-page__info-container {
   display: flex;
   align-items: center;
   margin-top: 8px;
+  flex-wrap: wrap;
 }
 
 #header__album-page__info-container__spotify {
