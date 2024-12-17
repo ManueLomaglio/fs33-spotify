@@ -1,0 +1,19 @@
+/* #header__album-page {
+    /*background: linear-gradient(to bottom, #2bb273, #166c44);
+} */
+
+body {
+    box-sizing: border-box;
+    background-color: #000;
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+      "nav nav nav" "sidebar main-view main-view"
+      "anteprima anteprima anteprima";
+    /*gap: 8px;
+    padding: 8px;*/
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
