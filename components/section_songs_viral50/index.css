@@ -310,11 +310,7 @@ button#more_11::before {
   div.invisible {
     display: none;
   }
-  button.opacity.add {
-    background-color: transparent;
-    color: white;
-    opacity: 1;
-  }
+
   div.container,
   div#first_row {
     grid-template-columns: 16px 4fr 1fr;
