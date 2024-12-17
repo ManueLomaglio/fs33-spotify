@@ -3,7 +3,7 @@ body {
   background-color: #000;
   width: 100%;
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   grid-template-areas:
     "nav nav nav" "sidebar main-view main-view"
     "anteprima anteprima anteprima";
