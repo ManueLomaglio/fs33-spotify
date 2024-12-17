@@ -331,6 +331,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .button_instagram svg {
@@ -371,6 +372,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .button_twitter svg {
   fill: #fff;
@@ -412,6 +414,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .button_facebook svg {
   fill: #fff;
