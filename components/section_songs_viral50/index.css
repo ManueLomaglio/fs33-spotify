@@ -164,6 +164,7 @@ div.container:hover button.opacity {
   transform: translateY(0);
   white-space: nowrap;
   pointer-events: none;
+  right: -20px;
 }
 .tag_30:hover::before {
   transform: translateY(-30px);
@@ -182,7 +183,6 @@ div.container:hover button.opacity {
   white-space: nowrap;
   pointer-events: none;
 }
-
 .tag_43:hover::before {
   transform: translateY(-43px);
   transition: all 0.3s;
@@ -198,9 +198,11 @@ span.song_1::before {
 }
 div#clock::before {
   content: "Durata";
+  right: 20px;
 }
 button.add::before {
   content: "Aggiungi a brani piaciuti";
+  right: -75px;
 }
 button#more_1::before {
   content: "Altre opzioni per ROSÉ,Bruno Mars";
