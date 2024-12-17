@@ -53,6 +53,7 @@
 .main__second-page {
   grid-area: main-view;
   overflow-y: scroll;
+  overflow-x: hidden;
   border-radius: 6px;
 }
 

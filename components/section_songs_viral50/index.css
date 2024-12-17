@@ -5,10 +5,12 @@
   box-sizing: border-box;
 }
 
+
 section#albums_viral50 {
   padding-left: var(--general-distance);
   padding-right: var(--general-distance);
   contain: layout style size;
+  color: #b3b3b3;
 }
 div#first_row {
   display: grid;
@@ -56,9 +58,7 @@ div.duration {
   justify-content: center;
   gap: 15px;
 }
-div.height {
-  height: 40px;
-}
+
 div.height_16 {
   height: var(--general-distance);
 }
