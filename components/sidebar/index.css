@@ -19,6 +19,7 @@
   overflow: auto;
   position: relative;
   height: 40vh;
+  flex-grow: 1;
 }
 
 .sidebar-trick {
@@ -41,6 +42,8 @@
   flex-wrap: wrap;
   margin: 32px 0;
   padding: 0 24px;
+  line-height: 28px;
+  justify-self: end;
 }
 
 .footer_links a {
@@ -71,12 +74,16 @@
   padding: 0 24px;
 }
 
-.sidebar_card:hover {
-  overflow-y: overlay;
-  padding-right: 0px;
-}
+/*.sidebar_card:hover {
+  overflow-y: scroll;
+}*/
 
 .sidebar_card::-webkit-scrollbar {
+  width: 8px;
+  background: hsla(0, 0%, 100%, 0);
+}
+
+.sidebar_card:hover:-webkit-scrollbar {
   width: 8px;
 }
 
@@ -84,11 +91,11 @@
   background: transparent;
 }
 
-.sidebar_card::-webkit-scrollbar-thumb {
+.sidebar_card:hover::-webkit-scrollbar-thumb {
   background: #5a5a5a;
   border-radius: 10px;
-  transition: background-color 0.3s ease;
 }
+
 
 .sidebar_card::-webkit-scrollbar-thumb:hover {
   background: #898989; /* Colore quando passi con il mouse */
