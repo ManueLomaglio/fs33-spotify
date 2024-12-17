@@ -20,6 +20,7 @@
   position: relative;
   height: 40vh;
   flex-grow: 1;
+  padding: 0 8px 8px 8px;
 }
 
 .sidebar-trick {
@@ -27,7 +28,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 8px 8px 8px;
   gap: 8px;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,6 @@
   margin: 32px 0;
   padding: 0 24px;
   line-height: 28px;
-  justify-self: end;
 }
 
 .footer_links a {
@@ -74,20 +73,16 @@
   padding: 0 24px;
 }
 
-/*.sidebar_card:hover {
-  overflow-y: scroll;
-}*/
 
 .sidebar_card::-webkit-scrollbar {
-  width: 8px;
-  background: hsla(0, 0%, 100%, 0);
-}
-
-.sidebar_card:hover:-webkit-scrollbar {
   width: 8px;
 }
 
 .sidebar_card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar_card::-webkit-scrollbar-thumb {
   background: transparent;
 }
 
@@ -96,11 +91,10 @@
   border-radius: 10px;
 }
 
-
 .sidebar_card::-webkit-scrollbar-thumb:hover {
-  background: #898989; /* Colore quando passi con il mouse */
+  background: #898989;
 }
 
 .sidebar_card::-webkit-scrollbar-thumb:active {
-  background: #b8b8b8; /* Colore quando clicchi */
+  background: #b8b8b8;
 }
