@@ -36,7 +36,7 @@
   width: fit-content;
   display: block;
   box-sizing: border-box;
-  cursor: text;
+  cursor: pointer;
 }
 .main_footer_links a span {
   padding: 0px 0px 8px;
