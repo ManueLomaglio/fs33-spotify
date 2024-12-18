@@ -5,11 +5,10 @@
   box-sizing: border-box;
 }
 
-
 section#albums_viral50 {
   padding-left: var(--general-distance);
   padding-right: var(--general-distance);
-  contain: layout style size;
+  contain: content;
   color: #b3b3b3;
 }
 div#first_row {
@@ -17,7 +16,7 @@ div#first_row {
   grid-template-columns: 16px 4fr 2fr 1fr;
   min-width: 120px;
   grid-template-rows: 36px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   column-gap: var(--general-distance);
   padding-left: var(--general-distance);
   padding-right: var(--general-distance);
@@ -128,7 +127,7 @@ svg.play_icon {
 
 /* effetti hover */
 div.container:hover {
-  background-color: hsla(0, 0%, 100%, 0.3);
+  background-color: hsla(0, 0%, 100%, 0.1);
 }
 div.container:hover .song_position {
   opacity: 0;
@@ -308,7 +307,7 @@ button#more_11::before {
   content: "Altre opzioni per Imago Heap";
 }
 
-@media screen and (max-width: 838px) {
+@media screen and (max-width: 940px) {
   div.invisible {
     display: none;
   }
