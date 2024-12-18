@@ -83,6 +83,7 @@
   -webkit-box-orient: vertical; /* Specifica l'orientamento del contenitore */
   -webkit-line-clamp: 2; /* Numero massimo di righe visibili */
   overflow: hidden; /* Nasconde il contenuto in eccesso */
+  height: 29px;
 }
 
 .card-artisti--hover:hover {
