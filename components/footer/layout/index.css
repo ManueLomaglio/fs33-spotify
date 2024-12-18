@@ -27,6 +27,12 @@
 #footer_navbar .left-sidebar-footer {
   display: none;
 }
+
+.main_footer_links > a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
 @media (min-width: 992px) {
   #footer_navbar {
     padding-left: 32px;

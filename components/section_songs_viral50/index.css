@@ -10,6 +10,7 @@ section#albums_viral50 {
   padding-right: var(--general-distance);
   contain: content;
   color: #b3b3b3;
+  min-width: none;
 }
 div#first_row {
   display: grid;
