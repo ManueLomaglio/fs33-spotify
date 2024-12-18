@@ -33,7 +33,7 @@
 
 #header__album-page__album-logo__container {
   display: inline-flex;
-  width: fit-content;
+  max-width: 168px;
   height: fit-content;
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);

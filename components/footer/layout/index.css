@@ -19,7 +19,7 @@
 }
 
 .horizontal_rule {
-  border-top: 0.8px solid #535353;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
   margin-bottom: 24px;
 }
 
