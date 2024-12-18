@@ -111,7 +111,7 @@
   }
 
   #header__album-page {
-    padding-bottom: 0;
+    padding: 20px 16px 0 16px;
   }
 
   .flex.duration p {
@@ -120,5 +120,23 @@
 
   #header__album-page__album-logo__container {
     width: clamp(144px, 40vw, 288px);
+  }
+
+  /* Media query per footer mobile*/
+  .button-footer {
+    padding: 0 24px 0 0;
+    margin-top: 20px;
+  }
+
+  .footer_links {
+    padding: 0;
+  }
+
+  .footer_links a {
+    font-size: 14px;
+  }
+
+  .politica_cookie {
+    display: none;
   }
 }

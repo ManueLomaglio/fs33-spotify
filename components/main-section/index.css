@@ -138,4 +138,8 @@
     width: 168px;
     overflow: hidden;
   }
+
+  .section-artisti__header__title {
+    padding: 0;
+  }
 }
