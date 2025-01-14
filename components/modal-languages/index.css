@@ -1,5 +1,29 @@
-.modal-container {
-height: 588px;
-max-width: 978px;
-display: flex;
+body {
+  font-family: "SpotifyMixUI", Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "SpotifyMixUI";
+  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2")
+    format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+.modal-header {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  background-color: #282828;
+  color: #ffffff;
+  height: 92px;
+  width: 978px;
+  padding: 16px 24px 0;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.modal-header > h1 {
+  font-size: 24px;
+}
+.modal-header > p {
+  font-size: 16px;
 }
