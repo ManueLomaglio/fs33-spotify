@@ -16,7 +16,7 @@
 }
 
 .sidebar_card {
-  overflow-y:scroll;
+  overflow-y: scroll;
   position: relative;
   height: 40vh;
   flex-grow: 1;
@@ -73,7 +73,6 @@
   padding: 0 24px;
 }
 
-
 .sidebar_card::-webkit-scrollbar {
   width: 8px;
 }
@@ -97,4 +96,8 @@
 
 .sidebar_card::-webkit-scrollbar-thumb:active {
   background: #b8b8b8;
+}
+
+.button_plus {
+  position: relative;
 }
