@@ -1,6 +1,6 @@
 .hamburger_wrapper {
   background-color: #000;
- height: 1000px;
+  height: 1000px;
 }
 
 .hamburger_list {
@@ -21,11 +21,10 @@
   display: flex;
   justify-content: flex-start;
 }
-.dividing_line{
+.dividing_line {
   width: 16px;
   margin: 32px 0px;
   border: 1px solid #fff;
-  
 }
 .hamburger_lower_section {
   display: flex;
@@ -51,3 +50,22 @@
   height: 32px;
   padding: 4px 0px;
 }
+.button_close_menu_wrapper {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+}
+/* .button_close_menu {
+  height: 24px;
+  width: 24px;
+  fill: white;
+  background-color: transparent;
+  position: absolute;
+  right: 24px;
+  align-self: flex-end;
+  
+}
+.button_close_menu svg {
+  height: 24px;
+  width: 24px;
+} */
