@@ -34,7 +34,7 @@ body {
   grid-area: anteprima;
 }
 
-.displaying-search {
+.displaying-hidden {
   display: none;
 }
 
