@@ -1,0 +1,63 @@
+:root {
+  --color-text-white: #fff;
+  --color-text-sub: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.search-song {
+  padding-left: 10px;
+}
+
+.search-song__button_top-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 12px 0px;
+}
+
+#brani {
+  background-color: var(--color-text-white);
+  color: black;
+}
+
+.search-song__button_top {
+  min-width: 56.2px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 15px;
+  padding: 4px 12px;
+  background-color: #2a2a2a;
+  color: var(--color-text-white);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.search-song__button_top:hover {
+  background-color: #333333;
+}
+
+.search-song #first_row > .flex p {
+  color: var(--color-text-sub);
+  font-size: 14px;
+}
+
+.search-song .container_viral50 .height > span,
+.search-song .container_viral50 .invisible > p,
+.song_position,
+.search-song .container_viral50 .duration > p {
+  color: var(--color-text-sub);
+}
+
+.search-song .container_viral50 .height > span,
+.search-song .container_viral50 .invisible > p,
+.search-song .container_viral50 .duration > p {
+  font-size: 14px;
+}
+.search-song .container_viral50:hover .height > span,
+.search-song .container_viral50:hover .invisible > p {
+  color: var(--color-text-white);
+}
