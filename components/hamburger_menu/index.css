@@ -1,11 +1,10 @@
 .hamburger_wrapper {
   background-color: #000;
- height: 100%;
+ height: 1000px;
 }
 
 .hamburger_list {
   padding: 56px 40px;
-  
   flex-grow: 1;
   overflow-y: scroll;
   display: flex;
@@ -18,10 +17,15 @@
   padding: 12px 0px;
   font-size: 20px;
 }
-.dividing_line {
-  border-bottom: 1px solid #fff;
-  margin: 32px;
+.dividing_line_wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.dividing_line{
   width: 16px;
+  margin: 32px 0px;
+  border: 1px solid #fff;
+  
 }
 .hamburger_lower_section {
   display: flex;
