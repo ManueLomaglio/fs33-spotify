@@ -125,24 +125,14 @@ const $clearButtonSearch = document.getElementById("searchbar__clear-button");
 const $mainSectionContainer = document.querySelector(".js-main-content");
 const $searchingSong = document.querySelector(".js-search");
 
-// EVENT BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
+// EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {
   $inputSearch.value = "";
   $mainSectionContainer.classList.remove("displaying-hidden");
   $inputSearch.focus();
 });
 
-// MOSTRA LA LISTA DI CANZONI QUANDO SI INSERISCE UNA LETTERE NEL SEARCH
-$inputSearch.addEventListener("keyup", (e) => {
-  if (e.target.value) {
-    $mainSectionContainer.classList.add("displaying-hidden");
-    $searchingSong.classList.remove("displaying-hidden");
-  } else {
-    $mainSectionContainer.classList.remove("displaying-hidden");
-    $searchingSong.classList.add("displaying-hidden");
-  }
-});
-
+// CONTROLLA QUANTI CANTANTI CONTIENE L'OGGETTO E RESTITUSCE LA STRINGA DA UTILIZZARE PER LA CREAZIONE DELL'ELEMENTO CARD
 function numberOfSingers(song) {
   let singer = "";
   if (song.fourthSinger) {
@@ -158,8 +148,37 @@ function numberOfSingers(song) {
   return singer;
 }
 
-function displayAllSongs(songs) {
-  songs.forEach((song, index) => {
+// FILTRA L'ARRAY IN BASE AL CARATTERE DI formattedText E CHIAMA LA CB A CUI PASSA L'ARRAY FILTRATO (SE NON PRESENTE PASSA L'INTERO ARRAY)
+function filterSong(songs, searchText, cb) {
+  const formattedText = searchText.toLowerCase();
+  const filteredSong = songs.filter((song) => {
+    return (
+      song.songTitle.toLowerCase().includes(formattedText) ||
+      song.singerName.toLowerCase().includes(formattedText) ||
+      song.secondSinger?.toLowerCase().includes(formattedText) ||
+      false ||
+      song.thirdSinger?.toLowerCase().includes(formattedText) ||
+      false ||
+      song.fourthSinger?.toLowerCase().includes(formattedText) ||
+      false ||
+      song.album.toLowerCase().includes(formattedText)
+    );
+  });
+
+  if (filteredSong.length > 0) {
+    cb(filteredSong);
+  } else {
+    cb(songs);
+  }
+}
+
+// CICLA L'ARRAY PASSSATO DALLA FUNZIONE filterSong PER CREARE L'ELEMENTO CARD DA MOSTRARE IN PAGINA
+function displaySongs(filteredSong) {
+  // RIMUOVE GLI ELEMENTI PASSATI PER LA NUOVA RICERCA
+  const songElements = $searchingSong.querySelectorAll(".container_viral50");
+  songElements.forEach((element) => element.remove());
+
+  filteredSong.forEach((song, index) => {
     const allSinger = numberOfSingers(song);
     const $songElement = document.createElement("div");
     $songElement.classList.add("container_viral50");
@@ -229,4 +248,18 @@ function displayAllSongs(songs) {
   });
 }
 
-displayAllSongs(songs);
+// EVENT PER CATTURARE IL TESTO DELLA SEARCH
+$inputSearch.addEventListener("keyup", (e) => {
+  const searchText = e.target.value;
+  if (searchText) {
+    $mainSectionContainer.classList.add("displaying-hidden");
+    $searchingSong.classList.remove("displaying-hidden");
+
+    filterSong(songs, searchText, (filteredSong) => {
+      displaySongs(filteredSong);
+    });
+  } else {
+    $mainSectionContainer.classList.remove("displaying-hidden");
+    $searchingSong.classList.add("displaying-hidden");
+  }
+});
