@@ -32,6 +32,7 @@ body {
   margin-inline: 32px;
   max-inline-size: 978px;
   overflow: hidden;
+  width: 978px;
 }
 
 .modal-header {
