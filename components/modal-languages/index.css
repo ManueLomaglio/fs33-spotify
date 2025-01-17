@@ -21,15 +21,22 @@ body {
   font-display: swap;
 }
 
+.modal-container {
+  background-color: #282828;
+  border-radius: 8px;
+  height: 588px;
+  inline-size: calc(100vw - 64px);
+  margin-block: 32px;
+  margin-inline: 32px;
+  max-inline-size: 978px;
+  overflow: hidden;
+}
 
 .modal-header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-  background-color: #282828;
   color: #ffffff;
-  height: 92px;
-  width: 978px;
   padding: 16px 24px 0;
   border-radius: 8px 8px 0px 0px;
 }
@@ -44,6 +51,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
+  padding-block-end: 16px;
 }
 
 .modal-button-close {
@@ -94,4 +102,14 @@ body {
 .language-subtitle {
   color: #b3b3b3;
   margin: 3px 0px;
+}
+
+
+
+@media (max-width: 991px) {
+  .language-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 927px;
+  }
 }
