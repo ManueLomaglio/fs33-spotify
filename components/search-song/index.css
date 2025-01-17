@@ -124,7 +124,7 @@ button.tooltip-add {
   margin-right: 20px;
 }
 
-.basic_features:hover {
+.tooltip-add:hover > svg {
   fill: white;
 }
 
@@ -146,7 +146,7 @@ button.tooltip-add {
   font-size: 13px;
 }
 
-svg.basic_features.tooltip-overflow-menu {
+.tooltip-overflow-menu > svg {
   fill: white;
 }
 

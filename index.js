@@ -124,6 +124,7 @@ const $inputSearch = document.querySelector('input[id="searchbar"]');
 const $clearButtonSearch = document.getElementById("searchbar__clear-button");
 const $mainSectionContainer = document.querySelector(".js-main-content");
 const $searchingSong = document.querySelector(".js-search");
+const $mainContainer = document.querySelector(".main-container");
 
 // EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {
@@ -132,7 +133,7 @@ $clearButtonSearch.addEventListener("click", () => {
   $inputSearch.focus();
 });
 
-// CONTROLLA QUANTI CANTANTI CONTIENE L'OGGETTO E RESTITUSCE LA STRINGA DA UTILIZZARE PER LA CREAZIONE DELL'ELEMENTO CARD
+// CONTROLLA QUANTI CANTANTI CONTIENE L'OGGETTO E RESTITUSCE LA STRINGA PER MOSTRARE I CANTANTI (OVVERO singer: singerForDisplay) e la lista dei cantanti come stringa (singerList: singerForTooltip)
 function numberOfSingers(song) {
   let singerForDisplay = "";
   let singerForTooltip = "";
@@ -263,6 +264,8 @@ $inputSearch.addEventListener("keyup", (e) => {
   if (searchText) {
     $mainSectionContainer.classList.add("displaying-hidden");
     $searchingSong.classList.remove("displaying-hidden");
+    $mainContainer.style.background = "none";
+    $mainContainer.style.backgroundColor = "#121212";
 
     filterSong(songs, searchText, (filteredSong) => {
       displaySongs(filteredSong);
@@ -270,5 +273,7 @@ $inputSearch.addEventListener("keyup", (e) => {
   } else {
     $mainSectionContainer.classList.remove("displaying-hidden");
     $searchingSong.classList.add("displaying-hidden");
+    $mainContainer.style.background =
+      "linear-gradient(to bottom, #222222 10%, #121212 20%)";
   }
 });
