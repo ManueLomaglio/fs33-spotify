@@ -10,6 +10,10 @@
 
 body {
   font-family: "SpotifyMixUI", Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @font-face {
@@ -24,8 +28,6 @@ body {
 .modal-container {
   background-color: #282828;
   border-radius: 8px;
-  height: 588px;
-  inline-size: calc(100vw - 64px);
   margin-block: 32px;
   margin-inline: 32px;
   max-inline-size: 978px;
@@ -74,20 +76,27 @@ body {
   display: grid;
   font-size: 16px;
   grid-template-columns: repeat(4, 1fr);
-  height: 496px;
-  width: 978px;
   padding: 16px 24px;
   background-color: #282828;
   border-radius: 0px 0px 8px 8px;
   overflow-y: scroll;
+  height: 496px;
 }
 .language-option {
-  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: center;
   padding: 16px;
-  font-weight: 300;
-  font-size: 16px;
 }
 
 .language-container :hover {
@@ -104,12 +113,18 @@ body {
   margin: 3px 0px;
 }
 
-
-
 @media (max-width: 991px) {
   .language-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 927px;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .language-container {
+    grid-template-columns: repeat(1, 1fr);
+    height: 100vh;
   }
 }
