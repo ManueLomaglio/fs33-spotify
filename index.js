@@ -134,18 +134,23 @@ $clearButtonSearch.addEventListener("click", () => {
 
 // CONTROLLA QUANTI CANTANTI CONTIENE L'OGGETTO E RESTITUSCE LA STRINGA DA UTILIZZARE PER LA CREAZIONE DELL'ELEMENTO CARD
 function numberOfSingers(song) {
-  let singer = "";
-  if (song.fourthSinger) {
-    singer = `<a href="" class="singerName">${song.singerName}</a>, <a href="" class="singerName">${song.secondSinger}</a>, <a href="" class="singerName">${song.thirdSinger}</a>, <a href="" class="singerName">${song.fourthSinger}</a>`;
-  } else if (song.thirdSinger) {
-    singer = `<a href="" class="singerName">${song.singerName}</a>, <a href="" class="singerName">${song.secondSinger}</a>, <a href="" class="singerName">${song.thirdSinger}</a>`;
-  } else if (song.secondSinger) {
-    singer = `<a href="" class="singerName">${song.singerName}</a>, <a href="" class="singerName">${song.secondSinger}</a>`;
-  } else if (song.singerName) {
-    singer = `<a href="" class="singerName">${song.singerName}</a>`;
+  let singerForDisplay = "";
+  let singerForTooltip = "";
+  if ("fourthSinger" in song) {
+    singerForDisplay = `<a href="" class="singerName">${song.singerName}</a>, <a href="" class="singerName">${song.secondSinger}</a>, <a href="" class="singerName">${song.thirdSinger}</a>, <a href="" class="singerName">${song.fourthSinger}</a>`;
+    singerForTooltip = `${song.singerName}, ${song.secondSinger}, ${song.thirdSinger}, ${song.fourthSinger}`;
+  } else if ("thirdSinger" in song) {
+    singerForDisplay = `<a href="" class="singerName">${song.singerName}</a>, <a href="" class="singerName">${song.secondSinger}</a>, <a href="" class="singerName">${song.thirdSinger}</a>`;
+    singerForTooltip = `${song.singerName}, ${song.secondSinger}, ${song.thirdSinger}`;
+  } else if ("secondSinger" in song) {
+    singerForDisplay = `<a href="" class="singerName">${song.singerName}</a>, <a href="" class="singerName">${song.secondSinger}</a>`;
+    singerForTooltip = `${song.singerName}, ${song.secondSinger}`;
+  } else if ("singerName" in song) {
+    singerForDisplay = `<a href="" class="singerName">${song.singerName}</a>`;
+    singerForTooltip = `${song.singerName}`;
   }
 
-  return singer;
+  return { singer: singerForDisplay, singerList: singerForTooltip };
 }
 
 // FILTRA L'ARRAY IN BASE AL CARATTERE DI formattedText E CHIAMA LA CB A CUI PASSA L'ARRAY FILTRATO (SE NON PRESENTE PASSA L'INTERO ARRAY)
@@ -179,7 +184,7 @@ function displaySongs(filteredSong) {
   songElements.forEach((element) => element.remove());
 
   filteredSong.forEach((song, index) => {
-    const allSinger = numberOfSingers(song);
+    const singers = numberOfSingers(song);
     const $songElement = document.createElement("div");
     $songElement.classList.add("container_viral50");
 
@@ -205,24 +210,28 @@ function displaySongs(filteredSong) {
               class="album_cover"
             />
             <div class="height shorten">
-              <p class="bold_white shorten">${song.songTitle}</p>
-              <span class="font_small tag_43 song_2"
-                >${allSinger}</span
+              <p class="bold_white shorten tooltip-song"  data-tooltip="${
+                song.songTitle
+              }">${song.songTitle}</p>
+              <span class="font_small tag_43 tooltip-singer" data-tooltip="${
+                singers.singerList
+              }"
+                >${singers.singer}</span
               >
             </div>
           </div>
           <div class="flex invisible">
             <!--Album-->
             <p
-              class="font_small hover_white_underlined shorten tag_43"
-              id="bpf"
+              class="font_small hover_white_underlined shorten tag_43 tooltip-album"
+              data-tooltip="${song.album}"
             >
               ${song.album}
             </p>
           </div>
           <div class="flex duration">
             <!--Duration-->
-            <button class="opacity tag_43 add">
+            <button class="opacity tag_43 tooltip-add" >
               <svg viewBox="0 0 16 16" class="basic_features">
                 <path
                   d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
@@ -233,7 +242,7 @@ function displaySongs(filteredSong) {
               </svg>
             </button>
             <p class="font_small">${song.songDuration}</p>
-            <button class="opacity tag_30" id="more_2">
+            <button class="opacity tag_30 tooltip-overflow-menu" data-tooltip="${`Altre opzioni per ${song.songTitle} di ${singers.singerList}`}">
               <svg viewBox="0 0 16 16" class="basic_features">
                 <path
                   d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
