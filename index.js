@@ -263,3 +263,18 @@ $inputSearch.addEventListener("keyup", (e) => {
     $searchingSong.classList.add("displaying-hidden");
   }
 });
+
+// SEZIONE NEWPLAYLIST
+const blueTooltip_btn = document.querySelector(".button_new_playlist");
+const blueTooltip_sec = document.querySelector("#blueTooltip_section");
+const $body = document.querySelector("body");
+
+blueTooltip_btn.addEventListener("click", () => {
+  blueTooltip_sec.style.display = "block";
+});
+
+$body.addEventListener("click", (event) => {
+  if (event.target !== blueTooltip_sec && event.target !== blueTooltip_btn) {
+    blueTooltip_sec.style.display = "none";
+  }
+});
