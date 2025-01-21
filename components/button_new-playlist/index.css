@@ -1,0 +1,41 @@
+.main__button-new-playlist__container {
+  background-color: #2d2d2d;
+  position: absolute;
+  z-index: 9999;
+  margin: 0px;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  top: 120%;
+  right: 0;
+  width: max-content;
+}
+
+.button-new-playlist__container {
+  padding: 4px;
+}
+
+.button-new-playlist {
+  display: flex;
+  padding: 14px;
+  gap: 12px;
+  background-color: transparent;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 0.875rem;
+  align-items: center;
+  font-weight: 400;
+}
+
+.song-note {
+  fill: white;
+  height: 16px;
+  width: 16px;
+}
+
+.button-new-playlist:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 2px;
+}
+
+.padding-text {
+  padding-left: 30px;
+}
