@@ -1,28 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box; /* Usato per rimuovere uno spazio che si creava nell'header sotto al testo */
-}
-
-body {
-  font-family: "SpotifyMixUI", Arial, sans-serif;
-  background-color: rgba(0, 0, 0, 0.7);
+.modal-languages {
+  position: fixed; /* Mantiene la modal in posizione rispetto alla viewport */
+  width: 100vw;
+  height: 100vh; /* Riempie l'intera altezza */
+  background-color: rgba(0, 0, 0, 0.7); /* Colore di sfondo semitrasparente */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@font-face {
-  font-family: "SpotifyMixUI";
-  src: url("https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2")
-    format("woff2");
-  font-weight: lighter;
-  font-style: normal;
-  font-display: swap;
+  z-index: 1000;
+  display: none;
+  cursor: default;
 }
 
 .modal-container {
@@ -120,6 +106,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     max-width: 927px;
     height: 100vh;
+    padding-top: 32px;
   }
 }
 
@@ -128,4 +115,22 @@ body {
     grid-template-columns: repeat(1, 1fr);
     height: 100vh;
   }
+}
+
+
+.language-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.language-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.language-container::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+  border-radius: 10px;
+}
+
+.language-container::-webkit-scrollbar-thumb:active {
+  background: #b8b8b8;
 }
