@@ -302,17 +302,19 @@
                   class="searchbar__search__icon-container"
                   id="searchbar__search__icon-container"
                 >
-                  <svg
-                    data-encore-id="icon"
-                    role="img"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    class="searchbar__search__X-icon"
-                  >
-                    <path
-                      d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"
-                    ></path>
-                  </svg>
+                  <button id="searchbar__clear-button">
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      class="searchbar__search__X-icon"
+                    >
+                      <path
+                        d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
@@ -351,7 +353,7 @@
         <button class="button_subscribe">Iscriviti</button>
         <button class="button_log_in">Accedi</button>
         <button class="button_log_in button_open_app">Apri l'app</button>
-        <div class="nav__hamburgher-menu__container">
+        <button class="nav__hamburgher-menu__container">
           <svg
             data-encore-id="icon"
             role="img"
@@ -361,8 +363,35 @@
           >
             <path d="M21 6H3V4h18v2zm0 14H3v-2h18v2zm0-7H3v-2h18v2z"></path>
           </svg>
+        </button>
+      </div>
+      <!--HAMBURGHER MENU-->
+      <div class="hamburger_wrapper"  aria-expanded="false" >
+      
+        <button class="button_close_menu">
+          <svg>
+            <path
+              d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"></path>
+          </svg>
+        </button>
+      
+      <div class="hamburger_list"  >
+        <button class="button_upper_section">Accedi</button>
+        <button class="button_upper_section">Iscriviti</button>
+
+        <div class="dividing_line_wrapper">
+          <div class="dividing_line"></div>
+        </div>
+
+        <div class="hamburger_lower_section">
+          <button class="button_lower_section">Premium</button>
+          <button class="button_lower_section">Assistenza</button>
+          <button class="button_lower_section">Scarica</button>
+          <button class="button_lower_section">Privacy</button>
+          <button class="button_lower_section">Condizioni</button>
         </div>
       </div>
+    </div>
     </nav>
 
     <!--SIDEBAR-->
@@ -446,7 +475,7 @@
     </div>
 
     <!--MAIN-->
-    <main class="main__second-page">
+    <main class="main__second-page js-main-container">
       <!--TOOLTIP AZZURRO-->
       <section id="blueTooltip_section" style="display: none">
         <div id="newPlaylist_tooltip" class="flex_display">
@@ -1613,6 +1642,41 @@
           </div>
         </div>
       </div>
+
+      <!--IF SEARCH A SONG IN SEARCHBAR-->
+      <section class="search-song js-search displaying-hidden">
+        <div class="search-song__button_top-container">
+          <button class="search-song__button_top">Tutto</button>
+          <button class="search-song__button_top" id="brani">Brani</button>
+          <button class="search-song__button_top">Artisti</button>
+          <button class="search-song__button_top">Album</button>
+          <button class="search-song__button_top">Podcast e show</button>
+          <button class="search-song__button_top">Generi e mood</button>
+          <button class="search-song__button_top">Profili</button>
+        </div>
+
+        <div id="first_row">
+          <div class="flex">
+            <p>#</p>
+          </div>
+          <div class="flex">
+            <p>Titolo</p>
+          </div>
+          <div class="flex invisible">
+            <p>Album</p>
+          </div>
+          <div class="flex tag_30" id="clock">
+            <svg viewBox="0 0 16 16" class="basic_features">
+              <path
+                d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+              ></path>
+              <path
+                d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H7.25V4A.75.75 0 0 1 8 3.25z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--ANTEPRIMA-->
@@ -1626,6 +1690,7 @@
       </div>
       <button class="button_subscribe_free">Iscriviti gratis</button>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>

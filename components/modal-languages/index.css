@@ -1,8 +1,8 @@
 .modal-languages {
   position: fixed; /* Mantiene la modal in posizione rispetto alla viewport */
   width: 100vw;
-  height: 100vh; 
-  background-color: rgba(0, 0, 0, 0.7); 
+  height: 100vh; /* Riempie l'intera altezza */
+  background-color: rgba(0, 0, 0, 0.7); /* Colore di sfondo semitrasparente */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +120,7 @@
 
 
 .language-container::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 .language-container::-webkit-scrollbar-track {

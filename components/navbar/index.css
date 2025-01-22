@@ -91,7 +91,16 @@
     width: 48px;
     height: 32px;
     padding: 0px 16px;
+  }
+
+  .nav__search-glass__button {
+    background-color: transparent;
+  }
+
+  .nav__search-glass__button > svg {
     fill: white;
+    width: 16px;
+    height: 16px;
   }
 
   .button_open_app {
@@ -109,6 +118,7 @@
     justify-content: end;
     align-items: center;
     margin-right: 20px;
+    background-color: transparent;
   }
 
   .nav__hamburgher-menu {
