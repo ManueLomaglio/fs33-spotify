@@ -1,0 +1,186 @@
+:root {
+  --color-text-white: #fff;
+  --color-text-sub: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes showTooltip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.search-song {
+  padding-left: 10px;
+}
+
+.search-song__button_top-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 12px 0px;
+}
+
+#brani {
+  background-color: var(--color-text-white);
+  color: black;
+}
+
+.search-song__button_top {
+  min-width: 56.2px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 15px;
+  padding: 4px 12px;
+  background-color: #2a2a2a;
+  color: var(--color-text-white);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.search-song__button_top:hover {
+  background-color: #333333;
+}
+
+.search-song #first_row > .flex p {
+  color: var(--color-text-sub);
+  font-size: 14px;
+}
+
+.search-song .height > p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tooltip-song:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 90px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  animation: showTooltip 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container_viral50:hover .singerName {
+  color: var(--color-text-white);
+}
+
+.search-song .singerName {
+  color: var(--color-text-sub);
+  text-decoration: none;
+}
+
+.search-song .singerName:hover {
+  text-decoration: underline;
+}
+
+.tooltip-singer:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -10px;
+  left: 90px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  animation: showTooltip 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-album:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -12px;
+  left: 57.3%;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  animation: showTooltip 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button.tooltip-add {
+  margin-right: 20px;
+}
+
+.tooltip-add:hover > svg {
+  fill: white;
+}
+
+.tooltip-add:hover::after {
+  content: "Aggingi a Brani che ti piacciono";
+  position: absolute;
+  top: -30px;
+  right: -90px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  animation: showTooltip 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.tooltip-overflow-menu > svg {
+  fill: white;
+}
+
+.tooltip-overflow-menu:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  animation: showTooltip 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.search-song .container_viral50 .height > span,
+.search-song .container_viral50 .invisible > p,
+.song_position,
+.search-song .container_viral50 .duration > p {
+  color: var(--color-text-sub);
+}
+
+.search-song .container_viral50 .height > span,
+.search-song .container_viral50 .invisible > p,
+.search-song .container_viral50 .duration > p {
+  font-size: 14px;
+}
+.search-song .container_viral50:hover .height > span,
+.search-song .container_viral50:hover .invisible > p {
+  color: var(--color-text-white);
+}

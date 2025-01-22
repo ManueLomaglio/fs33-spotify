@@ -172,6 +172,10 @@
   animation-delay: 0.5s;
 }
 
+#searchbar__clear-button {
+  background-color: transparent;
+}
+
 .searchbar__search__X-icon {
   width: 24px;
   height: 24px;
