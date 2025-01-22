@@ -1,8 +1,8 @@
 .modal-languages {
   position: fixed; /* Mantiene la modal in posizione rispetto alla viewport */
   width: 100vw;
-  height: 100vh; /* Riempie l'intera altezza */
-  background-color: rgba(0, 0, 0, 0.7); /* Colore di sfondo semitrasparente */
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.7); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,7 @@
   border-radius: 8px;
   margin-block: 32px;
   margin-inline: 32px;
+  margin: 32px;
   max-inline-size: 978px;
   overflow: hidden;
   width: 978px;
@@ -100,26 +101,26 @@
   margin: 3px 0px;
 }
 
+
+
 @media (max-width: 991px) {
   .language-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 927px;
     height: 100vh;
-    padding-top: 32px;
   }
 }
 
 @media (max-width: 767px) {
   .language-container {
     grid-template-columns: repeat(1, 1fr);
-    height: 100vh;
   }
 }
 
 
 .language-container::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 .language-container::-webkit-scrollbar-track {
