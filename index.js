@@ -1,3 +1,4 @@
+// SEZIONE SEARCH
 const songs = [
   {
     songImg: "https://i.scdn.co/image/ab67616d0000485136032cb4acd9df050bc2e197",
@@ -124,7 +125,7 @@ const $inputSearch = document.querySelector('input[id="searchbar"]');
 const $clearButtonSearch = document.getElementById("searchbar__clear-button");
 const $mainSectionContainer = document.querySelector(".js-main-content");
 const $searchingSong = document.querySelector(".js-search");
-const $mainContainer = document.querySelector(".main-container");
+const $mainContainer = document.querySelector(".js-main-container");
 
 // EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {
@@ -277,3 +278,66 @@ $inputSearch.addEventListener("keyup", (e) => {
       "linear-gradient(to bottom, #222222 10%, #121212 20%)";
   }
 });
+
+// SEZIONE NEWPLAYLIST
+const blueTooltip_btn = document.querySelector(".button_new_playlist");
+const blueTooltip_sec = document.querySelector("#blueTooltip_section");
+const $body = document.querySelector("body");
+
+blueTooltip_btn.addEventListener("click", () => {
+  blueTooltip_sec.style.display = "block";
+});
+
+$body.addEventListener("click", (event) => {
+  if (event.target !== blueTooltip_sec && event.target !== blueTooltip_btn) {
+    blueTooltip_sec.style.display = "none";
+  }
+});
+
+//MODAL LANGUAGES
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleziona gli elementi
+  const modalLanguages = document.querySelector(".modal-languages");
+  const buttonLanguage = document.querySelector(".button_language");
+  const modalButtonClose = document.querySelector(".modal-button-close");
+
+  // Funzione per aprire la modal
+  const openModal = () => {
+    modalLanguages.style.display = "flex"; // Mostra la modal
+  };
+
+  // Funzione per chiudere la modal
+  const closeModal = () => {
+    modalLanguages.style.display = "none"; // Nasconde la modal
+  };
+
+  buttonLanguage.addEventListener("click", openModal);
+  modalButtonClose.addEventListener("click", closeModal);
+
+  // Chiude la modal cliccando fuori dal contenitore
+  modalLanguages.addEventListener("click", (e) => {
+    if (e.target === modalLanguages) {
+      closeModal();
+    }
+  });
+});
+const $hamburgherCloseMenu = document.querySelector(".button_close_menu");
+const $hamburherShowMenu = document.querySelector("#hamburgher_menu");//non esiste in html
+//selettore del menu 
+const $hamburgherMenu = document.querySelector('.hamburger_wrapper');
+
+// funzioni del menu
+const openMenuFunction=function(){
+   // $hamburgherMenu.style.visibility = "visible";
+  $hamburgherMenu.setAttribute("aria-expanded", "true");
+}
+const closeMenuFunction = function () {
+  //$hamburgherMenu.style.visibility = "hidden";
+  $hamburgherMenu.setAttribute("aria-expanded", "false");
+};
+
+//eventi
+
+$hamburgherCloseMenu.addEventListener("click", closeMenuFunction);
+
+$hamburherShowMenu.addEventListener("click",openMenuFunction);

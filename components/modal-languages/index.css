@@ -1,0 +1,137 @@
+.modal-languages {
+  position: fixed; /* Mantiene la modal in posizione rispetto alla viewport */
+  width: 100vw;
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+  cursor: default;
+}
+
+.modal-container {
+  background-color: #282828;
+  border-radius: 8px;
+  margin-block: 32px;
+  margin-inline: 32px;
+  margin: 32px;
+  max-inline-size: 978px;
+  overflow: hidden;
+  width: 978px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  color: #ffffff;
+  padding: 16px 24px 0;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.modal-header-text > h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0px 0px 8px;
+}
+.modal-header-text > p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  padding-block-end: 16px;
+}
+
+.modal-button-close {
+  height: 32px;
+  width: 32px;
+  background-color: rgba(0, 0, 0, 0.7);
+  fill: #b3b3b3;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-button-close svg {
+  height: 16px;
+  width: 16px;
+  fill: #b3b3b3;
+}
+
+.language-container {
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 16px 24px;
+  background-color: #282828;
+  border-radius: 0px 0px 8px 8px;
+  overflow-y: scroll;
+  height: 496px;
+}
+.language-option {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.language-container :hover {
+  background-color: #424142;
+}
+
+.language-title {
+  color: #ffffff;
+  margin: 3px 0px;
+}
+
+.language-subtitle {
+  color: #b3b3b3;
+  margin: 3px 0px;
+}
+
+
+
+@media (max-width: 991px) {
+  .language-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 927px;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .language-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.language-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.language-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.language-container::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+  border-radius: 10px;
+}
+
+.language-container::-webkit-scrollbar-thumb:active {
+  background: #b8b8b8;
+}
