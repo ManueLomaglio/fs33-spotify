@@ -337,3 +337,32 @@ function handleOutsideClick(event) {
     document.removeEventListener("click", handleOutsideClick); // Rimuove l'evento per evitare sovraccarico
   }
 }
+
+//MODAL LANGUAGES
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleziona gli elementi
+  const modalLanguages = document.querySelector(".modal-languages");
+  const buttonLanguage = document.querySelector(".button_language");
+  const modalButtonClose = document.querySelector(".modal-button-close");
+
+  // Funzione per aprire la modal
+  const openModal = () => {
+    modalLanguages.style.display = "flex"; // Mostra la modal
+  };
+
+  // Funzione per chiudere la modal
+  const closeModal = () => {
+    modalLanguages.style.display = "none"; // Nasconde la modal
+  };
+
+  // Aggiungi eventi
+  buttonLanguage.addEventListener("click", openModal);
+  modalButtonClose.addEventListener("click", closeModal);
+
+  // Chiude la modal cliccando fuori dal contenitore
+  modalLanguages.addEventListener("click", (e) => {
+    if (e.target === modalLanguages) {
+      closeModal();
+    }
+  });
+});

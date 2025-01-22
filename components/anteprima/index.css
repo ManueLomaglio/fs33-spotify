@@ -4,6 +4,7 @@
   padding: 11px 24px 7px 15px;
   align-items: center;
   cursor: pointer;
+  z-index: 1000;
 }
 
 div#anteprima_testo {
