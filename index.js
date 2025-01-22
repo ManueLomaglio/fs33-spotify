@@ -284,38 +284,48 @@ const blueTooltip_btn = document.querySelector(".button_new_playlist");
 const blueTooltip_sec = document.querySelector("#blueTooltip_section");
 const $body = document.querySelector("body");
 
-blueTooltip_btn.addEventListener("click", () => {
+blueTooltip_btn.addEventListener("click", (event) => {
   blueTooltip_sec.style.display = "block";
 });
 
+blueTooltip_sec.addEventListener("click", (event) => {
+  event.stopPropagation(); // Impedisce che il click chiuda il tooltip
+});
+
 $body.addEventListener("click", (event) => {
-  if (event.target !== blueTooltip_sec && event.target !== blueTooltip_btn) {
+  if (event.target !== blueTooltip_btn) {
     blueTooltip_sec.style.display = "none";
   }
 });
 
 //MODAL LANGUAGES
-const modalLanguages = document.querySelector(".modal-languages");
-const buttonLanguage = document.querySelector(".button_language");
-const modalButtonClose = document.querySelector(".modal-button-close");
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleziona gli elementi
+  const modalLanguages = document.querySelector(".modal-languages");
+  const buttonLanguage = document.querySelector(".button_language");
+  const modalButtonClose = document.querySelector(".modal-button-close");
 
-const openModal = () => {
-  modalLanguages.style.display = "flex";
-};
+  // Funzione per aprire la modal
+  const openModal = () => {
+    modalLanguages.style.display = "flex"; // Mostra la modal
+  };
 
-const closeModal = () => {
-  modalLanguages.style.display = "none";
-};
+  // Funzione per chiudere la modal
+  const closeModal = () => {
+    modalLanguages.style.display = "none"; // Nasconde la modal
+  };
 
-buttonLanguage.addEventListener("click", openModal);
-modalButtonClose.addEventListener("click", closeModal);
+  buttonLanguage.addEventListener("click", openModal);
+  modalButtonClose.addEventListener("click", closeModal);
 
-// Chiude la modal cliccando fuori dal contenitore
-modalLanguages.addEventListener("click", (e) => {
-  if (e.target === modalLanguages) {
-    closeModal();
-  }
+  // Chiude la modal cliccando fuori dal contenitore
+  modalLanguages.addEventListener("click", (e) => {
+    if (e.target === modalLanguages) {
+      closeModal();
+    }
+  });
 });
+
 const $hamburgherCloseMenu = document.querySelector(".button_close_menu");
 const $hamburherShowMenu = document.querySelector("#hamburgher_menu"); //non esiste in html
 //selettore del menu
@@ -336,3 +346,77 @@ const closeMenuFunction = function () {
 $hamburgherCloseMenu.addEventListener("click", closeMenuFunction);
 
 $hamburherShowMenu.addEventListener("click", openMenuFunction);
+
+//QUI INIZIA LA PARTE JAVASCRIPT DEDICATA ALL'APPARIZIONE DEL TOOLTIP CREA UNA NUOVA PLAYLIST DOPO AVER CLICCATO IL BOTTONE "+"
+
+const $buttonPlus = document.querySelector(".button_plus");
+
+//Evento click che aggiunge e rimuove, se l'elemento già è presente, l'elemento HTML che contiene il button-new-playlist
+
+$buttonPlus.addEventListener("click", function (event) {
+  event.stopPropagation(); // Impedisce la propagazione al body
+
+  //Verifica l'esistenza dell'elemento HTML, in caso lo rimuove
+  const $existingTooltip = document.querySelector(
+    ".main__button-new-playlist__container"
+  );
+
+  if ($existingTooltip) {
+    $existingTooltip.remove();
+    return;
+  }
+
+  //Inserisce il nuovo elemento HTML al nodo più vicino, quello di buttoPlus
+
+  $buttonPlus.insertAdjacentHTML(
+    "beforeend", // Puoi scegliere dove posizionare il nuovo contenuto
+    `<div class="main__button-new-playlist__container">
+        <div class="button-new-playlist__container">
+          <button class="button-new-playlist">
+            <svg class="song-note">
+              <path
+                d="M2 0v2H0v1.5h2v2h1.5v-2h2V2h-2V0H2zm11.5 2.5H8.244A5.482 5.482 0 0 0 7.966 1H15v11.75A2.75 2.75 0 1 1 12.25 10h1.25V2.5zm0 9h-1.25a1.25 1.25 0 1 0 1.25 1.25V11.5zM4 8.107a5.465 5.465 0 0 0 1.5-.593v5.236A2.75 2.75 0 1 1 2.75 10H4V8.107zM4 11.5H2.75A1.25 1.25 0 1 0 4 12.75V11.5z"
+              ></path>
+            </svg>
+            <span class="padding-text">Crea una nuova playlist</span>
+          </button>
+        </div>
+      </div>`
+  );
+
+  const $newTooltip = document.querySelector(
+    ".main__button-new-playlist__container"
+  );
+
+  $newTooltip.addEventListener("click", () => {
+    if (blueTooltip_sec) {
+      blueTooltip_sec.style.display = "block";
+    }
+  });
+
+  // Nascondi il blueTooltip_sec nel caso in cui esistesse già
+
+  if (blueTooltip_sec) {
+    blueTooltip_sec.style.display = "none";
+  }
+});
+
+//Funzione per gestire il click all'esterno del componente che è stato appena creato
+
+function handleOutsideClick(event) {
+  const $tooltip = document.querySelector(
+    ".main__button-new-playlist__container"
+  );
+
+  // Se non c'è il tooltip, non fa nulla
+  if (!$tooltip) return;
+
+  // Controlla se il click è avvenuto fuori dal tooltip o dal bottone
+  if (
+    !event.target.closest(".main__button-new-playlist__container") &&
+    !event.target.closest(".button_plus")
+  ) {
+    $tooltip.remove(); // Rimuove il tooltip
+    document.removeEventListener("click", handleOutsideClick); // Rimuove l'evento per evitare sovraccarico
+  }
+}
