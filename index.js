@@ -278,6 +278,20 @@ $inputSearch.addEventListener("keyup", (e) => {
   }
 });
 
+// SEZIONE NEWPLAYLIST
+const blueTooltip_btn = document.querySelector(".button_new_playlist");
+const blueTooltip_sec = document.querySelector("#blueTooltip_section");
+const $body = document.querySelector("body");
+
+blueTooltip_btn.addEventListener("click", () => {
+  blueTooltip_sec.style.display = "block";
+});
+
+$body.addEventListener("click", (event) => {
+  if (event.target !== blueTooltip_sec && event.target !== blueTooltip_btn) {
+    blueTooltip_sec.style.display = "none";
+  }
+});
 //QUI INIZIA LA PARTE JAVASCRIPT DEDICATA ALL'APPARIZIONE DEL TOOLTIP CREA UNA NUOVA PLAYLIST DOPO AVER CLICCATO IL BOTTONE "+"
 
 const $buttonPlus = document.querySelector(".button_plus");
@@ -341,6 +355,9 @@ function handleOutsideClick(event) {
 //MODAL LANGUAGES
 document.addEventListener("DOMContentLoaded", () => {
   // Seleziona gli elementi
+  const modalLanguages = document.querySelector(".modal-languages");
+  const buttonLanguage = document.querySelector(".button_language");
+  const modalButtonClose = document.querySelector(".modal-button-close");
   const modalLanguages = document.querySelector(".modal-languages");
   const buttonLanguage = document.querySelector(".button_language");
   const modalButtonClose = document.querySelector(".modal-button-close");

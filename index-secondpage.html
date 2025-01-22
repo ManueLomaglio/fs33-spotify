@@ -447,6 +447,35 @@
 
     <!--MAIN-->
     <main class="main__second-page">
+      <!--TOOLTIP AZZURRO-->
+      <section id="blueTooltip_section" style="display: none">
+        <div id="newPlaylist_tooltip" class="flex_display">
+          <div id="text_container" class="flex_display">
+            <p class="bold_text big_text">Crea una playlist</p>
+            <p class="light_text medium_text">
+              Accedi per creare e condividere playlist.
+            </p>
+          </div>
+
+          <div id="buttons_container" class="flex_display">
+            <button
+              type="button"
+              class="bold_text medium_text scale"
+              id="trasparent"
+            >
+              Non adesso
+            </button>
+            <button
+              type="button"
+              class="bold_text medium_text scale"
+              id="log_in_button"
+            >
+              Accedi
+            </button>
+          </div>
+        </div>
+      </section>
+
       <div class="js-main-content">
         <!--HEADER-->
         <header id="header__album-page">
@@ -1597,5 +1626,6 @@
       </div>
       <button class="button_subscribe_free">Iscriviti gratis</button>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

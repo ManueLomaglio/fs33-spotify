@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex_display {
+  display: flex;
+}
+
+#newPlaylist_tooltip {
+  padding: 16px;
+  position: fixed;
+  top: 7.6rem;
+  background-color: #69bfff;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 336px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+#buttons_container {
+  justify-content: end;
+}
+
+#text_container {
+  gap: 15px;
+  flex-direction: column;
+}
+
+#blueTooltip_section {
+  position: absolute;
+}
+
+/* BOTTONI */
+#buttons_container button {
+  padding: 4px 16px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+#log_in_button {
+  background-color: white;
+  border: 0px solid transparent;
+  border-radius: 9999px;
+}
+#trasparent {
+  background-color: transparent;
+}
+
+/* TRIANGOLINO */
+#newPlaylist_tooltip::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  left: -9.8px; /* Posiziona il triangolo a sinistra */
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #69bfff; /* Stesso colore del contenitore */
+}
+
+/* TESTO */
+.bold_text {
+  font-weight: 700;
+}
+.light_text {
+  font-weight: 400;
+}
+.big_text {
+  font-size: 18px;
+}
+.medium_text {
+  font-size: 16px;
+}
+
+/* HOVER */
+.scale:hover {
+  transform: scale(1.05); /* Aumenta la dimensione del bottone */
+}
+#log_in_button:hover {
+  background-color: #f0f0f0;
+}
