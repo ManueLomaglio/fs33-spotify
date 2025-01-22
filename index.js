@@ -295,29 +295,24 @@ $body.addEventListener("click", (event) => {
 });
 
 //MODAL LANGUAGES
-document.addEventListener("DOMContentLoaded", () => {
-  // Seleziona gli elementi
-  const modalLanguages = document.querySelector(".modal-languages");
-  const buttonLanguage = document.querySelector(".button_language");
-  const modalButtonClose = document.querySelector(".modal-button-close");
+const modalLanguages = document.querySelector(".modal-languages");
+const buttonLanguage = document.querySelector(".button_language");
+const modalButtonClose = document.querySelector(".modal-button-close");
 
-  // Funzione per aprire la modal
-  const openModal = () => {
-    modalLanguages.style.display = "flex"; // Mostra la modal
-  };
+const openModal = () => {
+  modalLanguages.style.display = "flex";
+};
 
-  // Funzione per chiudere la modal
-  const closeModal = () => {
-    modalLanguages.style.display = "none"; // Nasconde la modal
-  };
+const closeModal = () => {
+  modalLanguages.style.display = "none";
+};
 
-  buttonLanguage.addEventListener("click", openModal);
-  modalButtonClose.addEventListener("click", closeModal);
+buttonLanguage.addEventListener("click", openModal);
+modalButtonClose.addEventListener("click", closeModal);
 
-  // Chiude la modal cliccando fuori dal contenitore
-  modalLanguages.addEventListener("click", (e) => {
-    if (e.target === modalLanguages) {
-      closeModal();
-    }
-  });
+// Chiude la modal cliccando fuori dal contenitore
+modalLanguages.addEventListener("click", (e) => {
+  if (e.target === modalLanguages) {
+    closeModal();
+  }
 });
