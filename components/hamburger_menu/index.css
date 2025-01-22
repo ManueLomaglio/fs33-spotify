@@ -3,23 +3,22 @@
   display: flex;
   flex-direction: column;
   position: fixed;
+  width: 100%;
+  height: 100%;
   bottom: 0;
-  top: 0;
   left: 0;
-  right: 0;
   z-index: 5;
   visibility: hidden;
   transform: translateX(100%);
-  transition: transform 0.5s ease-out, opacity 0.3s ease-out;
+  transition: all 0.4s;
   opacity: 0;
 }
 .hamburger_wrapper[aria-expanded="true"] {
   transform: translateX(0);
   opacity: 1;
   visibility: visible;
-  /* transition: transform 0.5s ease-in, opacity 0.5s ease-in; */
+  
 }
-
 
 .hamburger_list {
   padding: 56px 40px;
