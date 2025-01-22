@@ -118,6 +118,7 @@
     justify-content: end;
     align-items: center;
     margin-right: 20px;
+    background-color: transparent;
   }
 
   .nav__hamburgher-menu {

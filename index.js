@@ -316,3 +316,23 @@ modalLanguages.addEventListener("click", (e) => {
     closeModal();
   }
 });
+const $hamburgherCloseMenu = document.querySelector(".button_close_menu");
+const $hamburherShowMenu = document.querySelector("#hamburgher_menu");//non esiste in html
+//selettore del menu 
+const $hamburgherMenu = document.querySelector('.hamburger_wrapper');
+
+// funzioni del menu
+const openMenuFunction=function(){
+   // $hamburgherMenu.style.visibility = "visible";
+  $hamburgherMenu.setAttribute("aria-expanded", "true");
+}
+const closeMenuFunction = function () {
+  //$hamburgherMenu.style.visibility = "hidden";
+  $hamburgherMenu.setAttribute("aria-expanded", "false");
+};
+
+//eventi
+
+$hamburgherCloseMenu.addEventListener("click", closeMenuFunction);
+
+$hamburherShowMenu.addEventListener("click",openMenuFunction);
