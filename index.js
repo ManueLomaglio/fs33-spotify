@@ -296,7 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modalLanguages.style.display = 'none'; // Nasconde la modal
   };
 
-  // Aggiungi eventi
   buttonLanguage.addEventListener('click', openModal);
   modalButtonClose.addEventListener('click', closeModal);
 
