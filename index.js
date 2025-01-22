@@ -1,3 +1,4 @@
+// SEZIONE SEARCH
 const songs = [
   {
     songImg: "https://i.scdn.co/image/ab67616d0000485136032cb4acd9df050bc2e197",
@@ -124,7 +125,7 @@ const $inputSearch = document.querySelector('input[id="searchbar"]');
 const $clearButtonSearch = document.getElementById("searchbar__clear-button");
 const $mainSectionContainer = document.querySelector(".js-main-content");
 const $searchingSong = document.querySelector(".js-search");
-const $mainContainer = document.querySelector(".main-container");
+const $mainContainer = document.querySelector(".js-main-container");
 
 // EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {

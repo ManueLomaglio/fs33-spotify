@@ -184,3 +184,13 @@ button.tooltip-add {
 .search-song .container_viral50:hover .invisible > p {
   color: var(--color-text-white);
 }
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .tooltip-add {
+    display: none;
+  }
+
+  .tooltip-overflow-menu {
+    display: none;
+  }
+}

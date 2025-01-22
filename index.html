@@ -337,18 +337,20 @@
 
       <div class="nav__buttons__container">
         <div class="nav__search-glass__container">
-          <svg
-            data-encore-id="icon"
-            role="img"
-            aria-hidden="true"
-            data-testid="search-icon"
-            viewBox="0 0 16 16"
-            class="nav__search-glass"
-          >
-            <path
-              d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
-            ></path>
-          </svg>
+          <button class="nav__search-glass__button">
+            <svg
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              data-testid="search-icon"
+              viewBox="0 0 16 16"
+              class="nav__search-glass"
+            >
+              <path
+                d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+              ></path>
+            </svg>
+          </button>
         </div>
         <button class="button_subscribe">Iscriviti</button>
         <button class="button_log_in">Accedi</button>
@@ -365,6 +367,24 @@
           </svg>
         </div>
       </div>
+
+      <!-- <div class="nav__search-mobile__container displaying-hidden"> ATTUALMENTE IN LAVORAZIONE
+        <div class="nav__search-mobile-input-container">
+          <button class="nav__back-page">
+            <svg
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              class="Svg-sc-ytk21e-0 zsGU"
+            >
+              <path
+                d="M13.414 3.5a.999.999 0 0 0-1.707-.707l-9.207 9.2 9.207 9.202a1 1 0 1 0 1.414-1.413L6.335 13H20.5a1 1 0 0 0 0-2H6.322l6.799-6.794a.999.999 0 0 0 .293-.707z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div> -->
     </nav>
 
     <!--PREMIUM BANNER-->
@@ -474,7 +494,7 @@
     </div>
 
     <!--MAIN-->
-    <main class="main-container">
+    <main class="main-container js-main-container">
       <!--TOOLTIP AZZURRO-->
       <section id="blueTooltip_section" style="display: none">
         <div id="newPlaylist_tooltip" class="flex_display">
