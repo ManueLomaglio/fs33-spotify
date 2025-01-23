@@ -242,3 +242,84 @@
   background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4H4V2zM1.513 9.37A1 1 0 0 1 2.291 9H21.71a1 1 0 0 1 .978 1.208l-2.17 10.208A2 2 0 0 1 18.562 22H5.438a2 2 0 0 1-1.956-1.584l-2.17-10.208a1 1 0 0 1 .201-.837zM12 17.834c1.933 0 3.5-1.044 3.5-2.333 0-1.289-1.567-2.333-3.5-2.333S8.5 14.21 8.5 15.5c0 1.289 1.567 2.333 3.5 2.333z"></path></svg>');
   filter: invert(1);
 }
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .searchbar {
+    height: 38px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .searchbar__form {
+    width: 100%;
+  }
+
+  #searchbar {
+    caret-color: #757575;
+  }
+
+  .searchbar__form:hover {
+    border-color: transparent;
+    background-color: white;
+  }
+
+  .searchbar__form:focus-within {
+    /* border: 2px solid white; */
+    border: 1px solid transparent;
+    outline: none;
+    background-color: white;
+  }
+
+  .searchbar__magnifying-glass__icon {
+    padding: 0px;
+    width: 18px;
+    height: 18px;
+    fill: #000000;
+  }
+
+  .searchbar__magnifying-glass__label:hover::after {
+    display: none;
+  }
+
+  .searchbar__form:hover .searchbar__magnifying-glass__icon,
+  .searchbar__form:focus-within .searchbar__magnifying-glass__icon {
+    fill: #000000;
+  }
+
+  .searchbar__form {
+    border-radius: 4px;
+    background-color: white;
+  }
+
+  #searchbar::placeholder,
+  #searchbar:not(:placeholder-shown) {
+    color: #757575;
+  }
+
+  #searchbar__search__icon-container {
+    background-color: white !important;
+    margin-top: 0px;
+    width: 30px;
+    height: 35px;
+    right: 10px;
+  }
+
+  .searchbar__search__icon-container:hover::after {
+    display: none;
+  }
+
+  .searchbar__search__X-icon {
+    width: 15.5px;
+    height: 15.5px;
+    fill: #000000;
+  }
+
+  .searchbar__search__X-icon:hover {
+    fill: #000000;
+    transform: none;
+  }
+
+  .searchbar__browse-album {
+    display: none;
+  }
+}
