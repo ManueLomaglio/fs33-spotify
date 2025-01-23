@@ -138,12 +138,21 @@ const $containerBtnGoBack = document.querySelector(
 const $btnGoBack = document.querySelector("#go-back");
 const $footer = document.querySelector("#footer_container");
 const $TextBeforeSearchMobile = document.querySelector(".before-search-mobile");
+const $navSecondPage = document.querySelector(".js-nav-secondPage");
+let isMobileSearch = false;
 
 // EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {
-  $inputSearch.value = "";
-  $mainSectionContainer.classList.remove("displaying-hidden");
-  $inputSearch.focus();
+  if (isMobileSearch) {
+    $inputSearch.value = "";
+    $TextBeforeSearchMobile.classList.remove("displaying-hidden");
+    $searchingSong.classList.add("displaying-hidden");
+    $inputSearch.focus();
+  } else {
+    $inputSearch.value = "";
+    $mainSectionContainer.classList.remove("displaying-hidden");
+    $inputSearch.focus();
+  }
 });
 
 // CONTROLLA QUANTI CANTANTI CONTIENE L'OGGETTO E RESTITUSCE LA STRINGA PER MOSTRARE I CANTANTI (OVVERO singer: singerForDisplay) e la lista dei cantanti come stringa (singerList: singerForTooltip)
@@ -291,15 +300,21 @@ $inputSearch.addEventListener("keyup", (e) => {
       displaySongs(filteredSong);
     });
   } else {
-    $mainSectionContainer.classList.remove("displaying-hidden");
-    $searchingSong.classList.add("displaying-hidden");
-    $mainContainer.style.background =
-      "linear-gradient(to bottom, #222222 10%, #121212 20%)";
+    if (isMobileSearch) {
+      $TextBeforeSearchMobile.classList.remove("displaying-hidden");
+      $searchingSong.classList.add("displaying-hidden");
+    } else {
+      $mainSectionContainer.classList.remove("displaying-hidden");
+      $searchingSong.classList.add("displaying-hidden");
+      $mainContainer.style.background =
+        "linear-gradient(to bottom, #222222 10%, #121212 20%)";
+    }
   }
 });
 
 // EVENT PER IL BUTTON SEARCH SU MOBILE
 $btnSearchGlass.addEventListener("click", () => {
+  isMobileSearch = true;
   //MODIFICHE ALLA NAVBAR
   $logoSpotify.classList.add("displaying-hidden");
   $btnContainerNav.classList.add("displaying-hidden");
@@ -317,10 +332,6 @@ $btnSearchGlass.addEventListener("click", () => {
   //MODIFICHE AL MAIN
   $mainSectionContainer.classList.add("displaying-hidden");
   $TextBeforeSearchMobile.classList.remove("displaying-hidden");
-  $mainContainer.style.background = "none";
-  $mainContainer.style.backgroundColor = "#121212";
-  $mainContainer.style.minHeight = "100vh";
-  $mainContainer.style.borderRadius = "0px";
 
   //MODIFICHE AL FOOTER
   $footer.classList.add("displaying-hidden");
@@ -328,20 +339,25 @@ $btnSearchGlass.addEventListener("click", () => {
 
 // EVENT PER IL BUTTON BACK  DELLA NAVBAR
 $btnGoBack.addEventListener("click", () => {
+  isMobileSearch = false;
+  // MODIFICHE NAVBAR
   $logoSpotify.classList.remove("displaying-hidden");
   $btnContainerNav.classList.remove("displaying-hidden");
+  $navbar.style.position = "fixed";
   $navbar.style.height = "56px";
   $navbar.style.backgroundColor = "#000000";
   $navbar.style.padding = "";
+  if ($navSecondPage) $navSecondPage.style.background = "#0D442B";
   $inputSearch.value = "";
   $searchbar.style.display = "none";
 
   $containerBtnGoBack.classList.add("displaying-hidden");
 
-  //MODIFICHE AL BANNER
+  // MODIFICHE AL BANNER
   if ($premiumBanner) $premiumBanner.classList.remove("displaying-hidden");
 
-  //MODIFICHE AL MAIN
+  // MODIFICHE AL MAIN
+  $TextBeforeSearchMobile.classList.add("displaying-hidden");
   $mainSectionContainer.classList.remove("displaying-hidden");
   $searchingSong.classList.add("displaying-hidden");
 });

@@ -44,10 +44,12 @@ body {
     gap: inherit;
     grid-template-areas: "nav nav" "banner banner" "main-view main-view";
     height: 100%;
+    background-color: #121212;
   }
 
   .main-container {
     overflow-y: scroll;
+    background: none;
   }
 
   .left-sidebar-container,
