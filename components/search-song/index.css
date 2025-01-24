@@ -195,6 +195,11 @@ button.tooltip-add {
     padding-top: 8px;
     padding-left: 12px;
     padding-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+  .search-song__button_top-container::-webkit-scrollbar {
+    display: none;
   }
 
   .search-song__button_top {

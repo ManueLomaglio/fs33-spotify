@@ -92,6 +92,14 @@
     background-color: black;
   }
 
+  .nav__button-Home__searchbar__container {
+    margin: 0;
+  }
+
+  .searchbar {
+    min-width: 0px;
+  }
+
   .searchbar,
   .button_subscribe,
   .button_log_in,
