@@ -302,8 +302,9 @@ notNow_btn.addEventListener("click", (event) => {
 
 //MODAL LANGUAGES
 const modalLanguages = document.querySelector(".modal-languages");
-const buttonLanguage = document.querySelector(".button_language");
+const buttonLanguage = document.querySelectorAll(".button_language");
 const modalButtonClose = document.querySelector(".modal-button-close");
+
 
 const openModal = () => {
   modalLanguages.style.display = "flex";
@@ -313,7 +314,8 @@ const closeModal = () => {
   modalLanguages.style.display = "none";
 };
 
-buttonLanguage.addEventListener("click", openModal);
+//buttonLanguage.addEventListener("click", openModal);
+buttonLanguage.forEach((button)=>{button.addEventListener("click",openModal)});
 modalButtonClose.addEventListener("click", closeModal);
 
 // Chiude la modal cliccando fuori dal contenitore
@@ -322,8 +324,9 @@ modalLanguages.addEventListener("click", (e) => {
     closeModal();
   }
 });
+//HAMBURGHER menu
 const $hamburgherCloseMenu = document.querySelector(".button_close_menu");
-const $hamburherShowMenu = document.querySelector("#hamburgher_menu"); //non esiste in html
+const $hamburherShowMenu = document.querySelector("#hamburgher_menu"); 
 //selettore del menu
 const $hamburgherMenu = document.querySelector(".hamburger_wrapper");
 
