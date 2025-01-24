@@ -1,126 +1,5 @@
 // SEZIONE SEARCH
-const songs = [
-  {
-    songImg: "https://i.scdn.co/image/ab67616d0000485136032cb4acd9df050bc2e197",
-    songTitle: "APT.",
-    singerName: "ROSÉ",
-    secondSinger: "Bruno Mars",
-    album: "APT.",
-    songDuration: "2:49",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d0000485162d2665fd1709d37ec634ec2",
-    songTitle: "BAD PARENTING FUNK",
-    singerName: "DJ CEREJASS",
-    secondSinger: "Sayfalse",
-    album: "BAD PARENTING FUNK",
-    songDuration: "1:27",
-  },
-  {
-    songImg: "	https://i.scdn.co/image/ab67616d0000485111434fd28e36bd2a083e5079",
-    songTitle: "Victory Anthem",
-    singerName: "Khushi TDT",
-    secondSinger: "Lash curry",
-    thirdSinger: "Audiocrackerr",
-    album: "Victory Anthem",
-    songDuration: "2:37",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00004851773c5f60bcb309ef8802e4ef",
-    songTitle: 'Raanjhan (From "Do Patti")',
-    singerName: "Sachet-Parampara",
-    secondSinger: "Parampara Tandon",
-    thirdSinger: "Kausar Munir",
-    album: 'Raanjhan (From "Do Patti")',
-    songDuration: "4:00",
-  },
-  {
-    songImg: "	https://i.scdn.co/image/ab67616d000048514aaf2413384c1efcc38353c6",
-    songTitle: "Blood Sweat & Tears (from the series Arcane League of Legends)",
-    singerName: "Sheryl Lee Ralph",
-    secondSinger: "Arcane",
-    thirdSinger: "League of Legends",
-    album: "Blood Sweat & Tears (from the series Arcane League of Legends)",
-    songDuration: "3:42",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00004851ee19ea48939f4eafe486b1dc",
-    songTitle: "En Ontra Vida",
-    singerName: "Yami Safdie",
-    secondSinger: "Lasso",
-    album: "En Ontra Vida",
-    songDuration: "2:33",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00004851ff9efa742106d47f8136d55e",
-    songTitle: "Menina de Vermelho",
-    singerName: "MC Menor JP",
-    secondSinger: "RAMONMIX",
-    thirdSinger: "The Ironix",
-    album: "Menina de Vermelho",
-    songDuration: "2:31",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d000048511dac3694b3289cd903cb3acf",
-    songTitle: "That's So True",
-    singerName: "Gracie Abrams",
-    album: "The Secret of Us (Deluxe)",
-    songDuration: "2:46",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00004851c105fb55474f224476c23008",
-    songTitle: "Born With a Broken Heart",
-    singerName: "Damiano David",
-    album: "Born With a Broken Heart",
-    songDuration: "3:28",
-  },
-  {
-    songImg: "	https://i.scdn.co/image/ab67616d00004851f3eaae22e1c6b26400073c05",
-    songTitle: 'Popular - From "Wicked" Original Broadway Cast Recording/2003',
-    singerName: "Stephen Schwartz",
-    secondSinger: "Kristin Chenoweth",
-    thirdSinger: "Stephen Oremus",
-    fourthSinger: "Alex Lacamoire",
-    album: "Wicked",
-    songDuration: "3:44",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00004851e0f754cbb1bf632f9289865c",
-    songTitle: "Headlock",
-    singerName: "Imogen Heap",
-    album: "Speak for Yourself",
-    songDuration: "3:35",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d0000485156ac7b86e090f307e218e9c8",
-    songTitle: "7 rings",
-    singerName: "Ariana Grande",
-    album: "thank u, next",
-    songDuration: "2:58",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00004851a1db745e63940bc06985dea5",
-    songTitle: "Santa Tell Me",
-    singerName: "Ariana Grande",
-    album: "Santa Tell Me",
-    songDuration: "3:24",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00001e025675e83f707f1d7271e5cf8a",
-    songTitle: "Believer",
-    singerName: "Imagine Dragons",
-    album: "Evolve",
-    songDuration: "3:24",
-  },
-  {
-    songImg: "https://i.scdn.co/image/ab67616d00001e025675e83f707f1d7271e5cf8a",
-    songTitle: "Thunder",
-    singerName: "Imagine Dragons",
-    album: "Evolve",
-    songDuration: "3:07",
-  },
-];
-
+let songs = [];
 const $searchbar = document.querySelector(".searchbar");
 const $inputSearch = document.querySelector('input[id="searchbar"]');
 const $clearButtonSearch = document.getElementById("searchbar__clear-button");
@@ -139,7 +18,25 @@ const $btnGoBack = document.querySelector("#go-back");
 const $footer = document.querySelector("#footer_container");
 const $TextBeforeSearchMobile = document.querySelector(".before-search-mobile");
 const $navSecondPage = document.querySelector(".js-nav-secondPage");
+const $loaderSong = document.querySelector(".loader");
 let isMobileSearch = false;
+
+// FUNZIONE PER RECUPERO CANZONI
+async function fetchSong(cb) {
+  try {
+    const response = await fetch("songs.json");
+    const dataSongs = await response.json();
+
+    if (dataSongs) {
+      songs = await dataSongs;
+      cb(songs);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// FUNZIONE PER SINCRONIZZARE IN RECUPERO DELLE CANZONI E APPLICAZIONI DEL FILTER
 
 // EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {
@@ -296,9 +193,23 @@ $inputSearch.addEventListener("keyup", (e) => {
     $mainContainer.style.background = "none";
     $mainContainer.style.backgroundColor = "#121212";
 
-    filterSong(songs, searchText, (filteredSong) => {
-      displaySongs(filteredSong);
-    });
+    if (songs.length > 0) {
+      filterSong(songs, searchText, (filteredSong) => {
+        displaySongs(filteredSong);
+      });
+    } else {
+      // NEL CASO NON FOSSE ANCORA STATO POPOLATO L'ARRAY DELLE CANZONI LO RECUPERO CON IL FETCH
+      $loaderSong.classList.remove("displaying-hidden");
+      setTimeout(() => {
+        fetchSong((songs) => {
+          filterSong(songs, searchText, (filteredSong) => {
+            displaySongs(filteredSong);
+          });
+        });
+
+        $loaderSong.classList.add("displaying-hidden");
+      }, 1000);
+    }
   } else {
     if (isMobileSearch) {
       $TextBeforeSearchMobile.classList.remove("displaying-hidden");
@@ -330,6 +241,7 @@ $btnSearchGlass.addEventListener("click", () => {
   if ($premiumBanner) $premiumBanner.classList.add("displaying-hidden");
 
   //MODIFICHE AL MAIN
+  $mainContainer.style.borderRadius = "0px";
   $mainSectionContainer.classList.add("displaying-hidden");
   $TextBeforeSearchMobile.classList.remove("displaying-hidden");
 
@@ -360,6 +272,9 @@ $btnGoBack.addEventListener("click", () => {
   $TextBeforeSearchMobile.classList.add("displaying-hidden");
   $mainSectionContainer.classList.remove("displaying-hidden");
   $searchingSong.classList.add("displaying-hidden");
+
+  // MODIFCHE AL FOOTER
+  $footer.classList.remove("displaying-hidden");
 });
 
 // SEZIONE NEWPLAYLIST
