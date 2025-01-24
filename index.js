@@ -121,17 +121,38 @@ const songs = [
   },
 ];
 
+const $searchbar = document.querySelector(".searchbar");
 const $inputSearch = document.querySelector('input[id="searchbar"]');
 const $clearButtonSearch = document.getElementById("searchbar__clear-button");
 const $mainSectionContainer = document.querySelector(".js-main-content");
 const $searchingSong = document.querySelector(".js-search");
 const $mainContainer = document.querySelector(".js-main-container");
+const $btnSearchGlass = document.querySelector(".nav__search-glass__button");
+const $logoSpotify = document.querySelector(".nav__logo__container");
+const $btnContainerNav = document.querySelector(".nav__buttons__container");
+const $navbar = document.querySelector(".navbar");
+const $premiumBanner = document.querySelector(".premium-banner");
+const $containerBtnGoBack = document.querySelector(
+  ".nav__contaniner__btn-back"
+);
+const $btnGoBack = document.querySelector("#go-back");
+const $footer = document.querySelector("#footer_container");
+const $TextBeforeSearchMobile = document.querySelector(".before-search-mobile");
+const $navSecondPage = document.querySelector(".js-nav-secondPage");
+let isMobileSearch = false;
 
 // EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {
-  $inputSearch.value = "";
-  $mainSectionContainer.classList.remove("displaying-hidden");
-  $inputSearch.focus();
+  if (isMobileSearch) {
+    $inputSearch.value = "";
+    $TextBeforeSearchMobile.classList.remove("displaying-hidden");
+    $searchingSong.classList.add("displaying-hidden");
+    $inputSearch.focus();
+  } else {
+    $inputSearch.value = "";
+    $mainSectionContainer.classList.remove("displaying-hidden");
+    $inputSearch.focus();
+  }
 });
 
 // CONTROLLA QUANTI CANTANTI CONTIENE L'OGGETTO E RESTITUSCE LA STRINGA PER MOSTRARE I CANTANTI (OVVERO singer: singerForDisplay) e la lista dei cantanti come stringa (singerList: singerForTooltip)
@@ -208,13 +229,15 @@ function displaySongs(filteredSong) {
             <!--Title-->
             <img
               src="${song.songImg}"
-              alt="Icona album ${song.album}."
+              alt="Icona album ${song.album
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;")}."
               class="album_cover"
             />
             <div class="height shorten">
-              <p class="bold_white shorten tooltip-song"  data-tooltip="${
-                song.songTitle
-              }">${song.songTitle}</p>
+              <p class="bold_white shorten tooltip-song"  data-tooltip="${song.songTitle
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;")}">${song.songTitle}</p>
               <span class="font_small tag_43 tooltip-singer" data-tooltip="${
                 singers.singerList
               }"
@@ -226,7 +249,9 @@ function displaySongs(filteredSong) {
             <!--Album-->
             <p
               class="font_small hover_white_underlined shorten tag_43 tooltip-album"
-              data-tooltip="${song.album}"
+              data-tooltip="${song.album
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;")}"
             >
               ${song.album}
             </p>
@@ -244,7 +269,9 @@ function displaySongs(filteredSong) {
               </svg>
             </button>
             <p class="font_small">${song.songDuration}</p>
-            <button class="opacity tag_30 tooltip-overflow-menu" data-tooltip="${`Altre opzioni per ${song.songTitle} di ${singers.singerList}`}">
+            <button class="opacity tag_30 tooltip-overflow-menu" data-tooltip="Altre opzioni per ${song.songTitle
+              .replace(/"/g, "&quot;")
+              .replace(/'/g, "&#39;")} di ${singers.singerList}">
               <svg viewBox="0 0 16 16" class="basic_features">
                 <path
                   d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
@@ -263,6 +290,7 @@ function displaySongs(filteredSong) {
 $inputSearch.addEventListener("keyup", (e) => {
   const searchText = e.target.value;
   if (searchText) {
+    $TextBeforeSearchMobile.classList.add("displaying-hidden");
     $mainSectionContainer.classList.add("displaying-hidden");
     $searchingSong.classList.remove("displaying-hidden");
     $mainContainer.style.background = "none";
@@ -272,11 +300,66 @@ $inputSearch.addEventListener("keyup", (e) => {
       displaySongs(filteredSong);
     });
   } else {
-    $mainSectionContainer.classList.remove("displaying-hidden");
-    $searchingSong.classList.add("displaying-hidden");
-    $mainContainer.style.background =
-      "linear-gradient(to bottom, #222222 10%, #121212 20%)";
+    if (isMobileSearch) {
+      $TextBeforeSearchMobile.classList.remove("displaying-hidden");
+      $searchingSong.classList.add("displaying-hidden");
+    } else {
+      $mainSectionContainer.classList.remove("displaying-hidden");
+      $searchingSong.classList.add("displaying-hidden");
+      $mainContainer.style.background =
+        "linear-gradient(to bottom, #222222 10%, #121212 20%)";
+    }
   }
+});
+
+// EVENT PER IL BUTTON SEARCH SU MOBILE
+$btnSearchGlass.addEventListener("click", () => {
+  isMobileSearch = true;
+  //MODIFICHE ALLA NAVBAR
+  $logoSpotify.classList.add("displaying-hidden");
+  $btnContainerNav.classList.add("displaying-hidden");
+  $navbar.style.height = "72px";
+  $navbar.style.backgroundColor = "#181818";
+  $navbar.style.padding = "12px 16px";
+  $navbar.style.position = "unset";
+  $searchbar.style.display = "flex";
+
+  $containerBtnGoBack.classList.remove("displaying-hidden");
+
+  //MODIFICHE AL BANNER
+  if ($premiumBanner) $premiumBanner.classList.add("displaying-hidden");
+
+  //MODIFICHE AL MAIN
+  $mainSectionContainer.classList.add("displaying-hidden");
+  $TextBeforeSearchMobile.classList.remove("displaying-hidden");
+
+  //MODIFICHE AL FOOTER
+  $footer.classList.add("displaying-hidden");
+});
+
+// EVENT PER IL BUTTON BACK  DELLA NAVBAR
+$btnGoBack.addEventListener("click", () => {
+  isMobileSearch = false;
+  // MODIFICHE NAVBAR
+  $logoSpotify.classList.remove("displaying-hidden");
+  $btnContainerNav.classList.remove("displaying-hidden");
+  $navbar.style.position = "fixed";
+  $navbar.style.height = "56px";
+  $navbar.style.backgroundColor = "#000000";
+  $navbar.style.padding = "";
+  if ($navSecondPage) $navSecondPage.style.background = "#0D442B";
+  $inputSearch.value = "";
+  $searchbar.style.display = "none";
+
+  $containerBtnGoBack.classList.add("displaying-hidden");
+
+  // MODIFICHE AL BANNER
+  if ($premiumBanner) $premiumBanner.classList.remove("displaying-hidden");
+
+  // MODIFICHE AL MAIN
+  $TextBeforeSearchMobile.classList.add("displaying-hidden");
+  $mainSectionContainer.classList.remove("displaying-hidden");
+  $searchingSong.classList.add("displaying-hidden");
 });
 
 // SEZIONE NEWPLAYLIST
@@ -346,6 +429,7 @@ const closeMenuFunction = function () {
 $hamburgherCloseMenu.addEventListener("click", closeMenuFunction);
 
 $hamburherShowMenu.addEventListener("click", openMenuFunction);
+<<<<<<< HEAD
 
 //QUI INIZIA LA PARTE JAVASCRIPT DEDICATA ALL'APPARIZIONE DEL TOOLTIP CREA UNA NUOVA PLAYLIST DOPO AVER CLICCATO IL BOTTONE "+"
 
@@ -420,3 +504,5 @@ function handleOutsideClick(event) {
     document.removeEventListener("click", handleOutsideClick); // Rimuove l'evento per evitare sovraccarico
   }
 }
+=======
+>>>>>>> 8d8449f63bd4bed52b285f0878ca04e793dad8c1

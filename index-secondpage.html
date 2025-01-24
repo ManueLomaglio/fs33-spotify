@@ -242,7 +242,7 @@
     </div>
 
     <!--NAVBAR-->
-    <nav class="navbar">
+    <nav class="navbar js-nav-secondPage">
       <div class="nav__logo__container">
         <label for="toggle">
           <svg
@@ -264,11 +264,28 @@
       </div>
 
       <div class="nav__button-Home__searchbar">
+        <div class="nav__contaniner__btn-back displaying-hidden">
+          <button id="go-back">
+            <svg
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              class="Svg-sc-ytk21e-0 zsGU e-9541-icon"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13.414 3.5a.999.999 0 0 0-1.707-.707l-9.207 9.2 9.207 9.202a1 1 0 1 0 1.414-1.413L6.335 13H20.5a1 1 0 0 0 0-2H6.322l6.799-6.794a.999.999 0 0 0 .293-.707z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
         <div class="nav__button-Home__searchbar__container">
           <div class="button_home" title="">
             <input type="checkbox" class="button_home_checkbox" id="toggle" />
             <label for="toggle" class="button_home_checkbox_container"> </label>
           </div>
+
           <div class="searchbar">
             <form action="#" role="searchbox" class="searchbar__form">
               <div class="searchbar__magnifying-glass">
@@ -337,23 +354,26 @@
 
       <div class="nav__buttons__container">
         <div class="nav__search-glass__container">
-          <svg
-            data-encore-id="icon"
-            role="img"
-            aria-hidden="true"
-            data-testid="search-icon"
-            viewBox="0 0 16 16"
-            class="nav__search-glass"
-          >
-            <path
-              d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
-            ></path>
-          </svg>
+          <button class="nav__search-glass__button">
+            <svg
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              data-testid="search-icon"
+              viewBox="0 0 16 16"
+              class="nav__search-glass"
+            >
+              <path
+                d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+              ></path>
+            </svg>
+          </button>
         </div>
         <button class="button_subscribe">Iscriviti</button>
         <button class="button_log_in">Accedi</button>
         <button class="button_log_in button_open_app">Apri l'app</button>
-        <button class="nav__hamburgher-menu__container">
+
+        <button class="nav__hamburgher-menu__container" id="hamburgher_menu">
           <svg
             data-encore-id="icon"
             role="img"
@@ -364,34 +384,35 @@
             <path d="M21 6H3V4h18v2zm0 14H3v-2h18v2zm0-7H3v-2h18v2z"></path>
           </svg>
         </button>
-      </div>
-      <!--HAMBURGHER MENU-->
-      <div class="hamburger_wrapper"  aria-expanded="false" >
-      
-        <button class="button_close_menu">
-          <svg>
-            <path
-              d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"></path>
-          </svg>
-        </button>
-      
-      <div class="hamburger_list"  >
-        <button class="button_upper_section">Accedi</button>
-        <button class="button_upper_section">Iscriviti</button>
 
-        <div class="dividing_line_wrapper">
-          <div class="dividing_line"></div>
-        </div>
+        <!--HAMBURGHER MENU-->
+        <div class="hamburger_wrapper" aria-expanded="false">
+          <button class="button_close_menu">
+            <svg>
+              <path
+                d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"
+              ></path>
+            </svg>
+          </button>
 
-        <div class="hamburger_lower_section">
-          <button class="button_lower_section">Premium</button>
-          <button class="button_lower_section">Assistenza</button>
-          <button class="button_lower_section">Scarica</button>
-          <button class="button_lower_section">Privacy</button>
-          <button class="button_lower_section">Condizioni</button>
+          <div class="hamburger_list">
+            <button class="button_upper_section">Accedi</button>
+            <button class="button_upper_section">Iscriviti</button>
+
+            <div class="dividing_line_wrapper">
+              <div class="dividing_line"></div>
+            </div>
+
+            <div class="hamburger_lower_section">
+              <button class="button_lower_section">Premium</button>
+              <button class="button_lower_section">Assistenza</button>
+              <button class="button_lower_section">Scarica</button>
+              <button class="button_lower_section">Privacy</button>
+              <button class="button_lower_section">Condizioni</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </nav>
 
     <!--SIDEBAR-->
@@ -504,6 +525,11 @@
           </div>
         </div>
       </section>
+
+      <div class="before-search-mobile displaying-hidden">
+        <p>Ascolta i tuoi contenuti preferiti</p>
+        <p>Cerca artisti, brani, podcast e altro ancora</p>
+      </div>
 
       <div class="js-main-content">
         <!--HEADER-->

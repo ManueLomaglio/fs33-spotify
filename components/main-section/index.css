@@ -112,6 +112,27 @@
   white-space: nowrap;
 }
 
+.before-search-mobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0px 16px;
+  gap: 20px;
+  margin: 24px 0px 0px;
+}
+
+.before-search-mobile p:nth-of-type(1) {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.before-search-mobile p:nth-of-type(2) {
+  font-size: 13px;
+  color: white;
+}
+
 @media (max-width: 576px) {
   .main-container {
     overflow-y: scroll;
