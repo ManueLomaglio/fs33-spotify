@@ -54,7 +54,7 @@
   content: "";
   position: absolute;
   top: 50%; /* Centra verticalmente */
-  left: -9.8px; /* Posiziona il triangolo a sinistra */
+  left: -9px; /* Posiziona il triangolo a sinistra */
   transform: translateY(-50%);
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;

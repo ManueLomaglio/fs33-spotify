@@ -280,16 +280,24 @@ $btnGoBack.addEventListener("click", () => {
 // SEZIONE NEWPLAYLIST
 const blueTooltip_btn = document.querySelector(".button_new_playlist");
 const blueTooltip_sec = document.querySelector("#blueTooltip_section");
-const $body = document.querySelector("body");
+const notNow_btn = document.querySelector("#trasparent");
 
 blueTooltip_btn.addEventListener("click", () => {
   blueTooltip_sec.style.display = "block";
 });
 
-$body.addEventListener("click", (event) => {
-  if (event.target !== blueTooltip_sec && event.target !== blueTooltip_btn) {
+// Se il clic non è dentro il tooltip, lo nascondi
+document.addEventListener("click", (event) => {
+  const insideClick = blueTooltip_sec.contains(event.target);
+
+  if (!insideClick && event.target !== blueTooltip_btn) {
     blueTooltip_sec.style.display = "none";
   }
+});
+
+// Previene la chiusura del tooltip quando si clicca su "Non adesso"
+notNow_btn.addEventListener("click", (event) => {
+  event.stopPropagation();
 });
 
 //MODAL LANGUAGES
