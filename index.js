@@ -1,5 +1,14 @@
 // SEZIONE SEARCH
 let songs = [];
+let $templateSong;
+let $htmlSong;
+/* let indexOfSong;
+let titleOfSong;
+let imgOfSong;
+let albumOfSong;
+let listOfSinger;
+let singerOfSong;
+let durationOfSong; */
 const $searchbar = document.querySelector(".searchbar");
 const $inputSearch = document.querySelector('input[id="searchbar"]');
 const $clearButtonSearch = document.getElementById("searchbar__clear-button");
@@ -21,6 +30,8 @@ const $navSecondPage = document.querySelector(".js-nav-secondPage");
 const $loaderSong = document.querySelector(".loader");
 let isMobileSearch = false;
 
+fetchTemplate();
+
 // FUNZIONE PER RECUPERO CANZONI
 async function fetchSong(cb) {
   try {
@@ -36,8 +47,6 @@ async function fetchSong(cb) {
   }
 }
 
-// FUNZIONE PER SINCRONIZZARE IN RECUPERO DELLE CANZONI E APPLICAZIONI DEL FILTER
-
 // EVENT PER CATTURARE IL CLICK DEL BUTTON PER CANCELLARE LETTERE INSERITE NELLA SEARCH
 $clearButtonSearch.addEventListener("click", () => {
   if (isMobileSearch) {
@@ -48,6 +57,7 @@ $clearButtonSearch.addEventListener("click", () => {
   } else {
     $inputSearch.value = "";
     $mainSectionContainer.classList.remove("displaying-hidden");
+    $searchingSong.classList.add("displaying-hidden");
     $inputSearch.focus();
   }
 });
@@ -97,18 +107,36 @@ function filterSong(songs, searchText, cb) {
   }
 }
 
+async function fetchTemplate() {}
+
 // CICLA L'ARRAY PASSSATO DALLA FUNZIONE filterSong PER CREARE L'ELEMENTO CARD DA MOSTRARE IN PAGINA
-function displaySongs(filteredSong) {
+async function displaySongs(filteredSong) {
   // RIMUOVE GLI ELEMENTI PASSATI PER LA NUOVA RICERCA
   const songElements = $searchingSong.querySelectorAll(".container_viral50");
   songElements.forEach((element) => element.remove());
 
+  if (!$templateSong) {
+    try {
+      const response = await fetch("templeteSong.html");
+      const dataTemplete = await response.text();
+
+      if (dataTemplete) {
+        const $htmlForSong = document.createElement("div");
+        $htmlForSong.innerHTML = dataTemplete;
+        $templateSong = $htmlForSong.querySelector(".container_viral50");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   filteredSong.forEach((song, index) => {
     const singers = numberOfSingers(song);
-    const $songElement = document.createElement("div");
+    /*const $songElement = document.createElement("div"); INJECT CON FILE STATICO
     $songElement.classList.add("container_viral50");
 
     $songElement.innerHTML = `<div class="container_viral50">
+
         <!--DIV SONG-->
         <div class="container">
           <div class="flex center invisible_phone">
@@ -179,7 +207,25 @@ function displaySongs(filteredSong) {
         </div>
       </div>`;
 
-    $searchingSong.appendChild($songElement);
+
+
+    $searchingSong.appendChild($songElement);*/
+
+    const templateString = $templateSong.outerHTML;
+    const replacedHTML = templateString
+      .replace(/{{index}}/g, index + 1)
+      .replace(/{{songImg}}/g, song.songImg)
+      .replace(/{{album}}/g, song.album)
+      .replace(/{{songTitle}}/g, song.songTitle)
+      .replace(/{{singerList}}/g, singers.singerList)
+      .replace(/{{singer}}/g, singers.singer)
+      .replace(/{{songDuration}}/g, song.songDuration);
+    $htmlSong = document.createElement("div");
+    $htmlSong.innerHTML = replacedHTML;
+
+    console.log($htmlSong.firstChild);
+
+    $searchingSong.appendChild($htmlSong.firstChild);
   });
 }
 
@@ -194,6 +240,7 @@ $inputSearch.addEventListener("keyup", (e) => {
     $mainContainer.style.backgroundColor = "#121212";
 
     if (songs.length > 0) {
+      // NEL CASO FOSSE STATO POPOLATO L'ARRAY DELLE CANZONI
       filterSong(songs, searchText, (filteredSong) => {
         displaySongs(filteredSong);
       });
@@ -305,7 +352,6 @@ const modalLanguages = document.querySelector(".modal-languages");
 const buttonLanguage = document.querySelectorAll(".button_language");
 const modalButtonClose = document.querySelector(".modal-button-close");
 
-
 const openModal = () => {
   modalLanguages.style.display = "flex";
 };
@@ -315,7 +361,9 @@ const closeModal = () => {
 };
 
 //buttonLanguage.addEventListener("click", openModal);
-buttonLanguage.forEach((button)=>{button.addEventListener("click",openModal)});
+buttonLanguage.forEach((button) => {
+  button.addEventListener("click", openModal);
+});
 modalButtonClose.addEventListener("click", closeModal);
 
 // Chiude la modal cliccando fuori dal contenitore
@@ -326,7 +374,7 @@ modalLanguages.addEventListener("click", (e) => {
 });
 //HAMBURGHER menu
 const $hamburgherCloseMenu = document.querySelector(".button_close_menu");
-const $hamburherShowMenu = document.querySelector("#hamburgher_menu"); 
+const $hamburherShowMenu = document.querySelector("#hamburgher_menu");
 //selettore del menu
 const $hamburgherMenu = document.querySelector(".hamburger_wrapper");
 
