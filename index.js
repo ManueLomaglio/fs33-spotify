@@ -2,13 +2,6 @@
 let songs = [];
 let $templateSong;
 let $htmlSong;
-/* let indexOfSong;
-let titleOfSong;
-let imgOfSong;
-let albumOfSong;
-let listOfSinger;
-let singerOfSong;
-let durationOfSong; */
 const $searchbar = document.querySelector(".searchbar");
 const $inputSearch = document.querySelector('input[id="searchbar"]');
 const $clearButtonSearch = document.getElementById("searchbar__clear-button");
@@ -132,82 +125,6 @@ async function displaySongs(filteredSong) {
 
   filteredSong.forEach((song, index) => {
     const singers = numberOfSingers(song);
-    /* const $songElement = document.createElement("div"); //INJECT CON FILE STATICO
-    $songElement.classList.add("container_viral50");
-
-    $songElement.innerHTML = `<div class="container_viral50">
-
-        <!--DIV SONG-->
-        <div class="container">
-          <div class="flex center invisible_phone">
-            <!--Numero-->
-            <p class="song_position">${index + 1}</p>
-            <span>
-              <svg viewBox="0 0 24 24" class="play_icon basic_features">
-                <path
-                  d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                ></path>
-              </svg>
-            </span>
-          </div>
-          <div class="flex">
-            <!--Title-->
-            <img
-              src="${song.songImg}"
-              alt="Icona album ${song.album
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#39;")}."
-              class="album_cover"
-            />
-            <div class="height shorten">
-              <p class="bold_white shorten tooltip-song"  data-tooltip="${song.songTitle
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#39;")}">${song.songTitle}</p>
-              <span class="font_small tag_43 tooltip-singer" data-tooltip="${
-                singers.singerList
-              }"
-                >${singers.singer}</span
-              >
-            </div>
-          </div>
-          <div class="flex invisible">
-            <!--Album-->
-            <p
-              class="font_small hover_white_underlined shorten tag_43 tooltip-album"
-              data-tooltip="${song.album
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#39;")}"
-            >
-              ${song.album}
-            </p>
-          </div>
-          <div class="flex duration">
-            <!--Duration-->
-            <button class="opacity tag_43 tooltip-add" >
-              <svg viewBox="0 0 16 16" class="basic_features">
-                <path
-                  d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
-                ></path>
-                <path
-                  d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"
-                ></path>
-              </svg>
-            </button>
-            <p class="font_small">${song.songDuration}</p>
-            <button class="opacity tag_30 tooltip-overflow-menu" data-tooltip="Altre opzioni per ${song.songTitle
-              .replace(/"/g, "&quot;")
-              .replace(/'/g, "&#39;")} di ${singers.singerList}">
-              <svg viewBox="0 0 16 16" class="basic_features">
-                <path
-                  d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>`; 
-
-    $searchingSong.appendChild($songElement);*/
 
     const templateString = $templateSong.outerHTML;
     const replacedHTML = templateString
@@ -226,8 +143,6 @@ async function displaySongs(filteredSong) {
       .replace(/{{songDuration}}/g, song.songDuration);
     $htmlSong = document.createElement("div");
     $htmlSong.innerHTML = replacedHTML;
-
-    console.log($htmlSong.firstChild);
 
     $searchingSong.appendChild($htmlSong.firstChild);
   });
