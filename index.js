@@ -132,7 +132,7 @@ async function displaySongs(filteredSong) {
 
   filteredSong.forEach((song, index) => {
     const singers = numberOfSingers(song);
-    /*const $songElement = document.createElement("div"); INJECT CON FILE STATICO
+    /* const $songElement = document.createElement("div"); //INJECT CON FILE STATICO
     $songElement.classList.add("container_viral50");
 
     $songElement.innerHTML = `<div class="container_viral50">
@@ -205,9 +205,7 @@ async function displaySongs(filteredSong) {
             </button>
           </div>
         </div>
-      </div>`;
-
-
+      </div>`; 
 
     $searchingSong.appendChild($songElement);*/
 
@@ -215,8 +213,14 @@ async function displaySongs(filteredSong) {
     const replacedHTML = templateString
       .replace(/{{index}}/g, index + 1)
       .replace(/{{songImg}}/g, song.songImg)
-      .replace(/{{album}}/g, song.album)
-      .replace(/{{songTitle}}/g, song.songTitle)
+      .replace(
+        /{{album}}/g,
+        song.album.replace(/"/g, "&quot;").replace(/'/g, "&#39;")
+      )
+      .replace(
+        /{{songTitle}}/g,
+        song.songTitle.replace(/"/g, "&quot;").replace(/'/g, "&#39;")
+      )
       .replace(/{{singerList}}/g, singers.singerList)
       .replace(/{{singer}}/g, singers.singer)
       .replace(/{{songDuration}}/g, song.songDuration);

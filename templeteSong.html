@@ -4,26 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="container_viral50">
+      <!--DIV SONG-->
       <div class="container">
-        <!-- Numero -->
-        <p class="song_position">{{index}}</p>
-        <span>
-          <svg viewBox="0 0 24 24" class="play_icon basic_features">
-            <path
-              d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-            ></path>
-          </svg>
-        </span>
-
-        <!-- Titolo e Immagine -->
+        <div class="flex center invisible_phone">
+          <!--Numero-->
+          <p class="song_position">{{index}}</p>
+          <span>
+            <svg viewBox="0 0 24 24" class="play_icon basic_features">
+              <path
+                d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+              ></path>
+            </svg>
+          </span>
+        </div>
         <div class="flex">
+          <!--Title-->
           <img
             src="{{songImg}}"
-            alt="Icona album {{album}}"
+            alt="Icona album {{songImg}}"
             class="album_cover"
           />
           <div class="height shorten">
@@ -36,14 +37,12 @@
             <span
               class="font_small tag_43 tooltip-singer"
               data-tooltip="{{singerList}}"
+              >{{singerList}}</span
             >
-              {{singer}}
-            </span>
           </div>
         </div>
-
-        <!-- Album -->
         <div class="flex invisible">
+          <!--Album-->
           <p
             class="font_small hover_white_underlined shorten tag_43 tooltip-album"
             data-tooltip="{{album}}"
@@ -51,9 +50,8 @@
             {{album}}
           </p>
         </div>
-
-        <!-- Durata e Azioni -->
         <div class="flex duration">
+          <!--Duration-->
           <button class="opacity tag_43 tooltip-add">
             <svg viewBox="0 0 16 16" class="basic_features">
               <path
