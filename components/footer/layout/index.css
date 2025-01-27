@@ -47,8 +47,11 @@
   }
 }
 @media (min-width: 320px) and (max-width: 568px) {
-  #footer_navbar .left-sidebar-footer,
-  #footer_navbar .button_language {
+  #footer_navbar .left-sidebar-footer
+  {
     display: inline;
   }
 }
+
+@media (min-width: 320px) and (max-width: 568px) { #footer_navbar .button_language{display: flex;} }
+
