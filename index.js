@@ -252,18 +252,16 @@ blueTooltip_btn.addEventListener("click", () => {
   blueTooltip_sec.style.display = "block";
 });
 
-// Se il clic non è dentro il tooltip, lo nascondi
+// Se il clic non è dentro il tooltip, nascondi la section
 document.addEventListener("click", (event) => {
   const insideClick = blueTooltip_sec.contains(event.target);
 
   if (!insideClick && event.target !== blueTooltip_btn) {
     blueTooltip_sec.style.display = "none";
   }
-});
-
-// Previene la chiusura del tooltip quando si clicca su "Non adesso"
-notNow_btn.addEventListener("click", (event) => {
-  event.stopPropagation();
+  if (event.target === notNow_btn) {
+    blueTooltip_sec.style.display = "none";
+  }
 });
 
 //MODAL LANGUAGES
